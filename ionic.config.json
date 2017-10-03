@@ -1,0 +1,8 @@
+{
+  "name": "BKHydroponic",
+  "app_id": "fd47b2c6",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
