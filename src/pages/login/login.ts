@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { Storage } from '@ionic/storage';
 import { AuthService } from '../../services/auth.service';
-import { ToastController } from 'ionic-angular';
+import { ToastService } from '../../services/toast.service';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { ToastController } from 'ionic-angular';
 })
 export class LoginPage implements OnInit {
 
-  constructor(public navCtrl: NavController, private toast: ToastController,
+  constructor(public navCtrl: NavController, private toastService: ToastService,
     private storage: Storage, private authService: AuthService) {
 
   }
@@ -36,13 +36,7 @@ export class LoginPage implements OnInit {
 
           this.storage.set('token', res.data.token);
           this.navCtrl.setRoot(HomePage);
-          const toast = this.toast.create({
-            message: res.message,
-            duration: 3000,
-            position: 'middle'
-          });
-
-          toast.present();
+          this.toastService.showToast(res.message);
         } else {
           alert(res.message);
         }

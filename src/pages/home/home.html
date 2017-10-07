@@ -16,28 +16,33 @@
         Your devices
     </h2>
     <div class="spacer" style="width:300px;height:28px;" id="home-spacer2"></div>
-    <div id="home-container2">
-        <ion-grid>
 
-            <ion-row>
-                <h3 id="home-heading4" style="color:#13690F;font-weight:400;">
-                    Device's name
-                </h3>
-            </ion-row>
+    <ion-list>
+        <div *ngFor="let device of deviceList" (click)="detail(device.mac)">
+            <div class="devider" style="margin: auto;width:400px;height:10px"></div>
+            <ion-grid>
 
-            <ion-row>
-                <h4 id="home-heading5" style="color:#000000;font-weight:300;">
-                    Installation date:
-                </h4>
-            </ion-row>
+                <ion-row>
+                    <h3 id="home-heading4" style="color:#13690F;font-weight:400;">
+                        {{device.name}}
+                    </h3>
+                </ion-row>
 
-            <ion-row>
-                <h4 id="home-heading5" style="color:#000000;font-weight:300;">
-                    Status: playing
-                </h4>
-            </ion-row>
+                <ion-row>
+                    <h4 id="home-heading5" style="color:#000000;font-weight:300;">
+                        Installation date: {{device.createdAt | date: 'dd/MM/yyyy'}}
+                    </h4>
+                </ion-row>
 
-        </ion-grid>
+                <ion-row>
+                    <h4 id="home-heading5" style="color:#000000;font-weight:300;">
+                        Status: {{device.status}}
+                    </h4>
+                </ion-row>
 
-    </div>
+            </ion-grid>
+        <div class="devider" style="margin: auto;width:350px;height:1px;background-color:black"></div>
+        </div>
+    </ion-list>
+
 </ion-content>

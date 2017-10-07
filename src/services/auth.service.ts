@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
 import { Storage } from '@ionic/storage';
 import 'rxjs/add/operator/map';
@@ -7,14 +7,12 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class AuthService {
 
-    constructor(private http: Http, private storage: Storage) {
+    constructor(private http: HttpClient, private storage: Storage) {
 
     }
 
     public login(user: any): Observable<any> {
-        return this.http.post('http://192.168.1.106:3210/user/login', user).map((res: Response) => {
-            return res.json();
-        });
+        return this.http.post('http://192.168.1.106:3210/user/login', user);
     }
 
     public logout() {

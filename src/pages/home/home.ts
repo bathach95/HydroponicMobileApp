@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { Storage } from '@ionic/storage';
+import { DeviceService } from '../../services/device.service';
 import { AuthService } from '../../services/auth.service';
-import { ToastController } from 'ionic-angular';
+import { ToastService } from '../../services/toast.service';
+import { DevicePage } from '../device/device';
 
 @Component({
     selector: 'page-home',
@@ -11,18 +12,23 @@ import { ToastController } from 'ionic-angular';
 })
 export class HomePage implements OnInit {
 
-    constructor(private storage: Storage, private navCtrl: NavController,
-        private authService: AuthService, private toast: ToastController) {
+    public deviceList: any[];
+
+    constructor(private navCtrl: NavController, private deviceService: DeviceService,
+        private authService: AuthService, private toastService: ToastService) {
 
     }
 
     public ngOnInit() {
-        this.storage.get('token').then((token) => {
-            if (!token) {
-                this.navCtrl.setRoot(LoginPage);
+        this.deviceService.getAllDevice().subscribe((res: any) => {
+            if (res.success){
+                this.deviceList = res.data;
+                console.log(this.deviceList);
+            } else {    
+                this.toastService.showToast(res.message);
             }
-        }).catch((err) => {
-            console.log(err);
+        }, (err) => {
+            console.log('get all device err: ' + err)
         })
     }
 
@@ -30,24 +36,15 @@ export class HomePage implements OnInit {
         this.authService.logout().then(() => {
 
             this.navCtrl.setRoot(LoginPage);
-
-            const toast = this.toast.create({
-                message: 'Logout sucess!',
-                duration: 3000,
-                position: 'middle'
-            });
-
-            toast.present();
+            this.toastService.showToast('Logout success!');
         }).catch((err) => {
             console.log(err)
         });
     }
 
-    public showConfirm() {
-        if (confirm("Do you want to click yes ?")) {
-            console.log("You have just click yes");
-        } else {
-            console.log("You have just click no")
-        }
+    public detail(deviceMac: any){
+        this.navCtrl.push(DevicePage, {
+            deviceMac: deviceMac
+        });
     }
 }

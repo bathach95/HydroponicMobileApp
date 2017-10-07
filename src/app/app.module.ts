@@ -1,10 +1,12 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MyApp } from './app.component';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
+import { HttpsRequestInterceptor } from '../interceptors/auth.interceptor';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -16,6 +18,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthService } from '../services/auth.service';
+import { DeviceService } from '../services/device.service';
+import { ToastService } from '../services/toast.service';
 
 
 @NgModule({
@@ -30,7 +34,7 @@ import { AuthService } from '../services/auth.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     IonicModule.forRoot(MyApp),
@@ -50,7 +54,10 @@ import { AuthService } from '../services/auth.service';
     StatusBar,
     SplashScreen,
     AuthService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    DeviceService,
+    ToastService,
+    { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }
