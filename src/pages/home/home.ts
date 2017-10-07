@@ -23,7 +23,6 @@ export class HomePage implements OnInit {
         this.deviceService.getAllDevice().subscribe((res: any) => {
             if (res.success){
                 this.deviceList = res.data;
-                console.log(this.deviceList);
             } else {    
                 this.toastService.showToast(res.message);
             }
@@ -33,13 +32,9 @@ export class HomePage implements OnInit {
     }
 
     public logout() {
-        this.authService.logout().then(() => {
-
-            this.navCtrl.setRoot(LoginPage);
-            this.toastService.showToast('Logout success!');
-        }).catch((err) => {
-            console.log(err)
-        });
+        this.authService.logout();
+        this.navCtrl.setRoot(LoginPage);
+        this.toastService.showToast('Logout success!');
     }
 
     public detail(deviceMac: any){

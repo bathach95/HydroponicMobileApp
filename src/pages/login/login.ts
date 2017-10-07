@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
-import { Storage } from '@ionic/storage';
 import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
 
@@ -13,18 +12,14 @@ import { ToastService } from '../../services/toast.service';
 export class LoginPage implements OnInit {
 
   constructor(public navCtrl: NavController, private toastService: ToastService,
-    private storage: Storage, private authService: AuthService) {
+    private authService: AuthService) {
 
   }
 
   public ngOnInit() {
-    this.storage.get('token').then((token) => {
-      if (token) {
-        this.navCtrl.setRoot(HomePage);
-      }
-    }).catch((error) => {
-      console.log(error)
-    })
+    if (localStorage.getItem('token')) {
+      this.navCtrl.setRoot(HomePage);
+    }
   }
 
   public login(user: any) {
@@ -32,9 +27,8 @@ export class LoginPage implements OnInit {
 
       this.authService.login(user).subscribe((res: any) => {
 
-        if (res.success){
-
-          this.storage.set('token', res.data.token);
+        if (res.success) {
+          localStorage.setItem('token', res.data.token);
           this.navCtrl.setRoot(HomePage);
           this.toastService.showToast(res.message);
         } else {
@@ -48,6 +42,6 @@ export class LoginPage implements OnInit {
     }
   }
 
-  
+
 
 }
