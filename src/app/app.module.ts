@@ -21,6 +21,7 @@ import { AuthService } from '../services/auth.service';
 import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
 import { CropService } from '../services/crop.service';
+import { DataService } from '../services/data.service';
 
 
 @NgModule({
@@ -58,6 +59,7 @@ import { CropService } from '../services/crop.service';
     DeviceService,
     ToastService,
     CropService,
+    DataService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

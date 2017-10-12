@@ -25,27 +25,27 @@
         Tree type: {{crop.treetype}}
       </p>
       <p id="device-heading9">
-        Start date: {{crop.startdate | date: 'dd/MM/yyyy'}}
+        Start date: {{crop.startdate | date: 'dd/MM/yyyy hh:mm:ss'}}
       </p>
       <p id="device-heading11">
-        Close date: {{crop.closedate | date: 'dd/MM/yyyy'}}
+        Close date: {{crop.closedate | date: 'dd/MM/yyyy hh:mm:ss'}}
       </p>
 
       <p id="device-heading13">
-        Latest data:
+        Latest data: <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
       </p>
-      <ion-grid id="info-table">
+      <ion-grid *ngIf="data" id="info-table">
         <ion-row>
           <ion-col>
             <div>
               <p>Temp</p>
-              <p>21 °C</p>
+              <p>{{data.temperature}} °C</p>
             </div>
           </ion-col>
           <ion-col>
             <div>
               <p>Humidity</p>
-              <p>50 %</p>
+              <p>{{data.humidity}} %</p>
             </div>
           </ion-col>
         </ion-row>
@@ -53,13 +53,13 @@
           <ion-col>
             <div>
               <p>ppm</p>
-              <p>400</p>
+              <p>{{data.ppm}}</p>
             </div>
           </ion-col>
           <ion-col>
             <div>
               <p>pH</p>
-              <p>7</p>
+              <p>{{data.ph}}</p>
             </div>
           </ion-col>
         </ion-row>

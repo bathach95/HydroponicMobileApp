@@ -8,5 +8,8 @@ export class DataService {
 
     }
 
-    
+    public getNewestDataByCropId(cropId: any): Observable<any>{
+        let params = new HttpParams().set('cropId', cropId);
+        return this.http.get('http://13.58.114.56:3210/data/newest', {params: params});
+    }
 }
