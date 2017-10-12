@@ -6,10 +6,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
-  <h1 id="login-heading2" style="color:#13690F;text-align:center;">
-    Hydroponic
-  </h1>
-  <div class="spacer" style="width:300px;height:50px;" id="login-spacer1"></div>
+  <div id="login-heading2">
+    BK Hydroponic
+  </div>
+  <div class="spacer" id="login-spacer1"></div>
   <form id="login-form5" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
     <ion-item id="login-input4">
       <ion-label></ion-label>
@@ -24,8 +24,8 @@
       <ion-label></ion-label>
       <ion-input required type="password" name="password" placeholder="Password" #password="ngModel" ngModel></ion-input>
     </ion-item>
-    <div class="spacer" style="width:300px;height:30px;" id="login-spacer2"></div>
-    <button round type="submit" id="login-button2" ion-button color="secondary" block style="font-size:-1px;" class="btn">
+    <div class="spacer" id="login-spacer2"></div>
+    <button round type="submit" id="login-button2" ion-button color="secondary" block class="btn">
         Login
     </button>    
 

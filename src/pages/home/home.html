@@ -12,36 +12,35 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding id="page3">
-    <h2 id="home-heading3" style="color:#000000;text-align:center;">
+    <div id="home-heading3">
         Your devices
-    </h2>
-    <div class="spacer" style="width:300px;height:28px;" id="home-spacer2"></div>
+    </div>
 
-    <ion-list>
-        <div *ngFor="let device of deviceList" (click)="detail(device.mac)">
-            <div class="devider" style="margin: auto;width:400px;height:10px"></div>
+    <ion-list *ngIf="deviceList">
+        <div *ngFor="let device of deviceList" (click)="detail(device.mac, device.name)" style="margin-left: 10px">
+            <div id="devider1" class="devider"></div>
             <ion-grid>
 
                 <ion-row>
-                    <h3 id="home-heading4" style="color:#13690F;font-weight:400;">
+                    <div id="home-heading4">
                         {{device.name}}
-                    </h3>
+                    </div>
                 </ion-row>
 
                 <ion-row>
-                    <h4 id="home-heading5" style="color:#000000;font-weight:300;">
+                    <div id="home-heading5">
                         Installation date: {{device.createdAt | date: 'dd/MM/yyyy'}}
-                    </h4>
+                    </div>
                 </ion-row>
 
                 <ion-row>
-                    <h4 id="home-heading5" style="color:#000000;font-weight:300;">
+                    <div id="home-heading5">
                         Status: {{device.status}}
-                    </h4>
+                    </div>
                 </ion-row>
 
             </ion-grid>
-        <div class="devider" style="margin: auto;width:350px;height:1px;background-color:black"></div>
+        <div id="devider2" class="devider"></div>
         </div>
     </ion-list>
 

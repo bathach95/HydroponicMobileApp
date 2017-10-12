@@ -20,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { AuthService } from '../services/auth.service';
 import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
+import { CropService } from '../services/crop.service';
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { ToastService } from '../services/toast.service';
     AuthService,
     DeviceService,
     ToastService,
+    CropService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

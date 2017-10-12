@@ -10,12 +10,12 @@ export class DeviceService {
     }
 
     public getAllDevice(): Observable<any>{
-        return this.http.get('http://192.168.10.230:3210/device/all');
+        return this.http.get('http://13.58.114.56:3210/device/all');
     }
 
     public getDeviceByMac(mac: any): Observable<any>{
         let params = new HttpParams().set('mac', mac);
-        return this.http.get('http://192.168.10.230:3210/device/one', {params: params});
+        return this.http.get('http://13.58.114.56:3210/device/one', {params: params});
     }
 
 }

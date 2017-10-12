@@ -8,7 +8,8 @@ export class CropService {
 
     }
 
-    public getCropByDeviceMac(mac: any){
-
+    public getNewestCropByDeviceMac(mac: any): Observable<any>{
+        let params = new HttpParams().set('mac', mac);
+        return this.http.get('http://13.58.114.56:3210/crop/newest', {params: params})
     }
 }

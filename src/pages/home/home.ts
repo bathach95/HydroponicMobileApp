@@ -37,9 +37,10 @@ export class HomePage implements OnInit {
         this.toastService.showToast('Logout success!');
     }
 
-    public detail(deviceMac: any){
+    public detail(deviceMac: any, deviceName: any){
         this.navCtrl.push(DevicePage, {
-            deviceMac: deviceMac
+            deviceMac: deviceMac,
+            deviceName: deviceName
         });
     }
 }

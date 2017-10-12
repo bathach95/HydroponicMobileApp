@@ -1,15 +1,76 @@
 <ion-header>
-    <ion-navbar>
-        <ion-title>
-            Device
-        </ion-title>
-    </ion-navbar>
+  <ion-navbar>
+    <ion-title>
+      Device
+    </ion-title>
+  </ion-navbar>
 </ion-header>
-<ion-content padding id="page3">
-    <h2 id="home-heading3" style="color:#000000;text-align:center;">
-        {{mac}}
-    </h2>
-    <div class="spacer" style="width:300px;height:28px;" id="home-spacer2"></div>
+<ion-content padding id="page4">
+  <div id="device-heading7">
+    {{name}}
+  </div>
+  <div id="device-heading8">
+    MAC: {{mac}}
+  </div>
+  <div *ngIf="crop">
+    <div id="device-heading10">
+      Running crop: {{crop.name}}
+    </div>
+    <div id="device-container3">
+      <p id="device-heading12">
+        Crop type: {{crop.type}}
+      </p>
 
+      <p id="device-heading14">
+        Tree type: {{crop.treetype}}
+      </p>
+      <p id="device-heading9">
+        Start date: {{crop.startdate | date: 'dd/MM/yyyy'}}
+      </p>
+      <p id="device-heading11">
+        Close date: {{crop.closedate | date: 'dd/MM/yyyy'}}
+      </p>
 
+      <p id="device-heading13">
+        Latest data:
+      </p>
+      <ion-grid id="info-table">
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>Temp</p>
+              <p>21 °C</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <p>Humidity</p>
+              <p>50 %</p>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div>
+              <p>ppm</p>
+              <p>400</p>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <p>pH</p>
+              <p>7</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button *ngIf="!crop.status" (click)="startDevice()" round id="btn-control-start" ion-button block>
+        Start this device
+      </button>
+
+      <button *ngIf="crop.status" (click)="stopDevice()" round id="btn-control-stop" ion-button block>
+        Stop this device
+      </button>
+    </div>
+  </div>
 </ion-content>

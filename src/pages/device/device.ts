@@ -1,24 +1,33 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DeviceService } from '../../services/device.service';
+import { CropService } from '../../services/crop.service';
+import { ToastService } from '../../services/toast.service';
 
 @Component({
     selector: 'page-device',
     templateUrl: 'device.html'
 })
 export class DevicePage implements OnInit {
-    private mac: any;
+    public mac: any;
+    public name: any;
+    public crop: any;
+    public data: any;
 
     constructor(private navCtrl: NavController, private navParams: NavParams,
-                private deviceService: DeviceService) {
+                private cropService: CropService, private toastService: ToastService) {
     }
 
-    public ngOnInit(){
-        this.mac = this.navParams.get('deviceMac');        
-        this.deviceService.getDeviceByMac(this.mac).subscribe((res: any) => {
-            console.log(res)
+    public ngOnInit() {
+        this.mac = this.navParams.get('deviceMac');
+        this.name = this.navParams.get('deviceName');
+        this.cropService.getNewestCropByDeviceMac(this.mac).subscribe((res: any) => {
+            if (res.success){
+                this.crop = res.data;
+            } else {
+                this.toastService.showToast("No running crop");
+            }
         }, (err) => {
-            console.log(err);
+            console.log(err)
         })
     }
 }

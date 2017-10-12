@@ -25523,3 +25523,91 @@ ion-grid {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
+#device-heading7 {
+  color: #13690F;
+  text-align: center;
+  font-size: 2em;
+}
+
+#device-heading8, #device-heading10 {
+  font-size: 1.6em;
+}
+
+#device-container3 {
+  font-size: 1.4em;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+#info-table {
+  text-align: center;
+  font-weight: 500;
+  color: #007acc;
+}
+
+#btn-control-start {
+  background-color: #007acc;
+}
+
+.danger-info {
+  color: #e62e00;
+}
+
+#btn-control-stop {
+  background-color: #e62e00;
+}
+
+#home-heading3 {
+  color: #13690F;
+  text-align: center;
+  font-size: 2em;
+}
+
+.devider {
+  margin: auto;
+}
+
+#devider1 {
+  width: 400px;
+  height: 10px;
+}
+
+#devider2 {
+  width: 350px;
+  height: 1px;
+  background-color: black;
+}
+
+#home-heading5 {
+  color: #000000;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+#home-heading4 {
+  color: #13690F;
+  font-weight: 350;
+  font-size: 1.7em;
+}
+
+#login-heading2 {
+  color: #13690F;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 450;
+}
+
+#login-spacer1 {
+  width: 300px;
+  height: 50px;
+}
+
+#login-spacer2 {
+  width: 300px;
+  height: 30px;
+}
+
+#login-button2 {
+  font-size: 1em;
+}
