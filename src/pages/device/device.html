@@ -37,13 +37,13 @@
       <ion-grid *ngIf="data" id="info-table">
         <ion-row>
           <ion-col>
-            <div>
-              <p>Temp</p>
+            <div [class.danger-info]="dataStatus.badStatus.temp">
+              <p>Temperature</p>
               <p>{{data.temperature}} °C</p>
             </div>
           </ion-col>
           <ion-col>
-            <div>
+            <div [class.danger-info]="dataStatus.badStatus.humidity">
               <p>Humidity</p>
               <p>{{data.humidity}} %</p>
             </div>
@@ -51,13 +51,13 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <div>
+            <div [class.danger-info]="dataStatus.badStatus.ppm">
               <p>ppm</p>
               <p>{{data.ppm}}</p>
             </div>
           </ion-col>
           <ion-col>
-            <div>
+            <div [class.danger-info]="dataStatus.badStatus.ph">
               <p>pH</p>
               <p>{{data.ph}}</p>
             </div>

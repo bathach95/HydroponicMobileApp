@@ -22,7 +22,7 @@ import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
 import { CropService } from '../services/crop.service';
 import { DataService } from '../services/data.service';
-
+import { ThresholdService } from '../services/threshold.service';
 
 @NgModule({
   declarations: [
@@ -60,6 +60,7 @@ import { DataService } from '../services/data.service';
     ToastService,
     CropService,
     DataService,
+    ThresholdService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

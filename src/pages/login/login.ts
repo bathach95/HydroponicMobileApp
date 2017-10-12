@@ -34,8 +34,8 @@ export class LoginPage implements OnInit {
         } else {
           alert(res.message);
         }
-      }, (err) => {
-        console.log(err)
+      }, (err:any) => {
+        console.log(err);
       })
     } else {
       alert('You have to enter email and password')

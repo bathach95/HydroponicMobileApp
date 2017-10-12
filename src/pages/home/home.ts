@@ -26,7 +26,7 @@ export class HomePage implements OnInit {
             } else {    
                 this.toastService.showToast(res.message);
             }
-        }, (err) => {
+        }, (err: any) => {
             console.log('get all device err: ' + err)
         })
     }
