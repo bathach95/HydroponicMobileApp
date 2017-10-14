@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "786918861869",
+    "firebase_url": "https://bkhydroponic.firebaseio.com",
+    "project_id": "bkhydroponic",
+    "storage_bucket": "bkhydroponic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786918861869:android:764d2cb7da3280eb",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786918861869-2v2nmjmjvhv6ig4hqvkdftdchrs5ph6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsms-5yM0HC6qZbxffdfwz55YFrUrzFL8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

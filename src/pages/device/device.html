@@ -17,49 +17,64 @@
       Running crop: {{crop.name}}
     </div>
     <div id="device-container3">
-      <p id="device-heading12">
+      <span id="device-heading12">
         Crop type: {{crop.type}}
-      </p>
-
-      <p id="device-heading14">
+      </span>
+      <br>
+      <span id="device-heading14">
         Tree type: {{crop.treetype}}
-      </p>
-      <p id="device-heading9">
+      </span>
+      <br>
+      <span id="device-heading9">
         Start date: {{crop.startdate | date: 'dd/MM/yyyy hh:mm:ss'}}
-      </p>
-      <p id="device-heading11">
+      </span>
+      <br>
+      <span id="device-heading11">
         Close date: {{crop.closedate | date: 'dd/MM/yyyy hh:mm:ss'}}
-      </p>
-
-      <p id="device-heading13">
-        Latest data: <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
-      </p>
+      </span>
+      <br>
+      <span id="device-heading13">
+        Latest data:
+        <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
+      </span>
       <ion-grid *ngIf="data" id="info-table">
         <ion-row>
           <ion-col>
             <div [class.danger-info]="dataStatus.badStatus.temp">
-              <p>Temperature</p>
-              <p>{{data.temperature}} °C</p>
+              <span>Temperature</span>
+              <br>
+              <span class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
+              <br>
+              <span>{{data.temperature}} °C</span>
             </div>
           </ion-col>
           <ion-col>
             <div [class.danger-info]="dataStatus.badStatus.humidity">
-              <p>Humidity</p>
-              <p>{{data.humidity}} %</p>
+              <span>Humidity</span>
+              <br>
+              <span class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
+              <br>
+              <span>{{data.humidity}} %</span>
             </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
             <div [class.danger-info]="dataStatus.badStatus.ppm">
-              <p>ppm</p>
-              <p>{{data.ppm}}</p>
+              <span>ppm</span>
+              <br>
+              <span class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
+              <br>
+              <span>{{data.ppm}}</span>
             </div>
           </ion-col>
           <ion-col>
             <div [class.danger-info]="dataStatus.badStatus.ph">
-              <p>pH</p>
-              <p>{{data.ph}}</p>
+              <span>pH</span>
+              <br>
+              <span class="threshold">({{threshold.phLower}} - {{threshold.phUpper}})</span>
+              <br>
+              <span>{{data.ph}}</span>
             </div>
           </ion-col>
         </ion-row>

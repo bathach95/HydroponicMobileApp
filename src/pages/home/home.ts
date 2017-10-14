@@ -16,14 +16,15 @@ export class HomePage implements OnInit {
 
     constructor(private navCtrl: NavController, private deviceService: DeviceService,
         private authService: AuthService, private toastService: ToastService) {
+            
 
     }
 
     public ngOnInit() {
         this.deviceService.getAllDevice().subscribe((res: any) => {
-            if (res.success){
+            if (res.success) {
                 this.deviceList = res.data;
-            } else {    
+            } else {
                 this.toastService.showToast(res.message);
             }
         }, (err: any) => {
@@ -37,7 +38,7 @@ export class HomePage implements OnInit {
         this.toastService.showToast('Logout success!');
     }
 
-    public detail(deviceMac: any, deviceName: any){
+    public detail(deviceMac: any, deviceName: any) {
         this.navCtrl.push(DevicePage, {
             deviceMac: deviceMac,
             deviceName: deviceName
