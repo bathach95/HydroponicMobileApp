@@ -323,6 +323,14 @@ var HomePage = /** @class */ (function () {
         this.deviceService.getAllDevice().subscribe(function (res) {
             if (res.success) {
                 _this.deviceList = res.data;
+                _this.deviceList.forEach(function (device) {
+                    var topic = '/topics/' + device.mac.replace(/[:]/g, '');
+                    FCMPlugin.subscribeToTopic(topic, function () {
+                        console.log('subscribe success to ' + device.mac);
+                    }, function (err) {
+                        console.log(err);
+                    });
+                });
             }
             else {
                 _this.toastService.showToast(res.message);
@@ -829,9 +837,6 @@ var MyApp = /** @class */ (function () {
             // Here you can do any higher level native things you might need.
             statusBar.styleDefault();
             splashScreen.hide();
-            FCMPlugin.subscribeToTopic('/topics/test', function () {
-                console.log('success');
-            });
         });
     }
     MyApp = __decorate([

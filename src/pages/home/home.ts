@@ -6,6 +6,8 @@ import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
 import { DevicePage } from '../device/device';
 
+declare const FCMPlugin: any;
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -16,7 +18,6 @@ export class HomePage implements OnInit {
 
     constructor(private navCtrl: NavController, private deviceService: DeviceService,
         private authService: AuthService, private toastService: ToastService) {
-            
 
     }
 
@@ -24,12 +25,23 @@ export class HomePage implements OnInit {
         this.deviceService.getAllDevice().subscribe((res: any) => {
             if (res.success) {
                 this.deviceList = res.data;
+
+                this.deviceList.forEach((device) => {
+                    let topic = '/topics/' + device.mac.replace(/[:]/g, '');
+                    FCMPlugin.subscribeToTopic(topic, () => {
+                        console.log('subscribe success to ' + device.mac)
+                    },(err) => {
+                        console.log(err);
+                    });
+                })
+                
             } else {
                 this.toastService.showToast(res.message);
             }
         }, (err: any) => {
             console.log('get all device err: ' + err)
         })
+
     }
 
     public logout() {
