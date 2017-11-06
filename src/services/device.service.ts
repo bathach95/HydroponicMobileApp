@@ -18,4 +18,10 @@ export class DeviceService {
         return this.http.get('http://13.58.114.56:3210/device/one', {params: params});
     }
 
+    public updateStatus(mac: any, status: any): Observable<any>{
+        let params = new HttpParams().set('mac', mac).append('status', status);
+        return this.http.put('http://13.58.114.56:3210/device/status', {params: params});
+    }
+
+
 }

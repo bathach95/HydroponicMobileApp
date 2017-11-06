@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CropService } from '../../services/crop.service';
 import { DataService } from '../../services/data.service';
+import { DeviceService } from '../../services/device.service';
 import { ThresholdService } from '../../services/threshold.service';
 import { ToastService } from '../../services/toast.service';
 import { Paho } from 'ng2-mqtt/mqttws31';
-import { BackgroundMode } from '@ionic-native/background-mode';
-import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @Component({
     selector: 'page-device',
@@ -25,7 +24,7 @@ export class DevicePage implements OnInit {
     constructor(private navCtrl: NavController, private navParams: NavParams,
         private cropService: CropService, private toastService: ToastService,
         private dataService: DataService, private thresholdService: ThresholdService,
-        private backgroundMode: BackgroundMode, private localNotifications: LocalNotifications) {
+        private deviceService: DeviceService) {
 
         this.client = new Paho.MQTT.Client('13.58.114.56', Number(1884), '', "client_" + Math.floor(Math.random() * 1000000000));
 
@@ -47,12 +46,12 @@ export class DevicePage implements OnInit {
         console.log('Connected to broker.');
     }
 
-    private parseIncomeData(data: string, cmdId: string, dataLength: string): any{
-        if (data.length === 33){
+    private parseIncomeData(data: string, cmdId: string, dataLength: string): any {
+        if (data.length === 33) {
             let dataMac = data.substr(0, 17);
             let dataCmdId = data.substr(17, 2);
             let dataDataLength = data.substr(19, 4);
-            if (dataMac === this.mac && dataCmdId === cmdId && dataDataLength === dataLength){
+            if (dataMac === this.mac && dataCmdId === cmdId && dataDataLength === dataLength) {
                 let result = data.substr(23, 10);
                 return {
                     temp: Number(result.substr(0, 2)),
@@ -61,7 +60,7 @@ export class DevicePage implements OnInit {
                     ppm: Number(result.substr(6, 4))
                 }
             }
-        } 
+        }
         return null;
     }
 
@@ -94,25 +93,19 @@ export class DevicePage implements OnInit {
         })
     }
 
-    private sendMessage(message: string, destination: string) {
-        let packet = new Paho.MQTT.Message(message);
-        packet.destinationName = destination;
-        this.client.send(packet);
-    }
-
-    private buildMessage(mac: string, cmdId: string, dataLength: string, data: string){
-        return (mac + cmdId + dataLength + data);
-    }
-
     public startDevice() {
-        let topic = 'device/' + this.mac + '/esp';
-        let controlStartMsg = this.buildMessage(this.mac, '03', '0003', '001') ;
-        this.sendMessage(controlStartMsg, topic);
+
+        this.deviceService.updateStatus(this.mac, 'running').subscribe((res: any) => {
+            this.toastService.showToast(res.message);
+            console.log(res.success);
+        })
     }
 
     public stopDevice() {
-        let topic = 'device/' + this.mac + '/esp';
-        let controlStopMsg = this.buildMessage(this.mac, '03', '0003', '000') ;
-        this.sendMessage(controlStopMsg, topic);
+
+        this.deviceService.updateStatus(this.mac, 'stop').subscribe((res: any) => {
+            this.toastService.showToast(res.message);
+            console.log(res.success);
+        })
     }
 }
