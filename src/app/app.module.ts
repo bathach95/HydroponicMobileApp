@@ -13,6 +13,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { DevicePage } from '../pages/device/device';
+import { SchedulePage } from '../pages/schedule/schedule';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -25,6 +26,7 @@ import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
 import { CropService } from '../services/crop.service';
 import { DataService } from '../services/data.service';
+import { ScheduleService } from '../services/schedule.service';
 import { ThresholdService } from '../services/threshold.service';
 
 @NgModule({
@@ -67,6 +69,7 @@ import { ThresholdService } from '../services/threshold.service';
     CropService,
     DataService,
     ThresholdService,
+    ScheduleService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
