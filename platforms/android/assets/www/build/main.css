@@ -25524,6 +25524,10 @@ ion-grid {
   justify-content: center;
 }
 
+.table-header {
+  font-size: 1.6em;
+}
+
 #device-heading7 {
   color: #13690F;
   text-align: center;

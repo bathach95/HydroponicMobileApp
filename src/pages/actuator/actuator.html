@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Actuator List
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+    <div>
+        <ion-grid id="info-table">
+            <div class="table-header">
+                <ion-row>
+                    <ion-col>
+                        <span>Type</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Name</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Priority</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Status</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div *ngIf="data" class="table-content">
+                <ion-row *ngFor="let actuator of data">
+                    <ion-col>
+                        {{actuator.type}}
+                    </ion-col>
+                    <ion-col>
+                        {{actuator.name}}
+                    </ion-col>
+                    <ion-col>
+                        {{actuator.priority}}
+                    </ion-col>
+                    <ion-col [style.color]="actuator.status === 'off' ? 'red' : 'green'">
+                        {{actuator.status}}
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+</ion-content>

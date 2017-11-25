@@ -11,7 +11,7 @@ export class AuthService {
     }
 
     public login(user: any): Observable<any> {
-        return this.http.post('http://13.58.114.56:3210/user/login', user);
+        return this.http.post('http://192.168.10.238:3210/user/login', user);
     }
 
     public logout() {

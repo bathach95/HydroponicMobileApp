@@ -13,6 +13,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { DevicePage } from '../pages/device/device';
+import { ActuatorPage } from '../pages/actuator/actuator';
 import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -26,6 +27,7 @@ import { ToastService } from '../services/toast.service';
 import { CropService } from '../services/crop.service';
 import { DataService } from '../services/data.service';
 import { ThresholdService } from '../services/threshold.service';
+import { ActuatorService } from '../services/actuator.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { ThresholdService } from '../services/threshold.service';
     LoginPage,
     HomePage,
     DevicePage,
+    ActuatorPage,
     TabsPage
   ],
   imports: [
@@ -53,6 +56,7 @@ import { ThresholdService } from '../services/threshold.service';
     LoginPage,
     HomePage,
     DevicePage,
+    ActuatorPage,
     TabsPage
   ],
   providers: [
@@ -64,6 +68,7 @@ import { ThresholdService } from '../services/threshold.service';
     AuthService,
     DeviceService,
     ToastService,
+    ActuatorService,
     CropService,
     DataService,
     ThresholdService,

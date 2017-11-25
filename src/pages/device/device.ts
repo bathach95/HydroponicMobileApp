@@ -5,6 +5,7 @@ import { DataService } from '../../services/data.service';
 import { DeviceService } from '../../services/device.service';
 import { ThresholdService } from '../../services/threshold.service';
 import { ToastService } from '../../services/toast.service';
+import { ActuatorPage } from '../actuator/actuator';
 import { Paho } from 'ng2-mqtt/mqttws31';
 
 @Component({
@@ -107,5 +108,11 @@ export class DevicePage implements OnInit {
             this.toastService.showToast(res.message);
             console.log(res.success);
         })
+    }
+
+    public goToActuatorPage(){
+        this.navCtrl.push(ActuatorPage, {
+            deviceMac: this.mac
+        });
     }
 }
