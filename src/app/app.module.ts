@@ -26,6 +26,7 @@ import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
 import { CropService } from '../services/crop.service';
 import { DataService } from '../services/data.service';
+import { ScheduleService } from '../services/schedule.service';
 import { ThresholdService } from '../services/threshold.service';
 import { ActuatorService } from '../services/actuator.service';
 
@@ -72,6 +73,7 @@ import { ActuatorService } from '../services/actuator.service';
     CropService,
     DataService,
     ThresholdService,
+    ScheduleService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
