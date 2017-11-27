@@ -25526,6 +25526,12 @@ ion-grid {
 
 .table-header {
   font-size: 1.6em;
+  color: black;
+}
+
+.table-content {
+  font-size: 1.4em;
+  font-weight: 300;
 }
 
 #device-heading7 {
@@ -25598,6 +25604,11 @@ ion-grid {
   color: #13690F;
   font-weight: 350;
   font-size: 1.7em;
+}
+
+.transparent-body {
+  background: none transparent !important;
+  opacity: 0 !important;
 }
 
 #login-heading2 {

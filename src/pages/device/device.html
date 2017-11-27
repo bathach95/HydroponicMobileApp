@@ -77,17 +77,19 @@
         </ion-row>
       </ion-grid>
 
-      <button *ngIf="!crop.status" (click)="startDevice()" round id="btn-control-start" ion-button block>
+      <button *ngIf="crop.status !== 'running'" (click)="startDevice()" round id="btn-control-start" ion-button block>
         Start this device
       </button>
 
-      <button *ngIf="crop.status" (click)="stopDevice()" round id="btn-control-stop" ion-button block>
+      <button *ngIf="crop.status === 'running'" (click)="stopDevice()" round id="btn-control-stop" ion-button block>
         Stop this device
+      </button>
+
+      <button (click)="goToActuatorPage()" round ion-button block>
+        Actuator list
       </button>
     </div>
   </div>
 
-  <button (click)="goToActuatorPage()" round ion-button block>
-      Actuator list
-    </button>
+
 </ion-content>

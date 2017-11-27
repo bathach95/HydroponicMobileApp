@@ -25606,6 +25606,11 @@ ion-grid {
   font-size: 1.7em;
 }
 
+.transparent-body {
+  background: none transparent !important;
+  opacity: 0 !important;
+}
+
 #login-heading2 {
   color: #13690F;
   text-align: center;

@@ -90,6 +90,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "phonegap-plugin-push/starter-push.gradle"
 apply from: "cordova-plugin-fcm/starter-FCMPlugin.gradle"
+apply from: "cordova-plugin-qrscanner/starter-qrscanner.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

@@ -33,10 +33,16 @@
     },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
     "cordova-plugin-app-event": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-compat": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }

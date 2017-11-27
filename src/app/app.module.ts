@@ -21,6 +21,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BackgroundMode } from '@ionic-native/background-mode'
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
+import { QRScanner } from '@ionic-native/qr-scanner'
 import { AuthService } from '../services/auth.service';
 import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
@@ -66,6 +67,7 @@ import { ActuatorService } from '../services/actuator.service';
     BackgroundMode,
     LocalNotifications,
     Push,
+    QRScanner,
     AuthService,
     DeviceService,
     ToastService,

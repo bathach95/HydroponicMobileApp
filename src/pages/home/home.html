@@ -6,12 +6,17 @@
 
         <ion-buttons end>
             <button color="danger" ion-button (click)="logout()">
-              Logout
+                Logout
             </button>
         </ion-buttons>
     </ion-navbar>
 </ion-header>
 <ion-content padding id="page3">
+    <div>
+        <button (click)="goToAddDevicePage()" round type="submit" id="login-button2" ion-button block class="btn">
+            Scan QR Code To Add New Device
+        </button>
+    </div>
     <div id="home-heading3">
         Your devices
     </div>
@@ -40,7 +45,7 @@
                 </ion-row>
 
             </ion-grid>
-        <div id="devider2" class="devider"></div>
+            <div id="devider2" class="devider"></div>
         </div>
     </ion-list>
 

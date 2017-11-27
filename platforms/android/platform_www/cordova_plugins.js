@@ -84,6 +84,14 @@ module.exports = [
         "clobbers": [
             "FCMPlugin"
         ]
+    },
+    {
+        "id": "cordova-plugin-qrscanner.QRScanner",
+        "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
+        "pluginId": "cordova-plugin-qrscanner",
+        "clobbers": [
+            "QRScanner"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -98,7 +106,9 @@ module.exports.metadata =
     "cordova-plugin-app-event": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "phonegap-plugin-push": "2.0.0",
-    "cordova-plugin-fcm": "2.1.2"
+    "cordova-plugin-fcm": "2.1.2",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-qrscanner": "2.5.0"
 };
 // BOTTOM OF METADATA
 });

@@ -51,6 +51,10 @@
             {
               "xml": "<feature name=\"FCMPlugin\"><param name=\"android-package\" value=\"com.gae.scaffolder.plugin.FCMPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"QRScanner\"><param name=\"android-package\" value=\"com.bitpay.cordova.qrscanner.QRScanner\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -148,6 +152,20 @@
               "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
               "count": 1
             }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CAMERA\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera.front\" android:required=\"false\" />",
+              "count": 1
+            }
           ]
         }
       }
@@ -182,6 +200,12 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-qrscanner": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -271,6 +295,14 @@
       "clobbers": [
         "FCMPlugin"
       ]
+    },
+    {
+      "id": "cordova-plugin-qrscanner.QRScanner",
+      "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
+      "pluginId": "cordova-plugin-qrscanner",
+      "clobbers": [
+        "QRScanner"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -283,6 +315,8 @@
     "cordova-plugin-app-event": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "phonegap-plugin-push": "2.0.0",
-    "cordova-plugin-fcm": "2.1.2"
+    "cordova-plugin-fcm": "2.1.2",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-qrscanner": "2.5.0"
   }
 }
