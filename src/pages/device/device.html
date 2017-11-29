@@ -6,6 +6,10 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
   <div id="device-heading7">
     {{name}}
   </div>

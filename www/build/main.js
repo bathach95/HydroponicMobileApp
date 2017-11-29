@@ -6,10 +6,10 @@ webpackJsonp([0],{
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toast_service__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_toast_service__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,10 +110,9 @@ var DeviceService = /** @class */ (function () {
     };
     DeviceService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["b" /* HttpClient */]])
     ], DeviceService);
     return DeviceService;
-    var _a;
 }());
 
 //# sourceMappingURL=device.service.js.map
@@ -127,7 +126,7 @@ var DeviceService = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -255,7 +254,7 @@ var TabsPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AboutPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -302,7 +301,7 @@ var AboutPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -340,13 +339,13 @@ var ContactPage = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_device_service__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toast_service__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_device__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_qr_scanner__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_toast_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__device_device__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_qr_scanner__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -374,7 +373,6 @@ var HomePage = /** @class */ (function () {
     }
     HomePage.prototype.ngOnInit = function () {
         var _this = this;
-        console.log("init homepage");
         this.deviceService.getAllDevice().subscribe(function (res) {
             if (res.success) {
                 _this.deviceList = res.data;
@@ -394,7 +392,29 @@ var HomePage = /** @class */ (function () {
             console.log('get all device err: ' + err);
         });
     };
-    HomePage.prototype.goToAddDevicePage = function () {
+    HomePage.prototype.doRefresh = function (refresher) {
+        var _this = this;
+        this.deviceService.getAllDevice().subscribe(function (res) {
+            if (res.success) {
+                _this.deviceList = res.data;
+                _this.deviceList.forEach(function (device) {
+                    var topic = '/topics/' + device.mac.replace(/[:]/g, '');
+                    FCMPlugin.subscribeToTopic(topic, function () {
+                        console.log('subscribe success to ' + device.mac);
+                    }, function (err) {
+                        console.log(err);
+                    });
+                });
+            }
+            else {
+                _this.toastService.showToast(res.message);
+            }
+            refresher.complete();
+        }, function (err) {
+            console.log('get all device err: ' + err);
+        });
+    };
+    HomePage.prototype.scan = function () {
         var _this = this;
         // Optionally request the permission early
         this.qrScanner.prepare()
@@ -443,7 +463,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Home\n        </ion-title>\n\n        <ion-buttons end>\n            <button color="danger" ion-button (click)="logout()">\n                Logout\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n    <div>\n        <button (click)="goToAddDevicePage()" round type="submit" id="login-button2" ion-button block class="btn">\n            Scan QR Code To Add New Device\n        </button>\n    </div>\n    <div id="home-heading3">\n        Your devices\n    </div>\n\n    <ion-list *ngIf="deviceList">\n        <div *ngFor="let device of deviceList" (click)="detail(device.mac, device.name)" style="margin-left: 10px">\n            <div id="devider1" class="devider"></div>\n            <ion-grid>\n\n                <ion-row>\n                    <div id="home-heading4">\n                        {{device.name}}\n                    </div>\n                </ion-row>\n\n                <ion-row>\n                    <div id="home-heading5">\n                        Installation date: {{device.createdAt | date: \'dd/MM/yyyy\'}}\n                    </div>\n                </ion-row>\n\n                <ion-row>\n                    <div id="home-heading5">\n                        Status: {{device.status}}\n                    </div>\n                </ion-row>\n\n            </ion-grid>\n            <div id="devider2" class="devider"></div>\n        </div>\n    </ion-list>\n\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/home/home.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Home\n        </ion-title>\n\n        <ion-buttons end>\n            <button color="danger" ion-button (click)="logout()">\n                Logout\n            </button>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<ion-content padding id="page3">\n    <div>\n        <button (click)="scan()" round type="submit" id="login-button2" ion-button block class="btn">\n            Scan QR Code To Add New Device\n        </button>\n    </div>\n    <div id="home-heading3">\n        Your devices\n    </div>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n        </ion-refresher-content>\n    </ion-refresher>\n    <ion-list>\n        <div *ngFor="let device of deviceList" (click)="detail(device.mac, device.name)" style="margin-left: 10px">\n            <div id="devider1" class="devider"></div>\n            <ion-grid>\n\n                <ion-row>\n                    <div id="home-heading4">\n                        {{device.name}}\n                    </div>\n                </ion-row>\n\n                <ion-row>\n                    <div id="home-heading5">\n                        Installation date: {{device.createdAt | date: \'dd/MM/yyyy\'}}\n                    </div>\n                </ion-row>\n\n                <ion-row>\n                    <div id="home-heading5">\n                        Status: {{device.status}}\n                    </div>\n                </ion-row>\n\n            </ion-grid>\n            <div id="devider2" class="devider"></div>\n        </div>\n    </ion-list>\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__services_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_device_service__["a" /* DeviceService */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__services_toast_service__["a" /* ToastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_toast_service__["a" /* ToastService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_qr_scanner__["a" /* QRScanner */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_qr_scanner__["a" /* QRScanner */]) === "function" && _e || Object])
     ], HomePage);
@@ -455,21 +475,19 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DevicePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_crop_service__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_data_service__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_crop_service__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_data_service__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_device_service__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_threshold_service__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_toast_service__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__actuator_actuator__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_mqtt_mqttws31__ = __webpack_require__(287);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_mqtt_mqttws31___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_ng2_mqtt_mqttws31__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_threshold_service__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_toast_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__actuator_actuator__ = __webpack_require__(209);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -487,7 +505,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var DevicePage = /** @class */ (function () {
     function DevicePage(navCtrl, navParams, cropService, toastService, dataService, thresholdService, deviceService) {
         this.navCtrl = navCtrl;
@@ -497,17 +514,41 @@ var DevicePage = /** @class */ (function () {
         this.dataService = dataService;
         this.thresholdService = thresholdService;
         this.deviceService = deviceService;
-        this.client = new __WEBPACK_IMPORTED_MODULE_8_ng2_mqtt_mqttws31__["Paho"].MQTT.Client('13.58.114.56', Number(1884), '', "client_" + Math.floor(Math.random() * 1000000000));
-        this.client.onConnectionLost = function (responseObject) {
-            console.log('Connection lost.');
-        };
-        this.client.onMessageArrived = function (message) {
-            console.log('Message arrived.');
-        };
-        this.client.connect({ onSuccess: this.onConnected.bind(this) });
     }
-    DevicePage.prototype.onConnected = function () {
-        console.log('Connected to broker.');
+    DevicePage.prototype.doRefresh = function (refresher) {
+        var _this = this;
+        this.cropService.getNewestCropByDeviceMac(this.mac).subscribe(function (res1) {
+            if (res1.success) {
+                _this.crop = res1.data;
+                _this.dataService.getNewestDataByCropId(_this.crop.id).subscribe(function (res2) {
+                    if (res2.success) {
+                        _this.thresholdService.getThreshold(_this.crop.id).subscribe(function (threshold) {
+                            if (threshold.success) {
+                                _this.data = res2.data;
+                                _this.threshold = threshold.data;
+                                _this.dataStatus = _this.dataService.getDataStatus(_this.data, threshold.data);
+                            }
+                            else {
+                                _this.toastService.showToast("You have to enter threshold to view data!");
+                            }
+                        }, function (err) {
+                            console.log(err);
+                        });
+                    }
+                    else {
+                        _this.toastService.showToast(res2.message);
+                    }
+                    refresher.complete();
+                }, function (err) {
+                    console.log(err);
+                });
+            }
+            else {
+                _this.toastService.showToast("No running crop");
+            }
+        }, function (err) {
+            console.log(err);
+        });
     };
     DevicePage.prototype.ngOnInit = function () {
         var _this = this;
@@ -546,14 +587,12 @@ var DevicePage = /** @class */ (function () {
         var _this = this;
         this.deviceService.updateStatus(this.mac, 'running').subscribe(function (res) {
             _this.toastService.showToast(res.message);
-            console.log(res.success);
         });
     };
     DevicePage.prototype.stopDevice = function () {
         var _this = this;
         this.deviceService.updateStatus(this.mac, 'stop').subscribe(function (res) {
             _this.toastService.showToast(res.message);
-            console.log(res.success);
         });
     };
     DevicePage.prototype.goToActuatorPage = function () {
@@ -563,21 +602,19 @@ var DevicePage = /** @class */ (function () {
     };
     DevicePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-device',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/device/device.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Device\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4">\n  <div id="device-heading7">\n    {{name}}\n  </div>\n  <div *ngIf="crop">\n    <div id="device-heading10">\n      Running crop: {{crop.name}}\n    </div>\n    <div id="device-container3">\n      <span id="device-heading12">\n        Crop type: {{crop.type}}\n      </span>\n      <br>\n      <span id="device-heading14">\n        Tree type: {{crop.treetype}}\n      </span>\n      <br>\n      <span id="device-heading9">\n        Start date: {{crop.startdate | date: \'dd/MM/yyyy hh:mm:ss\'}}\n      </span>\n      <br>\n      <span id="device-heading11">\n        Close date: {{crop.closedate | date: \'dd/MM/yyyy hh:mm:ss\'}}\n      </span>\n      <br>\n      <span id="device-heading13">\n        Latest data:\n        <span *ngIf="data">{{data.createdAt | date: \'dd/MM/yyyy hh:mm:ss\'}}</span>\n      </span>\n      <ion-grid *ngIf="data" id="info-table">\n        <ion-row>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.temp">\n              <span>Temperature</span>\n              <br>\n              <span class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>\n              <br>\n              <span>{{data.temperature}} °C</span>\n            </div>\n          </ion-col>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.humidity">\n              <span>Humidity</span>\n              <br>\n              <span class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>\n              <br>\n              <span>{{data.humidity}} %</span>\n            </div>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.ppm">\n              <span>ppm</span>\n              <br>\n              <span class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>\n              <br>\n              <span>{{data.ppm}}</span>\n            </div>\n          </ion-col>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.ph">\n              <span>pH</span>\n              <br>\n              <span class="threshold">({{threshold.phLower}} - {{threshold.phUpper}})</span>\n              <br>\n              <span>{{data.ph}}</span>\n            </div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <button *ngIf="crop.status !== \'running\'" (click)="startDevice()" round id="btn-control-start" ion-button block>\n        Start this device\n      </button>\n\n      <button *ngIf="crop.status === \'running\'" (click)="stopDevice()" round id="btn-control-stop" ion-button block>\n        Stop this device\n      </button>\n\n      <button (click)="goToActuatorPage()" round ion-button block>\n        Actuator list\n      </button>\n    </div>\n  </div>\n\n\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/device/device.html"*/
+            selector: 'page-device',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/device/device.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Device\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding id="page4">\n  <ion-refresher (ionRefresh)="doRefresh($event)">\n    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n    </ion-refresher-content>\n  </ion-refresher>\n  <div id="device-heading7">\n    {{name}}\n  </div>\n  <div *ngIf="crop">\n    <div id="device-heading10">\n      Running crop: {{crop.name}}\n    </div>\n    <div id="device-container3">\n      <span id="device-heading12">\n        Crop type: {{crop.type}}\n      </span>\n      <br>\n      <span id="device-heading14">\n        Tree type: {{crop.treetype}}\n      </span>\n      <br>\n      <span id="device-heading9">\n        Start date: {{crop.startdate | date: \'dd/MM/yyyy hh:mm:ss\'}}\n      </span>\n      <br>\n      <span id="device-heading11">\n        Close date: {{crop.closedate | date: \'dd/MM/yyyy hh:mm:ss\'}}\n      </span>\n      <br>\n      <span id="device-heading13">\n        Latest data:\n        <span *ngIf="data">{{data.createdAt | date: \'dd/MM/yyyy hh:mm:ss\'}}</span>\n      </span>\n      <ion-grid *ngIf="data" id="info-table">\n        <ion-row>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.temp">\n              <span>Temperature</span>\n              <br>\n              <span class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>\n              <br>\n              <span>{{data.temperature}} °C</span>\n            </div>\n          </ion-col>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.humidity">\n              <span>Humidity</span>\n              <br>\n              <span class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>\n              <br>\n              <span>{{data.humidity}} %</span>\n            </div>\n          </ion-col>\n        </ion-row>\n        <ion-row>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.ppm">\n              <span>ppm</span>\n              <br>\n              <span class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>\n              <br>\n              <span>{{data.ppm}}</span>\n            </div>\n          </ion-col>\n          <ion-col>\n            <div [class.danger-info]="dataStatus.badStatus.ph">\n              <span>pH</span>\n              <br>\n              <span class="threshold">({{threshold.phLower}} - {{threshold.phUpper}})</span>\n              <br>\n              <span>{{data.ph}}</span>\n            </div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n\n      <button *ngIf="crop.status !== \'running\'" (click)="startDevice()" round id="btn-control-start" ion-button block>\n        Start this device\n      </button>\n\n      <button *ngIf="crop.status === \'running\'" (click)="stopDevice()" round id="btn-control-stop" ion-button block>\n        Stop this device\n      </button>\n\n      <button (click)="goToActuatorPage()" round ion-button block>\n        Actuator list\n      </button>\n    </div>\n  </div>\n\n\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/device/device.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__services_crop_service__["a" /* CropService */], __WEBPACK_IMPORTED_MODULE_6__services_toast_service__["a" /* ToastService */],
-            __WEBPACK_IMPORTED_MODULE_3__services_data_service__["a" /* DataService */], __WEBPACK_IMPORTED_MODULE_5__services_threshold_service__["a" /* ThresholdService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_device_service__["a" /* DeviceService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_crop_service__["a" /* CropService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_crop_service__["a" /* CropService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_6__services_toast_service__["a" /* ToastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__services_toast_service__["a" /* ToastService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_3__services_data_service__["a" /* DataService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__services_data_service__["a" /* DataService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_5__services_threshold_service__["a" /* ThresholdService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__services_threshold_service__["a" /* ThresholdService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_4__services_device_service__["a" /* DeviceService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_device_service__["a" /* DeviceService */]) === "function" && _g || Object])
     ], DevicePage);
     return DevicePage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=device.js.map
 
 /***/ }),
 
-/***/ 208:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -614,7 +651,7 @@ var CropService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -664,7 +701,7 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -701,15 +738,15 @@ var ThresholdService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActuatorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_actuator_service__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toast_service__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_actuator_service__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_toast_service__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -757,14 +794,14 @@ var ActuatorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActuatorService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -797,13 +834,13 @@ var ActuatorService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(230);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -811,40 +848,40 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 231:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(274);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_forms__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__interceptors_auth_interceptor__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__interceptors_auth_interceptor__ = __webpack_require__(287);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_about_about__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_contact_contact__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_home_home__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_device_device__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_actuator_actuator__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_device_device__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_actuator_actuator__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_tabs_tabs__ = __webpack_require__(200);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_status_bar__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_splash_screen__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_background_mode__ = __webpack_require__(289);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_local_notifications__ = __webpack_require__(290);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_push__ = __webpack_require__(291);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_qr_scanner__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__ionic_native_background_mode__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__ionic_native_local_notifications__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_push__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_qr_scanner__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__services_auth_service__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__services_device_service__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_toast_service__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_crop_service__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_data_service__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_schedule_service__ = __webpack_require__(292);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_threshold_service__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_actuator_service__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__services_toast_service__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_crop_service__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_data_service__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__services_schedule_service__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__services_threshold_service__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__services_actuator_service__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -944,13 +981,13 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 275:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__ = __webpack_require__(200);
@@ -994,7 +1031,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 288:
+/***/ 287:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1026,7 +1063,7 @@ var HttpsRequestInterceptor = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 292:
+/***/ 291:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1059,12 +1096,12 @@ var ScheduleService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 34:
+/***/ 43:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1100,5 +1137,5 @@ var ToastService = /** @class */ (function () {
 
 /***/ })
 
-},[213]);
+},[212]);
 //# sourceMappingURL=main.js.map

@@ -13,15 +13,18 @@
 </ion-header>
 <ion-content padding id="page3">
     <div>
-        <button (click)="goToAddDevicePage()" round type="submit" id="login-button2" ion-button block class="btn">
+        <button (click)="scan()" round type="submit" id="login-button2" ion-button block class="btn">
             Scan QR Code To Add New Device
         </button>
     </div>
     <div id="home-heading3">
         Your devices
     </div>
-
-    <ion-list *ngIf="deviceList">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <ion-list>
         <div *ngFor="let device of deviceList" (click)="detail(device.mac, device.name)" style="margin-left: 10px">
             <div id="devider1" class="devider"></div>
             <ion-grid>
@@ -48,5 +51,4 @@
             <div id="devider2" class="devider"></div>
         </div>
     </ion-list>
-
 </ion-content>

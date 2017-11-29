@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { AddDevicePage } from '../add-device/add-device';
 import { DeviceService } from '../../services/device.service';
 import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
@@ -25,7 +24,6 @@ export class HomePage implements OnInit {
     }
 
     public ngOnInit() {
-        console.log("init homepage")
         this.deviceService.getAllDevice().subscribe((res: any) => {
             if (res.success) {
                 this.deviceList = res.data;
@@ -48,13 +46,35 @@ export class HomePage implements OnInit {
 
     }
 
-    public goToAddDevicePage() {
+    public doRefresh(refresher) {
+        this.deviceService.getAllDevice().subscribe((res: any) => {
+            if (res.success) {
+                this.deviceList = res.data;
+                this.deviceList.forEach((device) => {
+                    let topic = '/topics/' + device.mac.replace(/[:]/g, '');
+                    FCMPlugin.subscribeToTopic(topic, () => {
+                        console.log('subscribe success to ' + device.mac)
+                    }, (err) => {
+                        console.log(err);
+                    });
+                })
+
+            } else {
+                this.toastService.showToast(res.message);
+            }
+            refresher.complete();
+        }, (err: any) => {
+            console.log('get all device err: ' + err)
+        })
+      }
+
+    public scan() {
         // Optionally request the permission early
         this.qrScanner.prepare()
             .then((status: QRScannerStatus) => {
                 console.log(status)
                 if (status.authorized) {
-                    
+
                     // start scanning
                     let scanSub = this.qrScanner.scan().subscribe((text: string) => {
                         console.log(JSON.parse(text));
