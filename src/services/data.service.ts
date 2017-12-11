@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { Observable } from 'rxjs/Observable';
-
+import { Constant } from './constant.service';
 @Injectable()
 export class DataService {
-    constructor(private http: HttpClient) {
+    constructor(private http: HttpClient, private constant: Constant) {
 
     }
 
@@ -25,6 +25,6 @@ export class DataService {
 
     public getNewestDataByCropId(cropId: any): Observable<any> {
         let params = new HttpParams().set('cropId', cropId);
-        return this.http.get('http://192.168.1.106:3210/data/newest', { params: params });
+        return this.http.get(this.constant.HOST + '/data/newest', { params: params });
     }
 }

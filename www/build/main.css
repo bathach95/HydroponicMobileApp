@@ -25530,8 +25530,13 @@ ion-grid {
 }
 
 .table-content {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 300;
+}
+
+button {
+  border-radius: 20%;
+  font-size: 1.4em;
 }
 
 #device-heading7 {

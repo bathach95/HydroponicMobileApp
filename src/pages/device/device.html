@@ -71,23 +71,15 @@
           </ion-col>
           <ion-col>
             <div [class.danger-info]="dataStatus.badStatus.ph">
-              <span>pH</span>
+              <span>light</span>
               <br>
-              <span class="threshold">({{threshold.phLower}} - {{threshold.phUpper}})</span>
+              <span class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
               <br>
-              <span>{{data.ph}}</span>
+              <span>{{data.light}} lux</span>
             </div>
           </ion-col>
         </ion-row>
       </ion-grid>
-
-      <button *ngIf="crop.status !== 'running'" (click)="startDevice()" round id="btn-control-start" ion-button block>
-        Start this device
-      </button>
-
-      <button *ngIf="crop.status === 'running'" (click)="stopDevice()" round id="btn-control-stop" ion-button block>
-        Stop this device
-      </button>
 
       <button (click)="goToActuatorPage()" round ion-button block>
         Actuator list

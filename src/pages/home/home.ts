@@ -16,6 +16,7 @@ declare const FCMPlugin: any;
 export class HomePage implements OnInit {
 
     public deviceList: any[];
+    private topicList: string[] = [];
 
     constructor(private navCtrl: NavController, private deviceService: DeviceService,
         private authService: AuthService, private toastService: ToastService,
@@ -30,6 +31,7 @@ export class HomePage implements OnInit {
 
                 this.deviceList.forEach((device) => {
                     let topic = '/topics/' + device.mac.replace(/[:]/g, '');
+                    this.topicList.push(topic);
                     FCMPlugin.subscribeToTopic(topic, () => {
                         console.log('subscribe success to ' + device.mac)
                     }, (err) => {
@@ -72,12 +74,10 @@ export class HomePage implements OnInit {
         // Optionally request the permission early
         this.qrScanner.prepare()
             .then((status: QRScannerStatus) => {
-                console.log(status)
                 if (status.authorized) {
 
                     // start scanning
                     let scanSub = this.qrScanner.scan().subscribe((text: string) => {
-                        console.log(JSON.parse(text));
                         this.deviceService.addNewDevice(JSON.parse(text)).subscribe((res: any) => {
                             this.toastService.showToast(res.message);
                             this.ngOnInit();
@@ -110,6 +110,13 @@ export class HomePage implements OnInit {
         this.authService.logout();
         this.navCtrl.setRoot(LoginPage);
         this.toastService.showToast('Logout success!');
+        this.topicList.forEach((topic) => {
+            FCMPlugin.unsubscribeFromTopic(topic, (success) => {
+                console.log("unsub success " + success);
+            }, (err) => {
+                console.log("unsub fail " + err)
+            });
+        })
     }
 
     public detail(deviceMac: any, deviceName: any) {

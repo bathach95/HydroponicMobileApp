@@ -21,7 +21,7 @@
                         <span>Priority</span>
                     </ion-col>
                     <ion-col>
-                        <span>Status</span>
+                        <span>Active</span>
                     </ion-col>
                 </ion-row>
             </div>
@@ -36,8 +36,9 @@
                     <ion-col>
                         {{actuator.priority}}
                     </ion-col>
-                    <ion-col [style.color]="actuator.status === 'off' ? 'red' : 'green'">
-                        {{actuator.status}}
+                    <ion-col>
+                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="btn btn-success">Active</button>
+                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="btn btn-danger">Deactive</button>
                     </ion-col>
                 </ion-row>
             </div>
