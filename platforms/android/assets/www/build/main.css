@@ -25534,6 +25534,11 @@ ion-grid {
   font-weight: 300;
 }
 
+button {
+  border-radius: 20%;
+  font-size: 1.4em;
+}
+
 #device-heading7 {
   color: #13690F;
   text-align: center;

@@ -16,5 +16,7 @@ $ ionic cordova platform add android
 $ ionic cordova run android
 ```
 
+Note: change the server IP in constant.service.ts
+
 Substitute ios for android if not on a Mac.
 
