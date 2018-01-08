@@ -6,7 +6,10 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
-
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
     <div>
         <ion-grid id="info-table">
             <div class="table-header">
@@ -15,7 +18,7 @@
                         <span>Type</span>
                     </ion-col>
                     <ion-col>
-                        <span>Name</span>
+                        <span>ID</span>
                     </ion-col>
                     <ion-col>
                         <span>Priority</span>
@@ -31,7 +34,7 @@
                         {{actuator.type}}
                     </ion-col>
                     <ion-col>
-                        {{actuator.name}}
+                        {{actuator.idonboard.toString()[1]}}
                     </ion-col>
                     <ion-col>
                         {{actuator.priority}}

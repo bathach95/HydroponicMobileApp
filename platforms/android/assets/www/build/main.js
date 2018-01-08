@@ -807,6 +807,20 @@ var ActuatorPage = /** @class */ (function () {
             console.log(error);
         });
     };
+    ActuatorPage.prototype.doRefresh = function (refresher) {
+        var _this = this;
+        this.actuatorService.getAllActuator(this.mac).subscribe(function (result) {
+            if (result.success) {
+                _this.data = result.data;
+            }
+            else {
+                _this.toastService.showToast("Cannot load all actuators");
+            }
+            refresher.complete();
+        }, function (error) {
+            console.log(error);
+        });
+    };
     ActuatorPage.prototype.changeStatus = function (actuator) {
         var _this = this;
         var msg = actuator.status === 'on' ? 'deactive' : 'active';
@@ -825,7 +839,7 @@ var ActuatorPage = /** @class */ (function () {
     };
     ActuatorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-actuator',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/actuator/actuator.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Actuator List\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n    <div>\n        <ion-grid id="info-table">\n            <div class="table-header">\n                <ion-row>\n                    <ion-col>\n                        <span>Type</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>Name</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>Priority</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>Active</span>\n                    </ion-col>\n                </ion-row>\n            </div>\n            <div *ngIf="data" class="table-content">\n                <ion-row *ngFor="let actuator of data">\n                    <ion-col>\n                        {{actuator.type}}\n                    </ion-col>\n                    <ion-col>\n                        {{actuator.name}}\n                    </ion-col>\n                    <ion-col>\n                        {{actuator.priority}}\n                    </ion-col>\n                    <ion-col>\n                        <button *ngIf="actuator.status === \'on\'" (click)="changeStatus(actuator)" class="btn btn-success">Active</button>\n                        <button *ngIf="actuator.status !== \'on\'" (click)="changeStatus(actuator)" class="btn btn-danger">Deactive</button>\n                    </ion-col>\n                </ion-row>\n            </div>\n        </ion-grid>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/actuator/actuator.html"*/
+            selector: 'page-actuator',template:/*ion-inline-start:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/actuator/actuator.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-title>\n            Actuator List\n        </ion-title>\n    </ion-navbar>\n</ion-header>\n<ion-content padding>\n    <ion-refresher (ionRefresh)="doRefresh($event)">\n        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">\n        </ion-refresher-content>\n    </ion-refresher>\n    <div>\n        <ion-grid id="info-table">\n            <div class="table-header">\n                <ion-row>\n                    <ion-col>\n                        <span>Type</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>ID</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>Priority</span>\n                    </ion-col>\n                    <ion-col>\n                        <span>Active</span>\n                    </ion-col>\n                </ion-row>\n            </div>\n            <div *ngIf="data" class="table-content">\n                <ion-row *ngFor="let actuator of data">\n                    <ion-col>\n                        {{actuator.type}}\n                    </ion-col>\n                    <ion-col>\n                        {{actuator.idonboard.toString()[1]}}\n                    </ion-col>\n                    <ion-col>\n                        {{actuator.priority}}\n                    </ion-col>\n                    <ion-col>\n                        <button *ngIf="actuator.status === \'on\'" (click)="changeStatus(actuator)" class="btn btn-success">Active</button>\n                        <button *ngIf="actuator.status !== \'on\'" (click)="changeStatus(actuator)" class="btn btn-danger">Deactive</button>\n                    </ion-col>\n                </ion-row>\n            </div>\n        </ion-grid>\n    </div>\n</ion-content>'/*ion-inline-end:"/home/thach/Documents/TTTN/HydroponicMobileApp/src/pages/actuator/actuator.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__services_actuator_service__["a" /* ActuatorService */],
             __WEBPACK_IMPORTED_MODULE_3__services_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
@@ -1169,7 +1183,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var Constant = /** @class */ (function () {
     function Constant() {
-        this.HOST = 'http://192.168.1.106:3210';
+        this.HOST = 'http://13.58.114.56:3210';
     }
     Constant = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()

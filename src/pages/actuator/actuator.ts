@@ -12,7 +12,7 @@ export class ActuatorPage implements OnInit {
     public data: any;
 
     constructor(private navParams: NavParams, private actuatorService: ActuatorService,
-                private toastService: ToastService, private alertCtrl: AlertController) {
+        private toastService: ToastService, private alertCtrl: AlertController) {
 
     }
 
@@ -31,12 +31,29 @@ export class ActuatorPage implements OnInit {
         })
     }
 
-    public changeStatus(actuator){
+    public doRefresh(refresher) {
+
+        this.actuatorService.getAllActuator(this.mac).subscribe((result: any) => {
+            if (result.success) {
+                this.data = result.data;
+
+            } else {
+                this.toastService.showToast("Cannot load all actuators");
+            }
+            refresher.complete();
+
+        }, (error: any) => {
+            console.log(error)
+        })
+
+    }
+
+    public changeStatus(actuator) {
         let msg = actuator.status === 'on' ? 'deactive' : 'active';
         let newStatus = actuator.status === 'on' ? 'off' : 'on';
-        if (confirm("Do you want to " + msg +" this ?")){
+        if (confirm("Do you want to " + msg + " this ?")) {
             this.actuatorService.changeActuatorStatus(actuator.id, newStatus, this.mac, actuator.idonboard).subscribe((res: any) => {
-                if (res.success){
+                if (res.success) {
                     actuator.status = newStatus;
                 }
                 this.toastService.showToast(res.message);
@@ -45,6 +62,6 @@ export class ActuatorPage implements OnInit {
                 console.log(err);
                 this.toastService.showToast("Cannot change status of this actuator !")
             })
-        } 
+        }
     }
 }
