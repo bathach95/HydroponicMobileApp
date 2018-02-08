@@ -12,7 +12,7 @@ export class ToastService{
         const toast = this.toast.create({
             message: message,
             duration: 3000,
-            position: 'middle'
+            position: 'top'
         });
 
         toast.present();

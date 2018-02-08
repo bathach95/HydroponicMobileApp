@@ -30,7 +30,6 @@ import { DataService } from '../services/data.service';
 import { ScheduleService } from '../services/schedule.service';
 import { ThresholdService } from '../services/threshold.service';
 import { ActuatorService } from '../services/actuator.service';
-import { Constant } from '../services/constant.service';
 
 @NgModule({
   declarations: [
@@ -77,7 +76,6 @@ import { Constant } from '../services/constant.service';
     DataService,
     ThresholdService,
     ScheduleService,
-    Constant,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
