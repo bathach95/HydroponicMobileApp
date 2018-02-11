@@ -3,16 +3,20 @@
     <ion-title>
       Login
     </ion-title>
+    <!-- <ion-buttons end>
+        <button color="secondary" ion-button (click)="register()">
+            Register
+        </button>
+    </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page2">
   <div id="login-heading2">
-    BK Hydroponic
+    Hydroponic
   </div>
   <div class="spacer" id="login-spacer1"></div>
   <form id="login-form5" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
     <ion-item id="login-input4">
-      <ion-label></ion-label>
       <ion-input required type="email" id="email" name="email" placeholder="Email" #email="ngModel" ngModel></ion-input>
       <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
         <div *ngIf="email.errors.required">
@@ -21,14 +25,18 @@
       </div>
     </ion-item>
     <ion-item id="login-input5">
-      <ion-label></ion-label>
       <ion-input required type="password" name="password" placeholder="Password" #password="ngModel" ngModel></ion-input>
     </ion-item>
     <div class="spacer" id="login-spacer2"></div>
     <button round type="submit" id="login-button2" ion-button color="secondary" block class="btn">
         Login
     </button>    
-
   </form>
+  <div class="spacer" id="login-spacer3"></div>
+  <div id="register-line" text-center>
+    Do not have account ?
+    <br>
+    <button (click)="register()" round ion-button>Register</button>
+  </div>
 
 </ion-content>

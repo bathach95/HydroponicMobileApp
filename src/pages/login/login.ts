@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { RegisterPage } from '../register/register';
 import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
 
@@ -42,6 +43,8 @@ export class LoginPage implements OnInit {
     }
   }
 
-
+  public register() {
+    this.navCtrl.push(RegisterPage);
+  }
 
 }

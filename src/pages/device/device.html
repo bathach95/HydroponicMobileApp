@@ -10,6 +10,9 @@
     <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
     </ion-refresher-content>
   </ion-refresher>
+  <div text-center>
+    <button ion-button block color="primary" round (click)="goToAddCropPage()">Add new crop</button>
+  </div>
   <div id="device-heading7">
     {{name}}
   </div>
@@ -81,9 +84,12 @@
         </ion-row>
       </ion-grid>
 
-      <button (click)="goToActuatorPage()" round ion-button block>
-        Actuator list
-      </button>
+      <div text-center>
+        <button (click)="goToActuatorPage()" round ion-button>
+          Actuator list
+        </button>
+      </div>
+
     </div>
   </div>
 

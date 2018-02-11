@@ -12,4 +12,8 @@ export class CropService {
         let params = new HttpParams().set('mac', mac);
         return this.http.get(Constant.HOST + '/crop/newest', {params: params});
     }
+
+    public addCrop(crop: any): Observable<any> {
+        return this.http.post(Constant.HOST + '/crop/add', crop);
+    }
 }

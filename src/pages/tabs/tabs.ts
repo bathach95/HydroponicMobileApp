@@ -15,18 +15,11 @@ export class TabsPage implements OnInit{
   tab3Root = ContactPage;
   loggedIn = false;
 
-  constructor(private storate: Storage) {
-
-  }
+  constructor(private storage: Storage) {}
   
   public ngOnInit(){
-    console.log(this.storate.get('loggedin'))
-    if (this.storate.get('loggedin')){
+    if (this.storage.get('loggedin')){
       this.loggedIn = true;
     }
-  }
-
-  public logout(){
-    alert('logout');
   }
 }

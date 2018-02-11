@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Add new crop
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="spacer" id="register-spacer1"></div>
+    <form #addCropForm="ngForm" (ngSubmit)="addCrop(addCropForm.value)">
+
+        <ion-item>
+            <ion-label>Crop name</ion-label>
+            <ion-input required type="text" id="name" name="name" #name="ngModel" ngModel></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Tree type</ion-label>
+            <ion-input required type="text" id="treetype" name="treetype" #name="ngModel" ngModel></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Start date: MM/DD/YYYY HH:mm</ion-label>
+            <ion-datetime required displayFormat="MM/DD/YYYY HH:mm A" name="startdate" #name="ngModel" ngModel></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Close date MM/DD/YYYY HH:mm</ion-label>
+            <ion-datetime required displayFormat="MM/DD/YYYY HH:mm A" name="closedate" #name="ngModel" ngModel></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Report time (s)</ion-label>
+            <ion-input required type="number" name="reporttime" id="reporttime" [(ngModel)]="reporttime"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Hydroponic type</ion-label>
+            <ion-select name="type" #name="ngModel" ngModel>
+                <ion-option *ngFor="let type of hydroponicType" [value]="type.value">
+                    {{type.label}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+
+        <div class="spacer" id="register-spacer2"></div>
+        <button round type="submit" id="register-button" ion-button color="secondary" block class="btn">
+            Add
+        </button>
+    </form>
+</ion-content>

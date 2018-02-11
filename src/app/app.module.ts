@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpsRequestInterceptor } from '../interceptors/auth.interceptor';
 
+
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
@@ -15,6 +16,8 @@ import { HomePage } from '../pages/home/home';
 import { DevicePage } from '../pages/device/device';
 import { ActuatorPage } from '../pages/actuator/actuator';
 import { TabsPage } from '../pages/tabs/tabs';
+import { RegisterPage } from'../pages/register/register';
+import { AddCropPage } from '../pages/add-crop/addCrop';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,6 +33,7 @@ import { DataService } from '../services/data.service';
 import { ScheduleService } from '../services/schedule.service';
 import { ThresholdService } from '../services/threshold.service';
 import { ActuatorService } from '../services/actuator.service';
+import { RegisterService } from '../services/register.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,9 @@ import { ActuatorService } from '../services/actuator.service';
     HomePage,
     DevicePage,
     ActuatorPage,
-    TabsPage
+    TabsPage,
+    RegisterPage,
+    AddCropPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +65,9 @@ import { ActuatorService } from '../services/actuator.service';
     HomePage,
     DevicePage,
     ActuatorPage,
-    TabsPage
+    TabsPage,
+    RegisterPage,
+    AddCropPage
   ],
   providers: [
     StatusBar,
@@ -76,6 +84,7 @@ import { ActuatorService } from '../services/actuator.service';
     DataService,
     ThresholdService,
     ScheduleService,
+    RegisterService,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

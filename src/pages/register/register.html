@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Register
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <div id="register-heading1">
+      Hydroponic
+    </div>
+    <div class="spacer" id="register-spacer1"></div>
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)">
+
+      <ion-item>
+          <ion-input required type="text" id="name" name="name" placeholder="Username" #name="ngModel" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input required type="email" id="email" name="email" placeholder="Email" #email="ngModel" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input required type="number" id="phone" name="phone" placeholder="Phone" #phone="ngModel" ngModel></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-input required type="password" name="password" placeholder="Password" #password="ngModel" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input required type="password" name="passwordConfirm" placeholder="Retype password" #passwordConfirm="ngModel" ngModel></ion-input>
+        </ion-item>
+
+      <div class="spacer" id="register-spacer2"></div>
+      <button round type="submit" id="register-button" ion-button color="secondary" block class="btn">
+          Register
+      </button>    
+    </form>
+  </ion-content>
