@@ -25705,6 +25705,11 @@ button {
   font-size: 1.4em;
 }
 
+#add-actuator-spacer2 {
+  width: 300px;
+  height: 30px;
+}
+
 #device-heading7 {
   color: #13690F;
   text-align: center;
@@ -25742,6 +25747,44 @@ button {
 .threshold {
   font-size: 0.8em;
   color: #007acc !important;
+}
+
+#home-heading3 {
+  color: #13690F;
+  text-align: center;
+  font-size: 2em;
+}
+
+.devider {
+  margin: auto;
+}
+
+#devider1 {
+  width: 400px;
+  height: 10px;
+}
+
+#devider2 {
+  width: 350px;
+  height: 1px;
+  background-color: black;
+}
+
+#home-heading5 {
+  color: #000000;
+  font-weight: 300;
+  font-size: 1.4em;
+}
+
+#home-heading4 {
+  color: #13690F;
+  font-weight: 350;
+  font-size: 1.7em;
+}
+
+.transparent-body {
+  background: none transparent !important;
+  opacity: 0 !important;
 }
 
 #home-heading3 {

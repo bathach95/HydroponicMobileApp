@@ -12,85 +12,57 @@
   </ion-refresher>
   <div text-center>
     <button ion-button block color="primary" round (click)="goToAddCropPage()">Add new crop</button>
+    <button (click)="goToActuatorPage()" block round ion-button>Actuator list</button>
   </div>
   <div id="device-heading7">
     {{name}}
   </div>
-  <div *ngIf="crop">
-    <div id="device-heading10">
-      Running crop: {{crop.name}}
-    </div>
-    <div id="device-container3">
-      <span id="device-heading12">
-        Crop type: {{crop.type}}
-      </span>
-      <br>
-      <span id="device-heading14">
-        Tree type: {{crop.treetype}}
-      </span>
-      <br>
-      <span id="device-heading9">
-        Start date: {{crop.startdate | date: 'dd/MM/yyyy hh:mm:ss'}}
-      </span>
-      <br>
-      <span id="device-heading11">
-        Close date: {{crop.closedate | date: 'dd/MM/yyyy hh:mm:ss'}}
-      </span>
-      <br>
-      <span id="device-heading13">
-        Latest data:
-        <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
-      </span>
-      <ion-grid *ngIf="data" id="info-table">
-        <ion-row>
-          <ion-col>
-            <div [class.danger-info]="dataStatus.badStatus.temp">
-              <span>Temperature</span>
-              <br>
-              <span class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
-              <br>
-              <span>{{data.temperature}} °C</span>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div [class.danger-info]="dataStatus.badStatus.humidity">
-              <span>Humidity</span>
-              <br>
-              <span class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
-              <br>
-              <span>{{data.humidity}} %</span>
-            </div>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <div [class.danger-info]="dataStatus.badStatus.ppm">
-              <span>ppm</span>
-              <br>
-              <span class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
-              <br>
-              <span>{{data.ppm}}</span>
-            </div>
-          </ion-col>
-          <ion-col>
-            <div [class.danger-info]="dataStatus.badStatus.light">
-              <span>light</span>
-              <br>
-              <span class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
-              <br>
-              <span>{{data.light}} lux</span>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+  <div *ngIf="cropList">
+    <ion-list>
+      <div *ngFor="let crop of cropList" (click)="goToCropPage(crop.id)" style="margin-left: 10px">
+        <div id="devider1" class="devider"></div>
+        <ion-grid>
 
-      <div text-center>
-        <button (click)="goToActuatorPage()" round ion-button>
-          Actuator list
-        </button>
+          <ion-row>
+            <div id="home-heading4">
+              {{crop.name}}
+            </div>
+          </ion-row>
+
+          <ion-row>
+            <div id="home-heading5">
+              Start date: {{crop.startdate | date: 'MM/dd/yyyy HH:mm:ss'}}
+            </div>
+          </ion-row>
+
+          <ion-row>
+            <div id="home-heading5">
+              Close date: {{crop.closedate | date: 'MM/dd/yyyy HH:mm:ss'}}
+            </div>
+          </ion-row>
+
+          <ion-row>
+            <div id="home-heading5">
+              Tree type: {{crop.treetype}}
+            </div>
+          </ion-row>
+
+          <ion-row>
+            <div id="home-heading5">
+              Hydroponic type: {{crop.type}}
+            </div>
+          </ion-row>
+
+          <ion-row>
+            <div id="home-heading5">
+              Status: {{crop.status}}
+            </div>
+          </ion-row>
+
+        </ion-grid>
+        <div id="devider2" class="devider"></div>
       </div>
-
-    </div>
+    </ion-list>
   </div>
 
 

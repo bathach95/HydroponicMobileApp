@@ -35,7 +35,7 @@ export class LoginPage implements OnInit {
         } else {
           alert(res.message);
         }
-      }, (err:any) => {
+      }, (err: any) => {
         console.log(err);
       })
     } else {

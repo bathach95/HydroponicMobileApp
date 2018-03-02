@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpsRequestInterceptor } from '../interceptors/auth.interceptor';
 
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { LoginPage } from '../pages/login/login';
@@ -18,6 +17,8 @@ import { ActuatorPage } from '../pages/actuator/actuator';
 import { TabsPage } from '../pages/tabs/tabs';
 import { RegisterPage } from'../pages/register/register';
 import { AddCropPage } from '../pages/add-crop/addCrop';
+import { CropPage } from '../pages/crop/crop';
+import { AddActuatorPage } from '../pages/add-actuator/addActuator';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,6 +36,7 @@ import { ThresholdService } from '../services/threshold.service';
 import { ActuatorService } from '../services/actuator.service';
 import { RegisterService } from '../services/register.service';
 
+import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
 @NgModule({
   declarations: [
     MyApp,
@@ -46,7 +48,10 @@ import { RegisterService } from '../services/register.service';
     ActuatorPage,
     TabsPage,
     RegisterPage,
-    AddCropPage
+    AddCropPage,
+    CropPage,
+    AddActuatorPage,
+    ActuatorTypePipe
   ],
   imports: [
     BrowserModule,
@@ -67,7 +72,9 @@ import { RegisterService } from '../services/register.service';
     ActuatorPage,
     TabsPage,
     RegisterPage,
-    AddCropPage
+    AddCropPage,
+    CropPage,
+    AddActuatorPage
   ],
   providers: [
     StatusBar,

@@ -12,7 +12,7 @@ import * as moment from 'moment';
 })
 export class AddCropPage implements OnInit {
 
-    private mac: any;
+    private mac: string;
     private devicePage: any;
     public hydroponicType: any = Constant.HYDROPONIC_TYPE;
     public reporttime: number = Constant.DEFAULT_REPORT_TIME;
@@ -28,14 +28,14 @@ export class AddCropPage implements OnInit {
     public addCrop(crop) {
 
         let newCrop = this.formatCrop(crop);
-        this.cropService.addCrop(newCrop).subscribe((res) => {
+        this.cropService.addCrop(newCrop).subscribe((res: any) => {
             this.toastService.showToast(res.message);
             if (res.success) {
                 this.navCtrl.pop().then(() => {
                     this.devicePage.doRefresh(null);
                 });
             }
-        }, (err) => {
+        }, (err: any) => {
             console.log(err);
         })
     }

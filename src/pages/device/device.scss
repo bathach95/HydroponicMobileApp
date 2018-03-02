@@ -1,37 +1,36 @@
-#device-heading7 {
+#home-heading3{
     color:#13690F;
     text-align:center;
     font-size: 2em;
 }
 
-#device-heading8, #device-heading10 {
-    font-size: 1.6em;
+.devider{
+    margin: auto;
 }
 
-#device-container3{
-    font-size: 1.4em;
+#devider1{
+    width:400px;
+    height:10px
+}
+
+#devider2{
+    width:350px;
+    height:1px;
+    background-color:black;
+}
+
+#home-heading5{
+    color:#000000;
     font-weight:300;
-    margin-left: 15px;
-}
-#info-table{
-    text-align: center;
-    font-weight: 500;
-    color: #007acc;
+    font-size: 1.4em;
 }
 
-#btn-control-start{
-    background-color: #007acc;
+#home-heading4{
+    color:#13690F;
+    font-weight:350;
+    font-size: 1.7em;
 }
-
-.danger-info{
-    color: #e62e00;
-}
-
-#btn-control-stop{
-    background-color: #e62e00;
-}
-
-.threshold {
-    font-size: 0.8em;
-    color: #007acc !important;
-}
+.transparent-body {
+    background: none transparent !important;
+    opacity: 0 !important;
+  }

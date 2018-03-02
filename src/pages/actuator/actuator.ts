@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { ActuatorService } from '../../services/actuator.service';
 import { ToastService } from '../../services/toast.service';
 import { AlertController } from 'ionic-angular';
+import { AddActuatorPage } from '../add-actuator/addActuator';
 @Component({
     selector: 'page-actuator',
     templateUrl: 'actuator.html'
@@ -12,40 +13,31 @@ export class ActuatorPage implements OnInit {
     public data: any;
 
     constructor(private navParams: NavParams, private actuatorService: ActuatorService,
-        private toastService: ToastService, private alertCtrl: AlertController) {
+        private toastService: ToastService, private alertCtrl: AlertController,
+        private navCtrl: NavController) {
 
     }
 
     public ngOnInit() {
         this.mac = this.navParams.get('deviceMac');
 
-        this.actuatorService.getAllActuator(this.mac).subscribe((result: any) => {
-            if (result.success) {
-                this.data = result.data;
-
-            } else {
-                this.toastService.showToast("Cannot load all actuators");
-            }
-        }, (error: any) => {
-            console.log(error)
-        })
+        this.doRefresh(null);
     }
 
     public doRefresh(refresher) {
-
         this.actuatorService.getAllActuator(this.mac).subscribe((result: any) => {
             if (result.success) {
                 this.data = result.data;
-
             } else {
                 this.toastService.showToast("Cannot load all actuators");
             }
-            refresher.complete();
 
+            if (refresher) {
+                refresher.complete();
+            }
         }, (error: any) => {
             console.log(error)
         })
-
     }
 
     public changeStatus(actuator) {
@@ -58,10 +50,17 @@ export class ActuatorPage implements OnInit {
                 }
                 this.toastService.showToast(res.message);
 
-            }, (err) => {
+            }, (err: any) => {
                 console.log(err);
                 this.toastService.showToast("Cannot change status of this actuator !")
             })
         }
+    }
+
+    public goToAddActuatorPage() {
+        this.navCtrl.push(AddActuatorPage, {
+            deviceMac: this.mac,
+            actuatorPage: this
+        });
     }
 }

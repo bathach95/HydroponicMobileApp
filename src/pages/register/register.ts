@@ -15,17 +15,21 @@ export class RegisterPage {
             private registerService: RegisterService) {}
 
   public register(user) {
-    this.registerService.register(user).subscribe((res:any) => {
-        // TODO: verify confirm password
-        if (res.success) {
-            this.toastService.showToast(res.message);
-            this.navCtrl.push(LoginPage);
-        } else {
-            alert(res.message);
-        }
-    }, (err: any) => {
-        console.log(err);
-    })
+      if (user.password !== user.passwordConfirm) {
+        alert('Password does not match.');
+      } else {
+        this.registerService.register(user).subscribe((res: any) => {
+            if (res.success) {
+                this.toastService.showToast(res.message);
+                this.navCtrl.push(LoginPage);
+            } else {
+                alert(res.message);
+            }
+        }, (err: any) => {
+            console.log(err);
+        });
+      }
+    
   }
 
 }

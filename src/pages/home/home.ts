@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
                     this.topicList.push(topic);
                     FCMPlugin.subscribeToTopic(topic, () => {
                         console.log('subscribe success to ' + device.mac)
-                    }, (err) => {
+                    }, (err: any) => {
                         console.log(err);
                     });
                 })
@@ -56,7 +56,7 @@ export class HomePage implements OnInit {
                     let topic = '/topics/' + device.mac.replace(/[:]/g, '');
                     FCMPlugin.subscribeToTopic(topic, () => {
                         console.log('subscribe success to ' + device.mac)
-                    }, (err) => {
+                    }, (err: any) => {
                         console.log(err);
                     });
                 })
@@ -81,7 +81,7 @@ export class HomePage implements OnInit {
                         this.deviceService.addNewDevice(JSON.parse(text)).subscribe((res: any) => {
                             this.toastService.showToast(res.message);
                             this.ngOnInit();
-                        }, (err) => {
+                        }, (err: any) => {
                             this.toastService.showToast(err);
                         })
                         this.qrScanner.hide(); // hide camera preview
@@ -113,7 +113,7 @@ export class HomePage implements OnInit {
         this.topicList.forEach((topic) => {
             FCMPlugin.unsubscribeFromTopic(topic, (success) => {
                 console.log("unsub success " + success);
-            }, (err) => {
+            }, (err: any) => {
                 console.log("unsub fail " + err)
             });
         })
