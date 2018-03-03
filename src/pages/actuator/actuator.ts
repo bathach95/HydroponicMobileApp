@@ -57,6 +57,10 @@ export class ActuatorPage implements OnInit {
         }
     }
 
+    public deleteActuator(){
+        alert("hehe")
+    }
+
     public goToAddActuatorPage() {
         this.navCtrl.push(AddActuatorPage, {
             deviceMac: this.mac,

@@ -35,7 +35,6 @@ export class DevicePage implements OnInit {
         this.cropService.getAllCrop(this.mac).subscribe((res: any) => {
             if (res.success) {
                 this.cropList = res.data;
-                console.log(this.cropList);
             }
             this.toastService.showToast(res.message);
             
@@ -63,7 +62,8 @@ export class DevicePage implements OnInit {
 
     public goToCropPage(cropId) {
         this.navCtrl.push(CropPage, {
-            cropId: cropId
+            cropId: cropId,
+            deviceMac: this.mac
         })
     }
 }

@@ -6,7 +6,7 @@
     </ion-navbar>
   </ion-header>
   <ion-content padding id="page4">
-    <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher (ionRefresh)="loadCropData($event)">
       <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
       </ion-refresher-content>
     </ion-refresher>
@@ -14,27 +14,9 @@
     <div id="device-heading7">
       {{name}}
     </div>
-    <div *ngIf="crop">
-      <div id="device-heading10">
-        Running crop: {{crop.name}}
-      </div>
+    <div>
+
       <div id="device-container3">
-        <span id="device-heading12">
-          Crop type: {{crop.type}}
-        </span>
-        <br>
-        <span id="device-heading14">
-          Tree type: {{crop.treetype}}
-        </span>
-        <br>
-        <span id="device-heading9">
-          Start date: {{crop.startdate | date: 'dd/MM/yyyy hh:mm:ss'}}
-        </span>
-        <br>
-        <span id="device-heading11">
-          Close date: {{crop.closedate | date: 'dd/MM/yyyy hh:mm:ss'}}
-        </span>
-        <br>
         <span id="device-heading13">
           Latest data:
           <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
@@ -42,19 +24,19 @@
         <ion-grid *ngIf="data" id="info-table">
           <ion-row>
             <ion-col>
-              <div [class.danger-info]="dataStatus.badStatus.temp">
+              <div [class.danger-info]="dataStatus && dataStatus.badStatus.temp">
                 <span>Temperature</span>
                 <br>
-                <span class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
+                <span *ngIf="threshold" class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
                 <br>
                 <span>{{data.temperature}} °C</span>
               </div>
             </ion-col>
             <ion-col>
-              <div [class.danger-info]="dataStatus.badStatus.humidity">
+              <div [class.danger-info]="dataStatus && dataStatus.badStatus.humidity">
                 <span>Humidity</span>
                 <br>
-                <span class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
+                <span *ngIf="threshold" class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
                 <br>
                 <span>{{data.humidity}} %</span>
               </div>
@@ -62,32 +44,25 @@
           </ion-row>
           <ion-row>
             <ion-col>
-              <div [class.danger-info]="dataStatus.badStatus.ppm">
+              <div [class.danger-info]="dataStatus && dataStatus.badStatus.ppm">
                 <span>ppm</span>
                 <br>
-                <span class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
+                <span *ngIf="threshold" class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
                 <br>
                 <span>{{data.ppm}}</span>
               </div>
             </ion-col>
             <ion-col>
-              <div [class.danger-info]="dataStatus.badStatus.light">
-                <span>light</span>
+              <div [class.danger-info]="dataStatus && dataStatus.badStatus.light">
+                <span>Light</span>
                 <br>
-                <span class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
+                <span *ngIf="threshold" class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
                 <br>
                 <span>{{data.light}} lux</span>
               </div>
             </ion-col>
           </ion-row>
         </ion-grid>
-  
-        <div text-center>
-          <button (click)="goToActuatorPage()" round ion-button>
-            Actuator list
-          </button>
-        </div>
-  
       </div>
     </div>
   

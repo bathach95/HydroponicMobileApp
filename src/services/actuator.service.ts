@@ -29,6 +29,10 @@ export class ActuatorService {
         return this.http.post(Constant.HOST + '/actuator/addactuator', newActuator);
     }
 
+    public deleteActuator() {
+        
+    }
+
     public getAvailableActuator(mac: string) {
 
         return new Promise((resolve, reject) => {

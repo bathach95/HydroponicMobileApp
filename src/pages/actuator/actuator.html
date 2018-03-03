@@ -29,10 +29,13 @@
                     <ion-col>
                         <span>Active</span>
                     </ion-col>
+                    <ion-col>
+                        <span>Action</span>
+                    </ion-col>
                 </ion-row>
             </div>
             <div *ngIf="data" class="table-content">
-                <ion-row *ngFor="let actuator of data">
+                <ion-row *ngFor="let actuator of data" class="actuator-row">
                     <ion-col>
                         {{actuator.type}}
                     </ion-col>
@@ -43,8 +46,11 @@
                         {{actuator.priority}}
                     </ion-col>
                     <ion-col>
-                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="btn btn-success">Active</button>
-                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="btn btn-danger">Deactive</button>
+                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">Active</button>
+                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Deactive</button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-icon (click)="deleteActuator()" name="trash" color="danger"></ion-icon>
                     </ion-col>
                 </ion-row>
             </div>

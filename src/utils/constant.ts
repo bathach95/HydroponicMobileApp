@@ -1,7 +1,7 @@
 export class Constant {
 
     // server IP or domain name
-    public static HOST: string = 'http://192.168.1.106:3210';
+    public static HOST: string = 'http://192.168.1.109:3210';
 
     // hydroponic types
     public static HYDROPONIC_TYPE: any = [{
