@@ -11,12 +11,12 @@ export class ActuatorService {
     constructor(private http: HttpClient) { }
 
     public getAllActuator(mac: string): Observable<any> {
-        let params = new HttpParams().set('mac', mac);
+        let params: any = new HttpParams().set('mac', mac);
         return this.http.get(Constant.HOST + '/actuator/all', { params: params });
     }
 
     public changeActuatorStatus(id: any, newStatus: string, mac: string, idonboard: string): Observable<any> {
-        let body = {
+        let body: any = {
             id: id,
             mac: mac,
             status: newStatus,

@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Actuator List
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div text-center>
+        <button ion-button block color="primary" round (click)="goToAddActuatorPage()">Add new actuator</button>
+    </div>
+    <div>
+        <ion-grid id="info-table">
+            <div class="table-header">
+                <ion-row>
+                    <ion-col>
+                        <span>Type</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>ID</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Priority</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Active</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Action</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div *ngIf="data" class="table-content">
+                <ion-row *ngFor="let actuator of data" class="actuator-row">
+                    <ion-col>
+                        {{actuator.type}}
+                    </ion-col>
+                    <ion-col>
+                        {{actuator.idonboard.toString()[1]}}
+                    </ion-col>
+                    <ion-col>
+                        {{actuator.priority}}
+                    </ion-col>
+                    <ion-col>
+                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">Active</button>
+                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Deactive</button>
+                    </ion-col>
+                    <ion-col>
+                        <ion-icon (click)="deleteActuator(actuator.id)" name="trash" color="danger"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+</ion-content>

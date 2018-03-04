@@ -4,6 +4,7 @@ import { CropService } from '../../services/crop.service';
 import { DataService } from '../../services/data.service';
 import { ThresholdService } from '../../services/threshold.service';
 import { ToastService } from '../../services/toast.service';
+import { SchedulePage } from '../schedule/schedule';
 
 @Component({
     selector: 'page-crop',
@@ -49,6 +50,13 @@ export class CropPage implements OnInit {
                 refresher.complete();
             }
         })
+    }
+
+    public goToSchedulePage() {
+        this.navCtrl.push(SchedulePage, {
+            cropId: this.cropId,
+            deviceMac: this.mac
+        });
     }
 
 }

@@ -13,14 +13,14 @@ export class AddActuatorPage implements OnInit {
     public actuatorPriority: string[] = Constant.ACTUATOR_PRIORITY;
     public mac: string;
     public availableActuator: any;
-    private actuatorPage: any;
+    private actuatorListPage: any;
 
     constructor(private navParams: NavParams, private actuatorService: ActuatorService,
                 private toastService: ToastService, private navCtrl: NavController) { }
 
     public ngOnInit() {
         this.mac = this.navParams.get('deviceMac');
-        this.actuatorPage = this.navParams.get('actuatorPage');
+        this.actuatorListPage = this.navParams.get('actuatorListPage');
 
         this.actuatorService.getAvailableActuator(this.mac).then((res: any) => {
             this.availableActuator = res;
@@ -42,7 +42,7 @@ export class AddActuatorPage implements OnInit {
         this.actuatorService.addActuator(newActuator).subscribe((res: any) => {
             if (res.success){
                 this.navCtrl.pop().then(() => {
-                    this.actuatorPage.doRefresh(null);
+                    this.actuatorListPage.doRefresh(null);
                 })
             }
             this.toastService.showToast(res.messasge);

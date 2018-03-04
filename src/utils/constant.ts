@@ -1,7 +1,7 @@
 export class Constant {
 
     // server IP or domain name
-    public static HOST: string = 'http://192.168.1.109:3210';
+    public static HOST: string = 'http://192.168.1.107:3210';
 
     // hydroponic types
     public static HYDROPONIC_TYPE: any = [{
@@ -48,4 +48,8 @@ export class Constant {
 
     // time format for parsing
     public static PARSE_TIME_FORMAT = "MM/DD/YYYY HH:mm A";
+
+    // default interval and delay time for schedule
+    public static DEFAULT_INTERVAL_TIME = 10;
+    public static DEFAULT_DELAY_TIME = 0;
 }

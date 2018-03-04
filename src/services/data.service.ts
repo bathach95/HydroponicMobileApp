@@ -9,7 +9,7 @@ export class DataService {
     }
 
     public getDataStatus(data: any, threshold: any) {
-        let status = {
+        let status: any = {
             badStatus: {
                 temp: data.temperature < threshold.temperatureLower || data.temperature > threshold.temperatureUpper,
                 humidity: data.humidity < threshold.humidityLower || data.humidity > threshold.humidityUpper,
@@ -24,7 +24,7 @@ export class DataService {
     }
 
     public getNewestDataByCropId(cropId: any): Observable<any> {
-        let params = new HttpParams().set('cropId', cropId);
+        let params: any = new HttpParams().set('cropId', cropId);
         return this.http.get(Constant.HOST + '/data/newest', { params: params });
     }
 }

@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { CropService } from '../../services/crop.service';
 import { DeviceService } from '../../services/device.service';
 import { ToastService } from '../../services/toast.service';
-import { ActuatorPage } from '../actuator/actuator';
+import { ActuatorListPage } from '../actuator-list/actuatorList';
 import { AddCropPage } from '../add-crop/addCrop';
 import { CropPage } from '../crop/crop';
 
@@ -54,8 +54,8 @@ export class DevicePage implements OnInit {
         });
     }
 
-    public goToActuatorPage() {
-        this.navCtrl.push(ActuatorPage, {
+    public goToActuatorListPage() {
+        this.navCtrl.push(ActuatorListPage, {
             deviceMac: this.mac
         });
     }

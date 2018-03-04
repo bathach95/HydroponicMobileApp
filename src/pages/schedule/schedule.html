@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Schedule
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-refresher (ionRefresh)="loadSchedules($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+
+    <div id="schedule-heading">
+        Schedule
+    </div>
+    <div text-center>
+        <button [disabled]="" ion-button>Send schedule to device</button>
+    </div>
+    <div>
+        <ion-grid id="info-table">
+            <div class="table-header">
+                <ion-row>
+                    <ion-col>
+                        <span>Type</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>ID</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Start</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Stop</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Action</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+            <div *ngIf="scheduleList" class="table-content">
+                <ion-row *ngFor="let schedule of scheduleList" class="schedule-row">
+                    <ion-col>
+                        {{schedule.Actuator.type}}
+                    </ion-col>
+                    <ion-col>
+                        {{schedule.Actuator.idonboard.toString()[1]}}
+                    </ion-col>
+                    <ion-col>
+                        {{schedule.starttime}}
+                    </ion-col>
+                    <ion-col>
+                        {{schedule.endtime}}
+                    </ion-col>
+                    <ion-col>
+                        <ion-icon (click)="deleteActuator(actuator.id)" name="trash" color="danger"></ion-icon>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+    <ion-fab bottom right>
+        <button ion-fab (click)="goToAddSchedulePage()">Add</button>
+    </ion-fab>
+</ion-content>

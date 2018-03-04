@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Add new schedule
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div class="spacer" id="add-schedule-spacer1"></div>
+    <form #addScheduleForm="ngForm" (ngSubmit)="addSchedule(addScheduleForm.value)">
+
+        <ion-item>
+            <ion-label>Actuator type</ion-label>
+            <ion-select require name="type" #name="ngModel" ngModel>
+                <ion-option *ngFor="let type of actuatorType" [value]="type.type">
+                    {{type.type}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Actuator ID</ion-label>
+            <ion-select require name="actuatorId" #name="ngModel" ngModel>
+                <ion-option *ngFor="let actuator of availableActuator | actuatorTypeFilter: {type: addScheduleForm.value.type}" [value]="actuator.id">
+                    {{actuator.idonboard.toString()[1]}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Start time: HH:mm</ion-label>
+            <ion-datetime required displayFormat="HH:mm A" name="starttime" #name="ngModel" ngModel></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Stop time: HH:mm</ion-label>
+            <ion-datetime required displayFormat="HH:mm A" name="endtime" #name="ngModel" ngModel></ion-datetime>
+        </ion-item>
+
+        <div class="spacer" id="add-schedule-spacer2"></div>
+        <button round type="submit" ion-button color="secondary" block class="btn">
+            Add
+        </button>
+    </form>
+</ion-content>

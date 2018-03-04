@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Actuator List
+            Actuator
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -10,8 +10,12 @@
         <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
         </ion-refresher-content>
     </ion-refresher>
+
+    <div text-center id="actuator-heading1">
+        {{actuator.type}} {{actuator.idonboard.toString()[1]}}
+    </div>
     <div text-center>
-        <button ion-button block color="primary" round (click)="goToAddActuatorPage()">Add new actuator</button>
+        <button ion-button block color="primary" round (click)="goToAddSchedulePage()">Add schedule</button>
     </div>
     <div>
         <ion-grid id="info-table">
@@ -34,23 +38,9 @@
                     </ion-col>
                 </ion-row>
             </div>
-            <div *ngIf="data" class="table-content">
-                <ion-row *ngFor="let actuator of data" class="actuator-row">
+            <div class="table-content">
+                <ion-row>
                     <ion-col>
-                        {{actuator.type}}
-                    </ion-col>
-                    <ion-col>
-                        {{actuator.idonboard.toString()[1]}}
-                    </ion-col>
-                    <ion-col>
-                        {{actuator.priority}}
-                    </ion-col>
-                    <ion-col>
-                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">Active</button>
-                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Deactive</button>
-                    </ion-col>
-                    <ion-col>
-                        <ion-icon (click)="deleteActuator()" name="trash" color="danger"></ion-icon>
                     </ion-col>
                 </ion-row>
             </div>
