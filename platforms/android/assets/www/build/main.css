@@ -25730,10 +25730,10 @@ ion-grid {
   height: 50px;
 }
 
-#device-heading7 {
+#crop-heading7 {
   color: #13690F;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 #device-heading8, #device-heading10 {
@@ -25770,6 +25770,12 @@ ion-grid {
 }
 
 #home-heading3 {
+  color: #13690F;
+  text-align: center;
+  font-size: 2em;
+}
+
+#device-heading7 {
   color: #13690F;
   text-align: center;
   font-size: 2em;

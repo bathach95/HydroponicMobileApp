@@ -15,22 +15,40 @@ export class ActuatorService {
         return this.http.get(Constant.HOST + '/actuator/all', { params: params });
     }
 
-    public changeActuatorStatus(id: any, newStatus: string, mac: string, idonboard: string): Observable<any> {
+    public changeActuatorStatus(actuator: any, newStatus: string, mac: string): Observable<any> {
         let body: any = {
-            id: id,
+            id: actuator.id,
             mac: mac,
             status: newStatus,
-            idonboard: idonboard
+            idonboard: actuator.idonboard,
+            mode: actuator.mode
         }
         return this.http.put(Constant.HOST + '/actuator/status', body);
+    }
+
+    public changeActuatorMode(mac: string, actuator: any, newMode: string): Observable<any> {
+        let body: any = {
+            id: actuator.id,
+            mac: mac,
+            status: actuator.status,
+            idonboard: actuator.idonboard,
+            mode: newMode
+        }
+        return this.http.put(Constant.HOST + '/actuator/mode', body);
     }
 
     public addActuator(newActuator: any): Observable<any> {
         return this.http.post(Constant.HOST + '/actuator/addactuator', newActuator);
     }
 
-    public deleteActuator() {
-        
+    public deleteActuator(actuator: any) {
+        let param: any = new HttpParams().set('id', actuator.id)
+                                        .append('mac', actuator.mac)
+                                        .append('idonboard', actuator.idonboard)
+                                        .append('priority', actuator.priority);                                        
+        return this.http.delete(Constant.HOST + '/actuator/delete', {
+            params: param
+        });
     }
 
     public getAvailableActuator(mac: string) {

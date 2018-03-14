@@ -24,10 +24,10 @@
                         <span>ID</span>
                     </ion-col>
                     <ion-col>
-                        <span>Priority</span>
+                        <span>Auto mode</span>
                     </ion-col>
                     <ion-col>
-                        <span>Active</span>
+                        <span>On/Off</span>
                     </ion-col>
                     <ion-col>
                         <span>Action</span>
@@ -43,14 +43,15 @@
                         {{actuator.idonboard.toString()[1]}}
                     </ion-col>
                     <ion-col>
-                        {{actuator.priority}}
+                        <button *ngIf="actuator.mode === 'auto'" (click)="changeMode(actuator)" class="custome btn btn-success">On</button>
+                        <button *ngIf="actuator.mode !== 'auto'" (click)="changeMode(actuator)" class="custome btn btn-danger">Off</button>
                     </ion-col>
                     <ion-col>
-                        <button *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">Active</button>
-                        <button *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Deactive</button>
+                        <button [disabled]="actuator.mode === 'auto'" *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">On</button>
+                        <button [disabled]="actuator.mode === 'auto'" *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Off</button>
                     </ion-col>
                     <ion-col>
-                        <ion-icon (click)="deleteActuator(actuator.id)" name="trash" color="danger"></ion-icon>
+                        <ion-icon (click)="deleteActuator(actuator)" name="trash" color="danger"></ion-icon>
                     </ion-col>
                 </ion-row>
             </div>

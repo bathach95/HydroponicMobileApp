@@ -26,15 +26,33 @@
                 </ion-option>
             </ion-select>
         </ion-item>
-
+        <ion-item>
+            <ion-label>Schedule: </ion-label>
+            <ion-checkbox name="schedule" #name="ngModel" [ngModel]="schedule"></ion-checkbox>
+        </ion-item>
         <ion-item>
             <ion-label>Start time: HH:mm</ion-label>
-            <ion-datetime required displayFormat="HH:mm A" name="starttime" #name="ngModel" ngModel></ion-datetime>
+            <ion-datetime [disabled]="!addScheduleForm.value.schedule" displayFormat="HH:mm A" name="starttime" #name="ngModel" ngModel></ion-datetime>
         </ion-item>
 
         <ion-item>
             <ion-label>Stop time: HH:mm</ion-label>
-            <ion-datetime required displayFormat="HH:mm A" name="endtime" #name="ngModel" ngModel></ion-datetime>
+            <ion-datetime [disabled]="!addScheduleForm.value.schedule" displayFormat="HH:mm A" name="endtime" #name="ngModel" ngModel></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Timer: </ion-label>
+            <ion-checkbox name="timer" #name="ngModel" [ngModel]="timer"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Duration (s):</ion-label>
+            <ion-input [disabled]="!addScheduleForm.value.timer" type="number" name="intervaltime" #name="ngModel" ngModel></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Delay (s):</ion-label>
+            <ion-input [disabled]="!addScheduleForm.value.timer" type="number" name="delaytime" #name="ngModel" ngModel></ion-input>
         </ion-item>
 
         <div class="spacer" id="add-schedule-spacer2"></div>

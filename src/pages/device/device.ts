@@ -6,6 +6,7 @@ import { ToastService } from '../../services/toast.service';
 import { ActuatorListPage } from '../actuator-list/actuatorList';
 import { AddCropPage } from '../add-crop/addCrop';
 import { CropPage } from '../crop/crop';
+import { SmartConfigPage } from '../smartconfig/smartconfig';
 
 @Component({
     selector: 'page-device',
@@ -15,19 +16,21 @@ export class DevicePage implements OnInit {
     public mac: string;
     public name: string;
     public cropList: any;
+    private homePage: any;
 
     constructor(private navCtrl: NavController, private navParams: NavParams,
         private cropService: CropService, private toastService: ToastService,
         private deviceService: DeviceService) {
     }
 
-    public doRefresh(refresher){
+    public doRefresh(refresher) {
         this.loadCropList(refresher);
     }
 
     public ngOnInit() {
         this.mac = this.navParams.get('deviceMac');
         this.name = this.navParams.get('deviceName');
+        this.homePage = this.navParams.get('homePage');
         this.loadCropList(null);
     }
 
@@ -37,7 +40,7 @@ export class DevicePage implements OnInit {
                 this.cropList = res.data;
             }
             this.toastService.showToast(res.message);
-            
+
         }, (err: any) => {
             console.log(err);
         }, () => {
@@ -45,6 +48,21 @@ export class DevicePage implements OnInit {
                 refresher.complete();
             }
         })
+    }
+
+    public deleteDevice() {
+        if (confirm("Do you want to delete this device ?")) {
+            this.deviceService.deleteDevice(this.mac).subscribe((res: any) => {
+                if (res.success) {
+                    this.navCtrl.pop().then(() => {
+                        this.homePage.doRefresh(null);
+                    })
+                }
+                this.toastService.showToast(res.message);
+            }, (err: any) => {
+                console.log(err);
+            })
+        }
     }
 
     public goToAddCropPage() {
@@ -60,10 +78,15 @@ export class DevicePage implements OnInit {
         });
     }
 
-    public goToCropPage(cropId) {
+    public goToCropPage(crop: any) {
         this.navCtrl.push(CropPage, {
-            cropId: cropId,
-            deviceMac: this.mac
+            crop: crop,
+            deviceMac: this.mac,
+            devicePage: this
         })
+    }
+
+    public goToSmartConfigPage() {
+        this.navCtrl.push(SmartConfigPage);
     }
 }

@@ -23,6 +23,7 @@
     "@angular/platform-browser-dynamic": "^4.4.3",
     "@angular/platform-server": "^4.4.3",
     "@angular/router": "^4.4.3",
+    "@ionic-native/android-permissions": "^4.5.3",
     "@ionic-native/background-mode": "^4.3.1",
     "@ionic-native/core": "^4.3.0",
     "@ionic-native/local-notifications": "^4.3.1",
@@ -33,11 +34,14 @@
     "@ionic/cloud-angular": "^0.12.0",
     "@ionic/storage": "^2.0.1",
     "@types/lodash": "^4.14.104",
+    "com.pylonproducts.wifiwizard": "https://github.com/hoerresb/WifiWizard",
     "cordova-android": "^6.2.3",
+    "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-background-mode": "^0.7.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-esptouch": "^1.0.3",
     "cordova-plugin-fcm": "^2.1.2",
     "cordova-plugin-qrscanner": "^2.5.0",
     "cordova-plugin-splashscreen": "^4.0.3",
@@ -55,6 +59,7 @@
     "rxjs": "^5.4.0",
     "sw-toolbox": "3.6.0",
     "typescript": "^2.5.3",
+    "wifiwizard": "git+https://github.com/hoerresb/WifiWizard.git",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
@@ -75,7 +80,10 @@
         "SENDER_ID": "786918861869"
       },
       "cordova-plugin-fcm": {},
-      "cordova-plugin-qrscanner": {}
+      "cordova-plugin-qrscanner": {},
+      "cordova-plugin-esptouch": {},
+      "com.pylonproducts.wifiwizard": {},
+      "cordova-plugin-android-permissions": {}
     },
     "platforms": [
       "android"

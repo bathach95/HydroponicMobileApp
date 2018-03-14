@@ -19,37 +19,13 @@
   </div>
   <div *ngIf="cropList">
     <ion-list>
-      <div *ngFor="let crop of cropList" (click)="goToCropPage(crop.id)" style="margin-left: 10px">
+      <div *ngFor="let crop of cropList" (click)="goToCropPage(crop)" style="margin-left: 10px">
         <div id="devider1" class="devider"></div>
         <ion-grid>
 
           <ion-row>
             <div id="home-heading4">
               {{crop.name}}
-            </div>
-          </ion-row>
-
-          <ion-row>
-            <div id="home-heading5">
-              Start date: {{crop.startdate | date: 'MM/dd/yyyy HH:mm:ss'}}
-            </div>
-          </ion-row>
-
-          <ion-row>
-            <div id="home-heading5">
-              Close date: {{crop.closedate | date: 'MM/dd/yyyy HH:mm:ss'}}
-            </div>
-          </ion-row>
-
-          <ion-row>
-            <div id="home-heading5">
-              Tree type: {{crop.treetype}}
-            </div>
-          </ion-row>
-
-          <ion-row>
-            <div id="home-heading5">
-              Hydroponic type: {{crop.type}}
             </div>
           </ion-row>
 
@@ -64,6 +40,16 @@
       </div>
     </ion-list>
   </div>
+  <ion-fab bottom right>
+      <button ion-fab color="danger" (click)="deleteDevice()">
+          <ion-icon name="trash"></ion-icon>
+      </button>
+  </ion-fab>
 
+  <ion-fab bottom left>
+      <button ion-fab color="primary" (click)="goToSmartConfigPage()">
+          <ion-icon name="settings"></ion-icon>
+      </button>
+  </ion-fab>
 
 </ion-content>

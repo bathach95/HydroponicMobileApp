@@ -3,7 +3,7 @@
     <name>BKHydroponic</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.107:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -89,12 +89,6 @@
     <allow-navigation href="http://192.168.10.249:8100" />
     <allow-navigation href="http://192.168.10.250:8100" />
     <allow-navigation href="http://192.168.10.58:8100" />
-    <allow-navigation href="http://192.168.8.107:8100" />
-    <allow-navigation href="http://192.168.10.227:8100" />
-    <allow-navigation href="http://192.168.1.5:8100" />
-    <allow-navigation href="http://192.168.1.109:8100" />
-    <allow-navigation href="http://192.168.0.16:8100" />
-    <allow-navigation href="http://192.168.1.107:8100" />
     <engine name="android" spec="^6.2.3" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
@@ -108,4 +102,14 @@
     </plugin>
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <plugin name="cordova-plugin-qrscanner" spec="^2.5.0" />
+    <allow-navigation href="http://192.168.8.107:8100" />
+    <allow-navigation href="http://192.168.10.227:8100" />
+    <allow-navigation href="http://192.168.1.5:8100" />
+    <allow-navigation href="http://192.168.1.109:8100" />
+    <allow-navigation href="http://192.168.0.16:8100" />
+    <allow-navigation href="http://192.168.1.107:8100" />
+    <allow-navigation href="http://192.168.1.136:8100" />
+    <plugin name="cordova-plugin-esptouch" spec="^1.0.3" />
+    <plugin name="com.pylonproducts.wifiwizard" spec="https://github.com/hoerresb/WifiWizard" />
+    <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
 </widget>

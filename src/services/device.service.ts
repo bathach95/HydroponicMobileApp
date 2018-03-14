@@ -30,5 +30,10 @@ export class DeviceService {
         return this.http.put(Constant.HOST + '/device/status', body);
     }
 
-
+    public deleteDevice(deviceMac: string): Observable<any> {
+        let param = new HttpParams().set('mac', deviceMac);
+        return this.http.delete(Constant.HOST + '/device/delete', {
+            params: param
+        })
+    }
 }

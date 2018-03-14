@@ -15,6 +15,8 @@ export class AddSchedulePage implements OnInit {
     private mac: string;
     private schedulePage: any;
     public actuatorType: any[] = Constant.ACTUATOR_TYPE;
+    public schedule: boolean = false;
+    public timer: boolean = false;
 
     constructor(private navParams: NavParams, private actuatorService: ActuatorService,
                 private scheduleService: ScheduleService, private toastService: ToastService,
@@ -38,16 +40,17 @@ export class AddSchedulePage implements OnInit {
         let newSchedule: any = {
             CropId: this.cropId,
             ActuatorId: schedule.actuatorId,
-            starttime: schedule.starttime,
-            endtime: schedule.endtime,
-            intervaltime: Constant.DEFAULT_INTERVAL_TIME,
-            delaytime: Constant.DEFAULT_DELAY_TIME
+            starttime: schedule.schedule ? schedule.starttime : Constant.DEFAULT_START_TIME,
+            endtime: schedule.schedule ? schedule.endtime : Constant.DEFAULT_STOP_TIME,
+            intervaltime: schedule.timer ? schedule.intervaltime : Constant.DEFAULT_INTERVAL_TIME,
+            delaytime: schedule.timer ? schedule.delaytime : Constant.DEFAULT_DELAY_TIME
         }
+        console.log(newSchedule);
         this.scheduleService.addSchedule(newSchedule).subscribe((res: any) => {
             this.toastService.showToast(res.message);
             if (res.success) {
                 this.navCtrl.pop().then(() => {
-                    this.schedulePage.loadSchedules(null);
+                    this.schedulePage.refresh(null);
                 })
             }
         }, (err: any) => {

@@ -35,6 +35,17 @@
     <feature name="QRScanner">
         <param name="android-package" value="com.bitpay.cordova.qrscanner.QRScanner" />
     </feature>
+    <feature name="esptouch">
+        <param name="android-package" value="com.coloz.esptouch.esptouch" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="WifiWizard">
+        <param name="android-package" value="com.pylonproducts.wifiwizard.WifiWizard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
+    </feature>
     <name>BKHydroponic</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -64,6 +75,7 @@
     <allow-navigation href="http://192.168.1.109:8100" />
     <allow-navigation href="http://192.168.0.16:8100" />
     <allow-navigation href="http://192.168.1.107:8100" />
+    <allow-navigation href="http://192.168.1.136:8100" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />

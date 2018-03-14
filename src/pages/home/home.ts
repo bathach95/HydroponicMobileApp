@@ -25,10 +25,13 @@ export class HomePage implements OnInit {
     }
 
     public ngOnInit() {
+        this.doRefresh(null);
+    }
+
+    public doRefresh(refresher) {
         this.deviceService.getAllDevice().subscribe((res: any) => {
             if (res.success) {
                 this.deviceList = res.data;
-
                 this.deviceList.forEach((device) => {
                     let topic = '/topics/' + device.mac.replace(/[:]/g, '');
                     this.topicList.push(topic);
@@ -44,29 +47,10 @@ export class HomePage implements OnInit {
             }
         }, (err: any) => {
             console.log('get all device err: ' + err)
-        })
-
-    }
-
-    public doRefresh(refresher) {
-        this.deviceService.getAllDevice().subscribe((res: any) => {
-            if (res.success) {
-                this.deviceList = res.data;
-                this.deviceList.forEach((device) => {
-                    let topic = '/topics/' + device.mac.replace(/[:]/g, '');
-                    FCMPlugin.subscribeToTopic(topic, () => {
-                        console.log('subscribe success to ' + device.mac)
-                    }, (err: any) => {
-                        console.log(err);
-                    });
-                })
-
-            } else {
-                this.toastService.showToast(res.message);
+        }, () => {
+            if (refresher) {
+                refresher.complete();
             }
-            refresher.complete();
-        }, (err: any) => {
-            console.log('get all device err: ' + err)
         })
       }
 
@@ -122,7 +106,8 @@ export class HomePage implements OnInit {
     public detail(deviceMac: any, deviceName: any) {
         this.navCtrl.push(DevicePage, {
             deviceMac: deviceMac,
-            deviceName: deviceName
+            deviceName: deviceName,
+            homePage: this
         });
     }
 }

@@ -55,6 +55,18 @@
             {
               "xml": "<feature name=\"QRScanner\"><param name=\"android-package\" value=\"com.bitpay.cordova.qrscanner.QRScanner\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"esptouch\"><param name=\"android-package\" value=\"com.coloz.esptouch.esptouch\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"WifiWizard\"><param name=\"android-package\" value=\"com.pylonproducts.wifiwizard.WifiWizard\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Permissions\"><param name=\"android-package\" value=\"com.android.plugins.Permissions\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -142,14 +154,30 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CHANGE_WIFI_MULTICAST_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
               "count": 1
             }
           ],
@@ -206,6 +234,15 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-esptouch": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "com.pylonproducts.wifiwizard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -303,6 +340,30 @@
       "clobbers": [
         "QRScanner"
       ]
+    },
+    {
+      "id": "cordova-plugin-esptouch.esptouch",
+      "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+      "pluginId": "cordova-plugin-esptouch",
+      "clobbers": [
+        "esptouch"
+      ]
+    },
+    {
+      "id": "com.pylonproducts.wifiwizard.WifiWizard",
+      "file": "plugins/com.pylonproducts.wifiwizard/www/WifiWizard.js",
+      "pluginId": "com.pylonproducts.wifiwizard",
+      "clobbers": [
+        "window.WifiWizard"
+      ]
+    },
+    {
+      "id": "cordova-plugin-android-permissions.Permissions",
+      "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+      "pluginId": "cordova-plugin-android-permissions",
+      "clobbers": [
+        "cordova.plugins.permissions"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -317,6 +378,9 @@
     "phonegap-plugin-push": "2.0.0",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-qrscanner": "2.5.0"
+    "cordova-plugin-qrscanner": "2.5.0",
+    "cordova-plugin-esptouch": "1.0.3",
+    "com.pylonproducts.wifiwizard": "0.2.11",
+    "cordova-plugin-android-permissions": "1.0.0"
   }
 }

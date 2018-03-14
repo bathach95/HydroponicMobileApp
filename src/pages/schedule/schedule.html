@@ -6,16 +6,16 @@
     </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <ion-refresher (ionRefresh)="loadSchedules($event)">
+    <ion-refresher (ionRefresh)="refresh($event)">
         <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
         </ion-refresher-content>
     </ion-refresher>
+    <div text-center>
+        <button [disabled]="synchronized" (click)="syncScheduleToDevice()" ion-button>Send schedule to device</button>
+    </div>
 
     <div id="schedule-heading">
         Schedule
-    </div>
-    <div text-center>
-        <button [disabled]="" ion-button>Send schedule to device</button>
     </div>
     <div>
         <ion-grid id="info-table">
@@ -53,7 +53,7 @@
                         {{schedule.endtime}}
                     </ion-col>
                     <ion-col>
-                        <ion-icon (click)="deleteActuator(actuator.id)" name="trash" color="danger"></ion-icon>
+                        <ion-icon (click)="deleteSchedule(schedule.id)" name="trash" color="danger"></ion-icon>
                     </ion-col>
                 </ion-row>
             </div>

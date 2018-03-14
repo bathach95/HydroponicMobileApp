@@ -22,22 +22,4 @@ export class ActuatorPage implements OnInit {
     public doRefresh(refresher) {
         
     }
-
-    public changeStatus() {
-        let msg = this.actuator.status === 'on' ? 'deactive' : 'active';
-        let newStatus = this.actuator.status === 'on' ? 'off' : 'on';
-        if (confirm("Do you want to " + msg + " this ?")) {
-            this.actuatorService.changeActuatorStatus(this.actuator.id, newStatus, this.actuator.DeviceMac, this.actuator.idonboard).subscribe((res: any) => {
-                if (res.success) {
-                    this.actuator.status = newStatus;
-                }
-                this.toastService.showToast(res.message);
-
-            }, (err: any) => {
-                console.log(err);
-                this.toastService.showToast("Cannot change status of this actuator !")
-            })
-        }
-    }
-
 }

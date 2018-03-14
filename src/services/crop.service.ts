@@ -19,4 +19,18 @@ export class CropService {
     public addCrop(crop: any): Observable<any> {
         return this.http.post(Constant.HOST + '/crop/add', crop);
     }
+
+    public getCropById(cropId: any): Observable<any> {
+        let param: any = new HttpParams().set('id', cropId);
+        return this.http.get(Constant.HOST + '/crop/one', {
+            params: param
+        });
+    }
+
+    public deleteCrop(cropId: any): Observable<any> {
+        let param: any = new HttpParams().set('id', cropId);
+        return this.http.delete(Constant.HOST + '/crop/delete', {
+            params: param
+        });
+    }
 }

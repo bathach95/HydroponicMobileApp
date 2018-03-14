@@ -92,6 +92,30 @@ module.exports = [
         "clobbers": [
             "QRScanner"
         ]
+    },
+    {
+        "id": "cordova-plugin-esptouch.esptouch",
+        "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+        "pluginId": "cordova-plugin-esptouch",
+        "clobbers": [
+            "esptouch"
+        ]
+    },
+    {
+        "id": "com.pylonproducts.wifiwizard.WifiWizard",
+        "file": "plugins/com.pylonproducts.wifiwizard/www/WifiWizard.js",
+        "pluginId": "com.pylonproducts.wifiwizard",
+        "clobbers": [
+            "window.WifiWizard"
+        ]
+    },
+    {
+        "id": "cordova-plugin-android-permissions.Permissions",
+        "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+        "pluginId": "cordova-plugin-android-permissions",
+        "clobbers": [
+            "cordova.plugins.permissions"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -108,7 +132,10 @@ module.exports.metadata =
     "phonegap-plugin-push": "2.0.0",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-compat": "1.2.0",
-    "cordova-plugin-qrscanner": "2.5.0"
+    "cordova-plugin-qrscanner": "2.5.0",
+    "cordova-plugin-esptouch": "1.0.3",
+    "com.pylonproducts.wifiwizard": "0.2.11",
+    "cordova-plugin-android-permissions": "1.0.0"
 };
 // BOTTOM OF METADATA
 });

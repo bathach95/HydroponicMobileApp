@@ -36,6 +36,15 @@
     },
     "cordova-plugin-qrscanner": {
       "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-esptouch": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "com.pylonproducts.wifiwizard": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {

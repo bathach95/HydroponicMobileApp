@@ -1,72 +1,110 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
-        Crop
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-  <ion-content padding id="page4">
-    <ion-refresher (ionRefresh)="loadCropData($event)">
-      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
-      </ion-refresher-content>
-    </ion-refresher>
+  <ion-navbar>
+    <ion-title>
+      Crop
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+  <ion-refresher (ionRefresh)="loadCropData($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
 
-    <div id="device-heading7">
-      {{name}}
-    </div>
-    <div text-center>
-      <button ion-button block color="primary" round (click)="goToSchedulePage()">Set schedule</button>
-    </div>
-    <div>
-      <div id="device-container3">
-        <span id="device-heading13">
-          Latest data:
-          <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
-        </span>
-        <ion-grid *ngIf="data" id="info-table">
-          <ion-row>
-            <ion-col>
-              <div [class.danger-info]="dataStatus && dataStatus.badStatus.temp">
-                <span>Temperature</span>
-                <br>
-                <span *ngIf="threshold" class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
-                <br>
-                <span>{{data.temperature}} °C</span>
-              </div>
-            </ion-col>
-            <ion-col>
-              <div [class.danger-info]="dataStatus && dataStatus.badStatus.humidity">
-                <span>Humidity</span>
-                <br>
-                <span *ngIf="threshold" class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
-                <br>
-                <span>{{data.humidity}} %</span>
-              </div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <div [class.danger-info]="dataStatus && dataStatus.badStatus.ppm">
-                <span>ppm</span>
-                <br>
-                <span *ngIf="threshold" class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
-                <br>
-                <span>{{data.ppm}}</span>
-              </div>
-            </ion-col>
-            <ion-col>
-              <div [class.danger-info]="dataStatus && dataStatus.badStatus.light">
-                <span>Light</span>
-                <br>
-                <span *ngIf="threshold" class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
-                <br>
-                <span>{{data.light}} lux</span>
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+
+  <div text-center>
+    <button ion-button block color="primary" round (click)="goToSchedulePage()">Set schedule</button>
+  </div>
+
+  <div text-center>
+      <button (click)="setThreshold()" block round ion-button>Set threshold for data</button>
+  </div>
+
+  <div>
+    <div id="device-container3">
+      <div id="crop-heading7">
+        {{crop.name}}
       </div>
+      <ion-grid *ngIf="crop">
+        <ion-row>
+          <div id="device-heading13">
+            Start date: {{crop.startdate | date: 'MM/dd/yyyy HH:mm:ss'}}
+          </div>
+        </ion-row>
+
+        <ion-row>
+          <div id="device-heading13">
+            Close date: {{crop.closedate | date: 'MM/dd/yyyy HH:mm:ss'}}
+          </div>
+        </ion-row>
+
+        <ion-row>
+          <div id="device-heading13">
+            Tree type: {{crop.treetype}}
+          </div>
+        </ion-row>
+
+        <ion-row>
+          <div id="device-heading13">
+            Hydroponic type: {{crop.type}}
+          </div>
+        </ion-row>
+
+        <ion-row>
+          <div id="device-heading13">
+            Latest data:
+            <span *ngIf="data">{{data.createdAt | date: 'dd/MM/yyyy hh:mm:ss'}}</span>
+          </div>
+        </ion-row>
+      </ion-grid>
+      <ion-grid *ngIf="data" id="info-table">
+        <ion-row>
+          <ion-col>
+            <div [class.danger-info]="dataStatus && dataStatus.badStatus.temp">
+              <span>Temperature</span>
+              <br>
+              <span *ngIf="threshold" class="threshold">({{threshold.temperatureLower}} - {{threshold.temperatureUpper}})</span>
+              <br>
+              <span>{{data.temperature}} °C</span>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div [class.danger-info]="dataStatus && dataStatus.badStatus.humidity">
+              <span>Humidity</span>
+              <br>
+              <span *ngIf="threshold" class="threshold">({{threshold.humidityLower}} - {{threshold.humidityUpper}})</span>
+              <br>
+              <span>{{data.humidity}} %</span>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div [class.danger-info]="dataStatus && dataStatus.badStatus.ppm">
+              <span>ppm</span>
+              <br>
+              <span *ngIf="threshold" class="threshold">({{threshold.ppmLower}} - {{threshold.ppmUpper}})</span>
+              <br>
+              <span>{{data.ppm}}</span>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div [class.danger-info]="dataStatus && dataStatus.badStatus.light">
+              <span>Light</span>
+              <br>
+              <span *ngIf="threshold" class="threshold">({{threshold.lightLower}} - {{threshold.lightUpper}})</span>
+              <br>
+              <span>{{data.light}} lux</span>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
-  
-  
-  </ion-content>
+  </div>
+  <ion-fab bottom right>
+      <button ion-fab color="danger" (click)="deleteCrop()">
+          <ion-icon name="trash"></ion-icon>
+      </button>
+  </ion-fab>
+
+</ion-content>

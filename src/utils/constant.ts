@@ -1,7 +1,9 @@
+import * as moment from 'moment';
+
 export class Constant {
 
     // server IP or domain name
-    public static HOST: string = 'http://192.168.1.107:3210';
+    public static HOST: string = 'http://13.58.114.56:3210';
 
     // hydroponic types
     public static HYDROPONIC_TYPE: any = [{
@@ -52,4 +54,8 @@ export class Constant {
     // default interval and delay time for schedule
     public static DEFAULT_INTERVAL_TIME = 10;
     public static DEFAULT_DELAY_TIME = 0;
+
+    // default start and stop timer
+    public static DEFAULT_START_TIME = moment('00:00','HH:mm A').format('HH:mm');
+    public static DEFAULT_STOP_TIME = moment('23:59','HH:mm A').format('HH:mm');
 }

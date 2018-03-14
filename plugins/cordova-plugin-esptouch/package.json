@@ -1,0 +1,103 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-esptouch",
+        "scope": null,
+        "escapedName": "cordova-plugin-esptouch",
+        "name": "cordova-plugin-esptouch",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/thach/Documents/HydroponicMobileApp"
+    ]
+  ],
+  "_from": "cordova-plugin-esptouch@latest",
+  "_id": "cordova-plugin-esptouch@1.0.3",
+  "_inCache": true,
+  "_location": "/cordova-plugin-esptouch",
+  "_nodeVersion": "8.9.3",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-esptouch_1.0.3_1518162702940_0.1662487847571843"
+  },
+  "_npmUser": {
+    "name": "coloz",
+    "email": "coloz999@gmail.com"
+  },
+  "_npmVersion": "5.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-esptouch",
+    "scope": null,
+    "escapedName": "cordova-plugin-esptouch",
+    "name": "cordova-plugin-esptouch",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-esptouch/-/cordova-plugin-esptouch-1.0.3.tgz",
+  "_shasum": "4b4d1e82254c6e8f8a74350258d42104a6442c4c",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-esptouch",
+  "_where": "/home/thach/Documents/HydroponicMobileApp",
+  "author": {
+    "name": "coloz"
+  },
+  "bugs": {
+    "url": "https://github.com/coloz/cordova-plugin-esptouch/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-esptouch",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "dependencies": {},
+  "description": "cordova plugin esptouch for esp8266 and esp32",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-79duaaOu8BTI6DBbTO6LKH69/vg25zw57A+c8bf7EabIIa95rZm3NkVC8rADrjqmQgW834QAp5tRtgp6QO9ilA==",
+    "shasum": "4b4d1e82254c6e8f8a74350258d42104a6442c4c",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-esptouch/-/cordova-plugin-esptouch-1.0.3.tgz",
+    "fileCount": 13,
+    "unpackedSize": 1853964
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova": ">300"
+      }
+    }
+  },
+  "gitHead": "bf04f156ab7d620e5598f713923c1aa026fd1024",
+  "homepage": "https://github.com/coloz/cordova-plugin-esptouch#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "esptouch",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "coloz",
+      "email": "coloz999@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-esptouch",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coloz/cordova-plugin-esptouch.git"
+  },
+  "version": "1.0.3"
+}

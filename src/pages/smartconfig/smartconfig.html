@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Smart Config
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <div id="register-heading1">
+        Smart Config
+    </div>
+    <div class="spacer" id="register-spacer1"></div>
+    <form #smartConfigForm="ngForm" (ngSubmit)="smartConfig(smartConfigForm.value)">
+
+        <ion-item>
+            <ion-label>SSID:</ion-label>
+            <ion-select require name="ssid" #name="ngModel" ngModel>
+                <ion-option *ngFor="let network of networks">
+                    {{network.ssid}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Password: </ion-label>
+            <ion-input name="password" #name="ngModel" ngModel></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>SSID is hidden </ion-label>
+            <ion-checkbox name="isHidden" #name="ngModel" [ngModel]="isHidden"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Task result count:</ion-label>
+            <ion-input type="number" name="count" #name="ngModel" [ngModel]="count"></ion-input>
+        </ion-item>
+
+        <div class="spacer" id="add-schedule-spacer2"></div>
+        <button round type="submit" ion-button color="secondary" block class="btn">
+            Confirm
+        </button>
+    </form>
+</ion-content>

@@ -22,6 +22,7 @@ import { AddActuatorPage } from '../pages/add-actuator/addActuator';
 import { ActuatorPage } from '../pages/actuator/actuator';
 import { SchedulePage } from '../pages/schedule/schedule';
 import { AddSchedulePage } from '../pages/add-schedule/addSchedule';
+import { SmartConfigPage } from '../pages/smartconfig/smartconfig';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,6 +39,7 @@ import { ScheduleService } from '../services/schedule.service';
 import { ThresholdService } from '../services/threshold.service';
 import { ActuatorService } from '../services/actuator.service';
 import { RegisterService } from '../services/register.service';
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
 @NgModule({
@@ -57,6 +59,7 @@ import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
     ActuatorPage,
     SchedulePage,
     AddSchedulePage,
+    SmartConfigPage,
     ActuatorTypePipe
   ],
   imports: [
@@ -83,7 +86,8 @@ import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
     AddActuatorPage,
     ActuatorPage,
     SchedulePage,
-    AddSchedulePage
+    AddSchedulePage,
+    SmartConfigPage
   ],
   providers: [
     StatusBar,
@@ -101,6 +105,7 @@ import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
     ThresholdService,
     ScheduleService,
     RegisterService,
+    AndroidPermissions,
     { provide: HTTP_INTERCEPTORS, useClass: HttpsRequestInterceptor, multi: true, },
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
