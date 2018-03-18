@@ -27,6 +27,7 @@
     "@ionic-native/background-mode": "^4.3.1",
     "@ionic-native/core": "^4.3.0",
     "@ionic-native/local-notifications": "^4.3.1",
+    "@ionic-native/network": "^4.5.3",
     "@ionic-native/push": "^4.3.1",
     "@ionic-native/qr-scanner": "^4.4.2",
     "@ionic-native/splash-screen": "^4.3.0",
@@ -36,16 +37,19 @@
     "@types/lodash": "^4.14.104",
     "com.pylonproducts.wifiwizard": "https://github.com/hoerresb/WifiWizard",
     "cordova-android": "^6.2.3",
+    "cordova-ios": "~4.5.4",
     "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-background-mode": "^0.7.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
-    "cordova-plugin-esptouch": "^1.0.3",
+    "cordova-plugin-esptouch": "file:///home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
     "cordova-plugin-fcm": "^2.1.2",
+    "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-qrscanner": "^2.5.0",
     "cordova-plugin-splashscreen": "^4.0.3",
     "cordova-plugin-statusbar": "^2.2.2",
+    "cordova-plugin-swift-support": "^3.1.1",
     "cordova-plugin-whitelist": "^1.3.1",
     "de.appplant.cordova.plugin.local-notification": "^0.8.5",
     "ionic-angular": "^3.7.1",
@@ -81,12 +85,14 @@
       },
       "cordova-plugin-fcm": {},
       "cordova-plugin-qrscanner": {},
-      "cordova-plugin-esptouch": {},
       "com.pylonproducts.wifiwizard": {},
-      "cordova-plugin-android-permissions": {}
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-esptouch": {},
+      "cordova-plugin-network-information": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

@@ -58,4 +58,7 @@ export class Constant {
     // default start and stop timer
     public static DEFAULT_START_TIME = moment('00:00','HH:mm A').format('HH:mm');
     public static DEFAULT_STOP_TIME = moment('23:59','HH:mm A').format('HH:mm');
+
+    // timeout for smart config in milisecond
+    public static DEFAULT_TIMEOUT_SMARTCONFIG = 22000;
 }

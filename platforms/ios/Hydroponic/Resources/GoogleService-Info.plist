@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>786918861869-vqvmpgotorfca225p2ahnpltnsm50cg7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.786918861869-vqvmpgotorfca225p2ahnpltnsm50cg7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBv0rVd4O2AGv_L_LP9lz-8Cz7n83ECe50</string>
+	<key>GCM_SENDER_ID</key>
+	<string>786918861869</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.hydroponic.ios</string>
+	<key>PROJECT_ID</key>
+	<string>bkhydroponic</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bkhydroponic.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:786918861869:ios:e8188eabec56e548</string>
+	<key>DATABASE_URL</key>
+	<string>https://bkhydroponic.firebaseio.com</string>
+</dict>
+</plist>

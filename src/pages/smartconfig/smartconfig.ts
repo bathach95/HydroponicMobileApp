@@ -2,10 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ToastService } from '../../services/toast.service';
 import { AndroidPermissions } from '@ionic-native/android-permissions';
+import { Timer } from '../../utils/timer';
+import { TimerCounter } from '../../utils/timerCounter';
+import { Constant } from '../../utils/constant';
 import * as _ from 'lodash';
 
 declare var esptouch: any;
-declare let WifiWizard: any;
+declare var WifiWizard: any;
 @Component({
     selector: 'page-smartconfig',
     templateUrl: 'smartconfig.html'
@@ -42,7 +45,6 @@ export class SmartConfigPage implements OnInit {
     }
 
     public ngOnInit() {
-        
         this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION).then((res: any) => {
             if (res.hasPermission) {
                 this.scanNetwork();
@@ -50,37 +52,39 @@ export class SmartConfigPage implements OnInit {
                 this.requestPermissionAndScanNetWork();
             }
         }).catch((err: any) => {
+            console.log(err);
             this.requestPermissionAndScanNetWork();
         })
     }
 
     public smartConfig(config: any) {
         this.toastService.showLoading();
-
         let network = _.find(this.networks, ['ssid', config.ssid.trim()]);
         let isHiddenStr = config.isHidden ? "YES" : "NO";
 
-        esptouch.start(network.ssid, network.bssid, config.password, isHiddenStr, config.count, (res: any) => {
+        esptouch.start(network.ssid, network.bssid, config.password, Constant.DEFAULT_TIMEOUT_SMARTCONFIG, config.count, (res: any) => {
             console.log(res);
-            this.stopSmartConfig();
-            this.toastService.showToast(res);
+            this.showToastAndStopSmartConfig(res);
             this.navCtrl.pop();
         }, (err: any) => {
             console.log(err);
-            this.toastService.showToast(err);
-            this.stopSmartConfig();
+            this.showToastAndStopSmartConfig(err);
         });
     }
 
     private stopSmartConfig() {
+        console.log('smart config stop ....')
         esptouch.stop((res: any) => {
             console.log(res);
-            this.toastService.showToast(res);
             this.toastService.dismissLoading();
         }, (err: any) => {
             console.log(err);
-            this.toastService.showToast(err);
             this.toastService.dismissLoading();
         })
+    }
+
+    private showToastAndStopSmartConfig(msg: any) {
+        this.toastService.showToast(msg);
+        this.stopSmartConfig();
     }
 }

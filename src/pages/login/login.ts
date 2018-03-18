@@ -4,7 +4,7 @@ import { HomePage } from '../home/home';
 import { RegisterPage } from '../register/register';
 import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
-
+import { Network } from '@ionic-native/network';
 
 @Component({
   selector: 'page-login',
@@ -13,9 +13,7 @@ import { ToastService } from '../../services/toast.service';
 export class LoginPage implements OnInit {
 
   constructor(public navCtrl: NavController, private toastService: ToastService,
-    private authService: AuthService) {
-
-  }
+              private authService: AuthService, private network: Network) {}
 
   public ngOnInit() {
     if (localStorage.getItem('token')) {

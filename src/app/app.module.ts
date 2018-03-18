@@ -30,6 +30,7 @@ import { BackgroundMode } from '@ionic-native/background-mode'
 import { LocalNotifications } from '@ionic-native/local-notifications';
 import { Push } from '@ionic-native/push';
 import { QRScanner } from '@ionic-native/qr-scanner'
+import { Network } from '@ionic-native/network';
 import { AuthService } from '../services/auth.service';
 import { DeviceService } from '../services/device.service';
 import { ToastService } from '../services/toast.service';
@@ -96,6 +97,7 @@ import { ActuatorTypePipe } from '../pipes/actuatorType.pipe';
     LocalNotifications,
     Push,
     QRScanner,
+    Network,
     AuthService,
     DeviceService,
     ToastService,

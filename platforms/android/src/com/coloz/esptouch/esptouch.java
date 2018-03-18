@@ -39,18 +39,19 @@ public class esptouch extends CordovaPlugin {
             final String apSsid = args.getString(0);
             final String apBssid = args.getString(1);
             final String apPassword = args.getString(2);
-            final String isSsidHiddenStr = args.getString(3);
+            final String timeoutStr = args.getString(3);
             final String taskResultCountStr = args.getString(4);
+            final int timeout = Integer.parseInt(timeoutStr); 
             final int taskResultCount = Integer.parseInt(taskResultCountStr);
             final Object mLock = new Object();
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     synchronized (mLock) {
-                        boolean isSsidHidden = false;
-                        if (isSsidHiddenStr.equals("YES")) {
-                            isSsidHidden = true;
-                        }
-                        mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword, isSsidHidden,
+                        // boolean isSsidHidden = false;
+                        // if (isSsidHiddenStr.equals("YES")) {
+                        //     isSsidHidden = true;
+                        // }
+                        mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword, timeout,
                                 cordova.getActivity());
                         mEsptouchTask.setEsptouchListener(myListener);
                     }

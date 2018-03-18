@@ -2,50 +2,40 @@
   "_args": [
     [
       {
-        "raw": "cordova-plugin-esptouch",
+        "raw": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
         "scope": null,
-        "escapedName": "cordova-plugin-esptouch",
-        "name": "cordova-plugin-esptouch",
-        "rawSpec": "",
-        "spec": "latest",
-        "type": "tag"
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+        "spec": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+        "type": "directory"
       },
-      "/home/thach/Documents/HydroponicMobileApp"
+      "/home/thach/Documents/IoT-Agriculture/HydroponicMobileApp"
     ]
   ],
-  "_from": "cordova-plugin-esptouch@latest",
+  "_from": "../cordova-plugin-esptouch",
   "_id": "cordova-plugin-esptouch@1.0.3",
   "_inCache": true,
   "_location": "/cordova-plugin-esptouch",
-  "_nodeVersion": "8.9.3",
-  "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/cordova-plugin-esptouch_1.0.3_1518162702940_0.1662487847571843"
-  },
-  "_npmUser": {
-    "name": "coloz",
-    "email": "coloz999@gmail.com"
-  },
-  "_npmVersion": "5.5.1",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "cordova-plugin-esptouch",
+    "raw": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
     "scope": null,
-    "escapedName": "cordova-plugin-esptouch",
-    "name": "cordova-plugin-esptouch",
-    "rawSpec": "",
-    "spec": "latest",
-    "type": "tag"
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+    "spec": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+    "type": "directory"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-esptouch/-/cordova-plugin-esptouch-1.0.3.tgz",
-  "_shasum": "4b4d1e82254c6e8f8a74350258d42104a6442c4c",
+  "_resolved": "file:../cordova-plugin-esptouch",
+  "_shasum": "f78fd04fcb64691aac2e2b4be8f7302c11b0222d",
   "_shrinkwrap": null,
-  "_spec": "cordova-plugin-esptouch",
-  "_where": "/home/thach/Documents/HydroponicMobileApp",
+  "_spec": "/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+  "_where": "/home/thach/Documents/IoT-Agriculture/HydroponicMobileApp",
   "author": {
     "name": "coloz"
   },
@@ -62,14 +52,6 @@
   "dependencies": {},
   "description": "cordova plugin esptouch for esp8266 and esp32",
   "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "integrity": "sha512-79duaaOu8BTI6DBbTO6LKH69/vg25zw57A+c8bf7EabIIa95rZm3NkVC8rADrjqmQgW834QAp5tRtgp6QO9ilA==",
-    "shasum": "4b4d1e82254c6e8f8a74350258d42104a6442c4c",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-esptouch/-/cordova-plugin-esptouch-1.0.3.tgz",
-    "fileCount": 13,
-    "unpackedSize": 1853964
-  },
   "engines": {
     "cordovaDependencies": {
       "1.0.0": {
@@ -86,15 +68,10 @@
     "cordova-ios"
   ],
   "license": "MIT",
-  "maintainers": [
-    {
-      "name": "coloz",
-      "email": "coloz999@gmail.com"
-    }
-  ],
   "name": "cordova-plugin-esptouch",
   "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
+  "readme": "# cordova-plugin-esptouch  \n配合esp8266、esp32进行esptouch配网的cordova插件，使用Espressif最新的库，可用于ionic、cordova项目  \n  \n##支持平台  \nios  \nandroid  \n  \n##参考引用  \nhttps://github.com/EspressifApp/LibEsptouchForIOS  \nhttps://github.com/EspressifApp/LibEsptouchForAndroid  \nhttps://github.com/xumingxin7398/cordovaEsptouch\n\n##使用方法  \n  \n```\ncordova plugin add cordova-plugin-esptouch\n```\n  \n```\ndeclare var esptouch;\n\nesptouch.start(ssid, \"00:00:00:00\", password, \"NO\", 1,\n  res => { this.configComplete(res) },\n  err => { this.configError(err) });\n}\n\nesptouch.stop(res => { console.log(res) }, err => { console.log(err) });\n\n```\n\n\nforked from https://github.com/t2wu/cordova-plugin-smartconfig  \n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/coloz/cordova-plugin-esptouch.git"
