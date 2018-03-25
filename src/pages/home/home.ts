@@ -6,8 +6,7 @@ import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
 import { DevicePage } from '../device/device';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-
-declare const FCMPlugin: any;
+import { FCM } from '@ionic-native/fcm';
 
 @Component({
     selector: 'page-home',
@@ -19,10 +18,8 @@ export class HomePage implements OnInit {
     private topicList: string[] = [];
 
     constructor(private navCtrl: NavController, private deviceService: DeviceService,
-        private authService: AuthService, private toastService: ToastService,
-        private qrScanner: QRScanner) {
-
-    }
+                private authService: AuthService, private toastService: ToastService,
+                private qrScanner: QRScanner, private fcm: FCM) {}
 
     public ngOnInit() {
         this.doRefresh(null);
@@ -35,9 +32,9 @@ export class HomePage implements OnInit {
                 this.deviceList.forEach((device) => {
                     let topic = '/topics/' + device.mac.replace(/[:]/g, '');
                     this.topicList.push(topic);
-                    FCMPlugin.subscribeToTopic(topic, () => {
+                    this.fcm.subscribeToTopic(topic).then(() => {
                         console.log('subscribe success to ' + device.mac)
-                    }, (err: any) => {
+                    }).catch((err: any) => {
                         console.log(err);
                     });
                 })
@@ -95,9 +92,9 @@ export class HomePage implements OnInit {
         this.navCtrl.setRoot(LoginPage);
         this.toastService.showToast('Logout success!');
         this.topicList.forEach((topic) => {
-            FCMPlugin.unsubscribeFromTopic(topic, (success) => {
+            this.fcm.unsubscribeFromTopic(topic).then((success) => {
                 console.log("unsub success " + success);
-            }, (err: any) => {
+            }).catch((err: any) => {
                 console.log("unsub fail " + err)
             });
         })

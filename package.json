@@ -1,5 +1,5 @@
 {
-  "name": "BKHydroponic",
+  "name": "Hydroponic",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -26,6 +26,7 @@
     "@ionic-native/android-permissions": "^4.5.3",
     "@ionic-native/background-mode": "^4.3.1",
     "@ionic-native/core": "^4.3.0",
+    "@ionic-native/fcm": "^4.6.0",
     "@ionic-native/local-notifications": "^4.3.1",
     "@ionic-native/network": "^4.5.3",
     "@ionic-native/push": "^4.3.1",
@@ -64,6 +65,7 @@
     "sw-toolbox": "3.6.0",
     "typescript": "^2.5.3",
     "wifiwizard": "git+https://github.com/hoerresb/WifiWizard.git",
+    "xcode": "^1.0.0",
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
