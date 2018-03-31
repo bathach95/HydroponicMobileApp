@@ -34,11 +34,36 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-esptouch.esptouch",
+    "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+    "pluginId": "cordova-plugin-esptouch",
+    "clobbers": [
+      "esptouch"
+    ]
+  },
+  {
     "id": "cordova-plugin-fcm.FCMPlugin",
     "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
     "pluginId": "cordova-plugin-fcm",
     "clobbers": [
       "FCMPlugin"
+    ]
+  },
+  {
+    "id": "cordova-plugin-network-information.network",
+    "file": "plugins/cordova-plugin-network-information/www/network.js",
+    "pluginId": "cordova-plugin-network-information",
+    "clobbers": [
+      "navigator.connection",
+      "navigator.network.connection"
+    ]
+  },
+  {
+    "id": "cordova-plugin-network-information.Connection",
+    "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+    "pluginId": "cordova-plugin-network-information",
+    "clobbers": [
+      "Connection"
     ]
   },
   {
@@ -108,31 +133,6 @@ module.exports = [
     "clobbers": [
       "PushNotification"
     ]
-  },
-  {
-    "id": "cordova-plugin-esptouch.esptouch",
-    "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
-    "pluginId": "cordova-plugin-esptouch",
-    "clobbers": [
-      "esptouch"
-    ]
-  },
-  {
-    "id": "cordova-plugin-network-information.network",
-    "file": "plugins/cordova-plugin-network-information/www/network.js",
-    "pluginId": "cordova-plugin-network-information",
-    "clobbers": [
-      "navigator.connection",
-      "navigator.network.connection"
-    ]
-  },
-  {
-    "id": "cordova-plugin-network-information.Connection",
-    "file": "plugins/cordova-plugin-network-information/www/Connection.js",
-    "pluginId": "cordova-plugin-network-information",
-    "clobbers": [
-      "Connection"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -144,7 +144,9 @@ module.exports.metadata =
   "cordova-plugin-device": "1.1.4",
   "cordova-plugin-background-mode": "0.7.2",
   "cordova-plugin-compat": "1.2.0",
+  "cordova-plugin-esptouch": "1.0.3",
   "cordova-plugin-fcm": "2.1.2",
+  "cordova-plugin-network-information": "2.0.1",
   "cordova-plugin-swift-support": "3.1.1",
   "cordova-plugin-qrscanner": "2.5.0",
   "cordova-plugin-splashscreen": "4.0.3",
@@ -152,9 +154,7 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.1",
   "de.appplant.cordova.plugin.local-notification": "0.8.5",
   "ionic-plugin-keyboard": "2.2.1",
-  "phonegap-plugin-push": "2.0.0",
-  "cordova-plugin-esptouch": "1.0.3",
-  "cordova-plugin-network-information": "2.0.1"
+  "phonegap-plugin-push": "2.2.2"
 };
 // BOTTOM OF METADATA
 });

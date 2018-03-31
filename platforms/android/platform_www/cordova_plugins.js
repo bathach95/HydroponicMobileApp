@@ -70,14 +70,6 @@ module.exports = [
         ]
     },
     {
-        "id": "phonegap-plugin-push.PushNotification",
-        "file": "plugins/phonegap-plugin-push/www/push.js",
-        "pluginId": "phonegap-plugin-push",
-        "clobbers": [
-            "PushNotification"
-        ]
-    },
-    {
         "id": "cordova-plugin-fcm.FCMPlugin",
         "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
         "pluginId": "cordova-plugin-fcm",
@@ -146,7 +138,6 @@ module.exports.metadata =
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-app-event": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
-    "phonegap-plugin-push": "2.0.0",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-qrscanner": "2.5.0",

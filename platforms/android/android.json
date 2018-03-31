@@ -45,10 +45,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"FCMPlugin\"><param name=\"android-package\" value=\"com.gae.scaffolder.plugin.FCMPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             },
@@ -111,26 +107,6 @@
               "count": 1
             },
             {
-              "xml": "<activity android:exported=\"true\" android:name=\"com.adobe.phonegap.push.PushHandlerActivity\" android:permission=\"${applicationId}.permission.PushHandlerActivity\" />",
-              "count": 1
-            },
-            {
-              "xml": "<receiver android:name=\"com.adobe.phonegap.push.BackgroundActionButtonHandler\" />",
-              "count": 1
-            },
-            {
-              "xml": "<receiver android:name=\"com.adobe.phonegap.push.PushDismissedHandler\" />",
-              "count": 1
-            },
-            {
-              "xml": "<service android:name=\"com.adobe.phonegap.push.FCMService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
-              "count": 1
-            },
-            {
-              "xml": "<service android:name=\"com.adobe.phonegap.push.PushInstanceIDListenerService\"><intent-filter><action android:name=\"com.google.firebase.INSTANCE_ID_EVENT\" /></intent-filter></service>",
-              "count": 1
-            },
-            {
               "xml": "<activity android:exported=\"true\" android:launchMode=\"singleTop\" android:name=\"com.gae.scaffolder.plugin.FCMPluginActivity\"><intent-filter><action android:name=\"FCM_PLUGIN_ACTIVITY\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
               "count": 1
             },
@@ -146,7 +122,7 @@
           "/manifest": [
             {
               "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
-              "count": 2
+              "count": 1
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\" />",
@@ -158,14 +134,10 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 2
+              "count": 1
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 2
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
               "count": 1
             },
             {
@@ -230,9 +202,6 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "de.appplant.cordova.plugin.local-notification": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "phonegap-plugin-push": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-fcm": {
@@ -329,14 +298,6 @@
       ]
     },
     {
-      "id": "phonegap-plugin-push.PushNotification",
-      "file": "plugins/phonegap-plugin-push/www/push.js",
-      "pluginId": "phonegap-plugin-push",
-      "clobbers": [
-        "PushNotification"
-      ]
-    },
-    {
       "id": "cordova-plugin-fcm.FCMPlugin",
       "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
       "pluginId": "cordova-plugin-fcm",
@@ -403,7 +364,6 @@
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-app-event": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
-    "phonegap-plugin-push": "2.0.0",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-qrscanner": "2.5.0",

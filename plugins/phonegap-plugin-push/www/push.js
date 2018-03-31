@@ -50,25 +50,7 @@ var PushNotification = function () {
       if (result && typeof result.registrationId !== 'undefined') {
         _this.emit('registration', result);
       } else if (result && result.additionalData && typeof result.additionalData.actionCallback !== 'undefined') {
-        var executeFuctionOrEmitEventByName = function executeFuctionOrEmitEventByName(functionName, context) {
-          for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
-            args[_key - 2] = arguments[_key];
-          }
-
-          var namespaces = functionName.split('.');
-          var func = namespaces.pop();
-          for (var i = 0; i < namespaces.length; i++) {
-            context = context[namespaces[i]];
-          }
-
-          if (typeof context[func] === 'function') {
-            context[func].call(context, args);
-          } else {
-            _this.emit(functionName, args);
-          }
-        };
-
-        executeFuctionOrEmitEventByName(result.additionalData.actionCallback, window, result);
+        _this.emit(result.additionalData.actionCallback, result);
       } else if (result) {
         _this.emit('notification', result);
       }
@@ -105,7 +87,7 @@ var PushNotification = function () {
       }
 
       if (typeof successCallback !== 'function') {
-        console.log('PushNotification.unregister failure: success callback parameter ' + ' must be a function');
+        console.log('PushNotification.unregister failure: success callback parameter must be a function');
         return;
       }
 
@@ -137,12 +119,12 @@ var PushNotification = function () {
       var errorCallback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
 
       if (typeof errorCallback !== 'function') {
-        console.log('PushNotification.subscribe failure: ' + 'failure parameter not a function');
+        console.log('PushNotification.subscribe failure: failure parameter not a function');
         return;
       }
 
       if (typeof successCallback !== 'function') {
-        console.log('PushNotification.subscribe failure: ' + 'success callback parameter must be a function');
+        console.log('PushNotification.subscribe failure: success callback parameter must be a function');
         return;
       }
 
@@ -168,7 +150,7 @@ var PushNotification = function () {
       }
 
       if (typeof successCallback !== 'function') {
-        console.log('PushNotification.unsubscribe failure: ' + 'success callback parameter must be a function');
+        console.log('PushNotification.unsubscribe failure: success callback parameter must be a function');
         return;
       }
 
@@ -231,7 +213,7 @@ var PushNotification = function () {
       var errorCallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
 
       if (typeof errorCallback !== 'function') {
-        console.log('PushNotification.clearAllNotifications failure: failure parameter ' + 'not a function');
+        console.log('PushNotification.clearAllNotifications failure: failure parameter not a function');
         return;
       }
 
@@ -296,8 +278,8 @@ var PushNotification = function () {
   }, {
     key: 'emit',
     value: function emit() {
-      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-        args[_key2] = arguments[_key2];
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
       }
 
       var eventName = args.shift();
@@ -362,6 +344,18 @@ module.exports = {
 
   hasPermission: function hasPermission(successCallback, errorCallback) {
     exec(successCallback, errorCallback, 'PushNotification', 'hasPermission', []);
+  },
+
+  createChannel: function createChannel(successCallback, errorCallback, channel) {
+    exec(successCallback, errorCallback, 'PushNotification', 'createChannel', [channel]);
+  },
+
+  deleteChannel: function deleteChannel(successCallback, errorCallback, channelId) {
+    exec(successCallback, errorCallback, 'PushNotification', 'deleteChannel', [channelId]);
+  },
+
+  listChannels: function listChannels(successCallback, errorCallback) {
+    exec(successCallback, errorCallback, 'PushNotification', 'listChannels', []);
   },
 
   /**

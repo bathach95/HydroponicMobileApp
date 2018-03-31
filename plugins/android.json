@@ -28,9 +28,6 @@
     "de.appplant.cordova.plugin.local-notification": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "phonegap-plugin-push": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
     },

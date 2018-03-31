@@ -19,7 +19,13 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-esptouch": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-qrscanner": {
@@ -41,12 +47,6 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "phonegap-plugin-push": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-esptouch": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

@@ -97,7 +97,6 @@
     <allow-navigation href="http://192.168.1.107:8100" />
     <allow-navigation href="http://192.168.1.136:8100" />
     <engine name="android" spec="^6.2.3" />
-    <engine name="ios" spec="~4.5.4" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
@@ -105,9 +104,6 @@
     <plugin name="ionic-plugin-keyboard" spec="^2.2.1" />
     <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
     <plugin name="de.appplant.cordova.plugin.local-notification" spec="^0.8.5" />
-    <plugin name="phonegap-plugin-push" spec="^2.0.0">
-        <variable name="SENDER_ID" value="786918861869" />
-    </plugin>
     <plugin name="cordova-plugin-fcm" spec="^2.1.2" />
     <plugin name="cordova-plugin-qrscanner" spec="^2.5.0" />
     <plugin name="com.pylonproducts.wifiwizard" spec="https://github.com/hoerresb/WifiWizard" />
@@ -115,4 +111,9 @@
     <allow-navigation href="http://192.168.10.224:8100" />
     <plugin name="cordova-plugin-esptouch" spec="/home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <allow-navigation href="http://192.168.10.112:8100" />
+    <plugin name="phonegap-plugin-push" spec="^2.2.2">
+        <variable name="SENDER_ID" value="786918861869" />
+    </plugin>
+    <engine name="ios" spec="~4.5.4" />
 </widget>

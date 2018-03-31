@@ -38,13 +38,13 @@
     "@types/lodash": "^4.14.104",
     "com.pylonproducts.wifiwizard": "https://github.com/hoerresb/WifiWizard",
     "cordova-android": "^6.2.3",
-    "cordova-ios": "~4.5.4",
+    "cordova-ios": "4.5.4",
     "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-background-mode": "^0.7.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
-    "cordova-plugin-esptouch": "file:///home/thach/Documents/IoT-Agriculture/cordova-plugin-esptouch",
+    "cordova-plugin-esptouch": "https://github.com/bathach95/cordova-plugin-esptouch.git",
     "cordova-plugin-fcm": "^2.1.2",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-qrscanner": "^2.5.0",
@@ -60,7 +60,7 @@
     "moment-timezone": "^0.5.14",
     "mqtt": "^2.13.0",
     "ng2-mqtt": "^0.1.2",
-    "phonegap-plugin-push": "^2.0.0",
+    "phonegap-plugin-push": "^2.2.2",
     "rxjs": "^5.4.0",
     "sw-toolbox": "3.6.0",
     "typescript": "^2.5.3",
@@ -82,15 +82,15 @@
       "ionic-plugin-keyboard": {},
       "cordova-plugin-background-mode": {},
       "de.appplant.cordova.plugin.local-notification": {},
-      "phonegap-plugin-push": {
-        "SENDER_ID": "786918861869"
-      },
       "cordova-plugin-fcm": {},
       "cordova-plugin-qrscanner": {},
       "com.pylonproducts.wifiwizard": {},
       "cordova-plugin-android-permissions": {},
       "cordova-plugin-esptouch": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "phonegap-plugin-push": {
+        "SENDER_ID": "786918861869"
+      }
     },
     "platforms": [
       "android",

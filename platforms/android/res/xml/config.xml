@@ -25,9 +25,6 @@
     <feature name="LocalNotification">
         <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
     </feature>
-    <feature name="PushNotification">
-        <param name="android-package" value="com.adobe.phonegap.push.PushPlugin" />
-    </feature>
     <feature name="FCMPlugin">
         <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
         <param name="onload" value="true" />
@@ -80,6 +77,7 @@
     <allow-navigation href="http://192.168.1.107:8100" />
     <allow-navigation href="http://192.168.1.136:8100" />
     <allow-navigation href="http://192.168.10.224:8100" />
+    <allow-navigation href="http://192.168.10.112:8100" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />

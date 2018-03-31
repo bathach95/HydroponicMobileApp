@@ -28,8 +28,14 @@
     <feature name="BackgroundMode">
         <param name="ios-package" value="APPBackgroundMode" />
     </feature>
+    <feature name="esptouch">
+        <param name="ios-package" value="esptouch" />
+    </feature>
     <feature name="FCMPlugin">
         <param name="ios-package" value="FCMPlugin" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="ios-package" value="CDVConnection" />
     </feature>
     <feature name="QRScanner">
         <param name="ios-package" value="QRScanner" />
@@ -82,6 +88,8 @@
     <allow-navigation href="http://192.168.0.16:8100" />
     <allow-navigation href="http://192.168.1.107:8100" />
     <allow-navigation href="http://192.168.1.136:8100" />
+    <allow-navigation href="http://192.168.10.224:8100" />
+    <allow-navigation href="http://192.168.10.112:8100" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -138,10 +146,4 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
-    <feature name="esptouch">
-        <param name="ios-package" value="esptouch" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="ios-package" value="CDVConnection" />
-    </feature>
 </widget>
