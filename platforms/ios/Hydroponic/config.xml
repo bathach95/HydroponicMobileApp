@@ -28,9 +28,6 @@
     <feature name="BackgroundMode">
         <param name="ios-package" value="APPBackgroundMode" />
     </feature>
-    <feature name="esptouch">
-        <param name="ios-package" value="esptouch" />
-    </feature>
     <feature name="FCMPlugin">
         <param name="ios-package" value="FCMPlugin" />
     </feature>
@@ -146,4 +143,7 @@
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
+    <feature name="esptouch">
+        <param name="ios-package" value="esptouch" />
+    </feature>
 </widget>

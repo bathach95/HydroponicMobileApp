@@ -61,11 +61,11 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"esptouch\"><param name=\"android-package\" value=\"com.coloz.esptouch.esptouch\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+              "xml": "<feature name=\"esptouch\"><param name=\"android-package\" value=\"com.coloz.esptouch.esptouch\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             }
           ]
@@ -133,14 +133,6 @@
               "count": 1
             },
             {
-              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
-              "count": 1
-            },
-            {
-              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-              "count": 1
-            },
-            {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
               "count": 2
             },
@@ -150,6 +142,14 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
               "count": 1
             },
             {
@@ -219,10 +219,10 @@
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-esptouch": {
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-network-information": {
+    "cordova-plugin-esptouch": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -330,14 +330,6 @@
       ]
     },
     {
-      "id": "cordova-plugin-esptouch.esptouch",
-      "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
-      "pluginId": "cordova-plugin-esptouch",
-      "clobbers": [
-        "esptouch"
-      ]
-    },
-    {
       "id": "cordova-plugin-network-information.network",
       "file": "plugins/cordova-plugin-network-information/www/network.js",
       "pluginId": "cordova-plugin-network-information",
@@ -352,6 +344,14 @@
       "pluginId": "cordova-plugin-network-information",
       "clobbers": [
         "Connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-esptouch.esptouch",
+      "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+      "pluginId": "cordova-plugin-esptouch",
+      "clobbers": [
+        "esptouch"
       ]
     }
   ],
@@ -369,7 +369,7 @@
     "cordova-plugin-qrscanner": "2.5.0",
     "com.pylonproducts.wifiwizard": "0.2.11",
     "cordova-plugin-android-permissions": "1.0.0",
-    "cordova-plugin-esptouch": "1.0.3",
-    "cordova-plugin-network-information": "2.0.1"
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-plugin-esptouch": "1.0.3"
   }
 }

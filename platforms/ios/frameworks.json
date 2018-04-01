@@ -1,7 +1,5 @@
 {
     "SystemConfiguration.framework": 2,
-    "UIKit.framework": 1,
-    "Foundation.framework": 1,
     "libc++.tbd": 1,
     "libz.tbd": 2,
     "AddressBook.framework": 1,
@@ -9,5 +7,7 @@
     "Security.framework": 1,
     "CoreTelephony.framework": 1,
     "UserNotifications.framework": 1,
-    "PushKit.framework": 1
+    "PushKit.framework": 1,
+    "UIKit.framework": 1,
+    "Foundation.framework": 1
 }

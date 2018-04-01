@@ -44,7 +44,7 @@
     "cordova-plugin-background-mode": "^0.7.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^1.1.4",
-    "cordova-plugin-esptouch": "https://github.com/bathach95/cordova-plugin-esptouch.git",
+    "cordova-plugin-esptouch": "git+https://github.com/bathach95/cordova-plugin-esptouch.git",
     "cordova-plugin-fcm": "^2.1.2",
     "cordova-plugin-network-information": "^2.0.1",
     "cordova-plugin-qrscanner": "^2.5.0",
@@ -86,11 +86,11 @@
       "cordova-plugin-qrscanner": {},
       "com.pylonproducts.wifiwizard": {},
       "cordova-plugin-android-permissions": {},
-      "cordova-plugin-esptouch": {},
       "cordova-plugin-network-information": {},
       "phonegap-plugin-push": {
         "SENDER_ID": "786918861869"
-      }
+      },
+      "cordova-plugin-esptouch": {}
     },
     "platforms": [
       "android",

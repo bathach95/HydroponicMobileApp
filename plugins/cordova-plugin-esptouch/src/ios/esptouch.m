@@ -29,19 +29,15 @@
         NSString *apSsid = (NSString *)[command.arguments objectAtIndex:0];
         NSString *apBssid = (NSString *)[command.arguments objectAtIndex:1];
         NSString *apPwd = (NSString *)[command.arguments objectAtIndex:2];
-        NSString *isSsidHiddenStr=(NSString *)[command.arguments objectAtIndex:3];
+        int timeout = [[command.arguments objectAtIndex:3] intValue];
         
-        BOOL isSsidHidden = true;
-        if([isSsidHiddenStr compare:@"NO"]==NSOrderedSame){
-            isSsidHidden=false;
-        }
         int taskCount = [[command.arguments objectAtIndex:4] intValue];
         
         NSLog(@"ssid: %@, bssid: %@, apPwd: %@", apSsid, apBssid, apPwd);
         //        self._esptouchTask =
         //        [[ESPTouchTask alloc]initWithApSsid:apSsid andApBssid:apBssid andApPwd:apPwd andIsSsidHiden:isSsidHidden]; // deprecated
         self._esptouchTask =
-        [[ESPTouchTask alloc]initWithApSsid:apSsid andApBssid:apBssid andApPwd:apPwd];
+        [[ESPTouchTask alloc]initWithApSsid:apSsid andApBssid:apBssid andApPwd:apPwd andTimeoutMillisecond:timeout];
         EspTouchDelegateImpl *esptouchDelegate=[[EspTouchDelegateImpl alloc]init];
         esptouchDelegate.command=command;
         esptouchDelegate.commandDelegate=self.commandDelegate;

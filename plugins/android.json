@@ -40,10 +40,10 @@
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-esptouch": {
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-network-information": {
+    "cordova-plugin-esptouch": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

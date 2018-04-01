@@ -102,14 +102,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-esptouch.esptouch",
-        "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
-        "pluginId": "cordova-plugin-esptouch",
-        "clobbers": [
-            "esptouch"
-        ]
-    },
-    {
         "id": "cordova-plugin-network-information.network",
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "pluginId": "cordova-plugin-network-information",
@@ -124,6 +116,14 @@ module.exports = [
         "pluginId": "cordova-plugin-network-information",
         "clobbers": [
             "Connection"
+        ]
+    },
+    {
+        "id": "cordova-plugin-esptouch.esptouch",
+        "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+        "pluginId": "cordova-plugin-esptouch",
+        "clobbers": [
+            "esptouch"
         ]
     }
 ];
@@ -143,8 +143,8 @@ module.exports.metadata =
     "cordova-plugin-qrscanner": "2.5.0",
     "com.pylonproducts.wifiwizard": "0.2.11",
     "cordova-plugin-android-permissions": "1.0.0",
-    "cordova-plugin-esptouch": "1.0.3",
-    "cordova-plugin-network-information": "2.0.1"
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-plugin-esptouch": "1.0.3"
 };
 // BOTTOM OF METADATA
 });

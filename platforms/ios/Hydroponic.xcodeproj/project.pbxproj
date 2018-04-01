@@ -19,7 +19,6 @@
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		245A83FA77CD4E8BB99BFDA4 /* APPMethodMagic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA53F00DB2C4677889293EB /* APPMethodMagic.m */; };
-		2466316BDAA84E4DB5F49472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9298384315433DA64DF84B /* Foundation.framework */; };
 		28B72CCF01B94C7DAD5AA8F7 /* CDVPlugin+APPAppEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF341BDBEBEA40B1BD3E1B41 /* CDVPlugin+APPAppEvent.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
@@ -27,7 +26,6 @@
 		3378C896908C4E278AF4D69E /* AppDelegate+FCMPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D8B633F347418C97732F23 /* AppDelegate+FCMPlugin.m */; };
 		3387DEE0CF7E45AEBA4BCFD8 /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 445F0EACC5874C8C8DDF7B1D /* PushKit.framework */; };
 		3B0EB060065C45FE95583862 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E1DBAE47314CE998515E11 /* CDVDevice.m */; };
-		4215A550F8174C68BCF537F9 /* esptouch.m in Sources */ = {isa = PBXBuildFile; fileRef = F1ADEB2C83CB454F99001927 /* esptouch.m */; };
 		4E4AEA7E3E5F4B0FBDC5DC7D /* NXWWifiWizard.m in Sources */ = {isa = PBXBuildFile; fileRef = 394AC1793B8C4408BC970206 /* NXWWifiWizard.m */; };
 		5C4F68E843EE4E65980570FA /* appbeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0F73D530E6684D41AD1F3C4A /* appbeep.wav */; };
 		5E9F70C9DE3444269E21D9BC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 039F9A132E264128A7F1FEB6 /* CoreTelephony.framework */; };
@@ -47,7 +45,6 @@
 		9FB9091B6FFC45DA96150DEC /* APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 0809F86FDCDB4F37BA37A709 /* APPLocalNotification.m */; };
 		A7CA1C0B21EC4546ABD41AD0 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AA95757ED743E899904053 /* UserNotifications.framework */; };
 		ACA5B7D304C6425E97AB120C /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8F321A9F284B09AAC3F035 /* libz.tbd */; };
-		AD40750ED4024DCA83E0348A /* libEsptouch_v0.3.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E04A1AB3968240B3B995E759 /* libEsptouch_v0.3.5.3.a */; };
 		ADE6FE77A7F9498FAF19F229 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BEB12AF61CD4120BA8CCBC5 /* CDVViewController+SplashScreen.m */; };
 		AF1D389D58EF4A548ED784BC /* PushPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9411C0121D4C5697E1AB90 /* PushPlugin.m */; };
 		B4CFDF8AEC024B588510A51B /* IonicKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F3B68E7CDF44CD81DFAB5D /* IonicKeyboard.m */; };
@@ -55,14 +52,17 @@
 		C6863472F68E458E8BD44D27 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84A1CD252364E04A2FC1B94 /* FirebaseInstanceID.framework */; };
 		CB70629E318F42E7AF6A7280 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3048008D5404BED8832E492 /* GoogleInterchangeUtilities.framework */; };
 		CCA53AEABCE689A9E632A7FC /* libPods-Hydroponic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6DF30172C298D523036141 /* libPods-Hydroponic.a */; };
-		DA489F38663E4D76B27BC572 /* esptouch in Sources */ = {isa = PBXBuildFile; fileRef = A21BEA6290124B97BD547DE6 /* esptouch */; };
 		DB674720DA1D429493EA23F1 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FFA1376C0744EEAAB6B1784 /* GoogleSymbolUtilities.framework */; };
 		E087D7EA61B0494AB2F17075 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B62B3C18DE48C0920D8F7B /* FirebaseCore.framework */; };
 		E1348B42621F4AAA8C609A9F /* UILocalNotification+APPLocalNotification.ios9.m in Sources */ = {isa = PBXBuildFile; fileRef = FE165892EEA14E45B46DF530 /* UILocalNotification+APPLocalNotification.ios9.m */; };
 		E17D9932FC0D4D00B9D02D20 /* APPBackgroundMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C086F38E2A542D4B2C673D5 /* APPBackgroundMode.m */; };
-		E8A44F086BE2485ABA4D050B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A26AD8B7316E46F2BC5945C2 /* UIKit.framework */; };
 		EA8A0C47D9D34996808F706B /* FCMPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 70D943DBCE424FFA827F7B83 /* FCMPlugin.m */; };
 		FF5FC11D391442B5920AEACA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4F5BBB2847F4BA6A22672FB /* Security.framework */; };
+		A1415B9864BA42E181D1A373 /* esptouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA3B5DA94BC41268E6020A0 /* esptouch.m */; };
+		D5CA3C8FD1E841E8B359BEE4 /* esptouch in Resources */ = {isa = PBXBuildFile; fileRef = 1D0A7E6403904E41B306F80A /* esptouch */; };
+		49FE0AB5D04F449B8B5B161C /* libEsptouch_v0.3.5.3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F25625494045229F290260 /* libEsptouch_v0.3.5.3.a */; };
+		571BA45D71E14B1BA24D2ED0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D503B3F4B0B64D69AC393F1D /* UIKit.framework */; };
+		7AAA5A07BAC0476284F775EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38FA9A0DA874818A600B716 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,8 +134,6 @@
 		8D1107310486CEB800E47090 /* Hydroponic-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Hydroponic-Info.plist"; path = "Hydroponic/Hydroponic-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
 		9565F1F75B8342E7A5FC8815 /* UNMutableNotificationContent+APPLocalNotification.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UNMutableNotificationContent+APPLocalNotification.m"; path = "de.appplant.cordova.plugin.local-notification/UNMutableNotificationContent+APPLocalNotification.m"; sourceTree = "<group>"; };
 		9BE93F13CC8E42BA8A3870D1 /* CDVSplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVSplashScreen.h; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; };
-		A21BEA6290124B97BD547DE6 /* esptouch */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = esptouch; path = "cordova-plugin-esptouch/esptouch"; sourceTree = "<group>"; };
-		A26AD8B7316E46F2BC5945C2 /* UIKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A2D8B633F347418C97732F23 /* AppDelegate+FCMPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+FCMPlugin.m"; path = "cordova-plugin-fcm/AppDelegate+FCMPlugin.m"; sourceTree = "<group>"; };
 		A8D1ABEF9CB644A8983F3322 /* NXWWifiWizard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = NXWWifiWizard.h; path = com.pylonproducts.wifiwizard/NXWWifiWizard.h; sourceTree = "<group>"; };
 		AA542F32C48445C88E2E9C40 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = "Hydroponic/Plugins/cordova-plugin-fcm/FirebaseAnalytics.framework"; sourceTree = "<group>"; };
@@ -156,8 +154,6 @@
 		C2E5973952AA4723BCF676C5 /* UNUserNotificationCenter+APPLocalNotification.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UNUserNotificationCenter+APPLocalNotification.m"; path = "de.appplant.cordova.plugin.local-notification/UNUserNotificationCenter+APPLocalNotification.m"; sourceTree = "<group>"; };
 		C51E4C2C15CD419A8114B2D9 /* CDVStatusBar.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVStatusBar.h; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; };
 		CB6D3432BA8341A7A52DF2AD /* CDVConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
-		CF9FFCF31E8141748770196D /* esptouch.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = esptouch.h; path = "cordova-plugin-esptouch/esptouch.h"; sourceTree = "<group>"; };
-		E04A1AB3968240B3B995E759 /* libEsptouch_v0.3.5.3.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = archive.ar; name = libEsptouch_v0.3.5.3.a; path = "Hydroponic/Plugins/cordova-plugin-esptouch/libEsptouch_v0.3.5.3.a"; sourceTree = "<group>"; };
 		E3048008D5404BED8832E492 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = "Hydroponic/Plugins/cordova-plugin-fcm/GoogleInterchangeUtilities.framework"; sourceTree = "<group>"; };
 		E4F5BBB2847F4BA6A22672FB /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		E643CF0C886B4921855C7F98 /* QRScanner.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = QRScanner.swift; path = "cordova-plugin-qrscanner/QRScanner.swift"; sourceTree = "<group>"; };
@@ -165,14 +161,12 @@
 		EA9A339698EA4CBF90956837 /* UNNotificationRequest+APPLocalNotification.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UNNotificationRequest+APPLocalNotification.m"; path = "de.appplant.cordova.plugin.local-notification/UNNotificationRequest+APPLocalNotification.m"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
-		EB9298384315433DA64DF84B /* Foundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC18F9E4EFED4D278278EDA2 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "Hydroponic/Plugins/cordova-plugin-fcm/GoogleUtilities.framework"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		ED353BEDEAA14A26B76E5454 /* GoogleIPhoneUtilities.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = GoogleIPhoneUtilities.framework; path = "Hydroponic/Plugins/cordova-plugin-fcm/GoogleIPhoneUtilities.framework"; sourceTree = "<group>"; };
 		EE570BC7103B4F738F602E3B /* APPLocalNotificationOptions.ios9.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = APPLocalNotificationOptions.ios9.m; path = "de.appplant.cordova.plugin.local-notification/APPLocalNotificationOptions.ios9.m"; sourceTree = "<group>"; };
 		EF1824F73DFF49D6BAF3A883 /* CDVSplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; };
 		F03AF222AC3F4AC7A18CE3DC /* APPLocalNotificationOptions.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = APPLocalNotificationOptions.h; path = "de.appplant.cordova.plugin.local-notification/APPLocalNotificationOptions.h"; sourceTree = "<group>"; };
-		F1ADEB2C83CB454F99001927 /* esptouch.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = esptouch.m; path = "cordova-plugin-esptouch/esptouch.m"; sourceTree = "<group>"; };
 		F70B458D138841588966A6F2 /* CDVDevice.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVDevice.h; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; };
 		F7B62B3C18DE48C0920D8F7B /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = "Hydroponic/Plugins/cordova-plugin-fcm/FirebaseCore.framework"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = Hydroponic/config.xml; sourceTree = "<group>"; };
@@ -180,6 +174,12 @@
 		FA09DA6CA0DD4BE98B6F6CEA /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		FE165892EEA14E45B46DF530 /* UILocalNotification+APPLocalNotification.ios9.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "UILocalNotification+APPLocalNotification.ios9.m"; path = "de.appplant.cordova.plugin.local-notification/UILocalNotification+APPLocalNotification.ios9.m"; sourceTree = "<group>"; };
 		FE9411C0121D4C5697E1AB90 /* PushPlugin.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = PushPlugin.m; path = "phonegap-plugin-push/PushPlugin.m"; sourceTree = "<group>"; };
+		2DA3B5DA94BC41268E6020A0 /* esptouch.m */ = {isa = PBXFileReference; name = "esptouch.m"; path = "cordova-plugin-esptouch/esptouch.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1D0A7E6403904E41B306F80A /* esptouch */ = {isa = PBXFileReference; name = "esptouch"; path = "cordova-plugin-esptouch/esptouch"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A2F25625494045229F290260 /* libEsptouch_v0.3.5.3.a */ = {isa = PBXFileReference; name = "libEsptouch_v0.3.5.3.a"; path = "Hydroponic/Plugins/cordova-plugin-esptouch/libEsptouch_v0.3.5.3.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C737AF1E34E8424AB5560F55 /* esptouch.h */ = {isa = PBXFileReference; name = "esptouch.h"; path = "cordova-plugin-esptouch/esptouch.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		D503B3F4B0B64D69AC393F1D /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A38FA9A0DA874818A600B716 /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,9 +189,6 @@
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				81C9130DADD146E49A7A52B3 /* SystemConfiguration.framework in Frameworks */,
-				AD40750ED4024DCA83E0348A /* libEsptouch_v0.3.5.3.a in Frameworks */,
-				E8A44F086BE2485ABA4D050B /* UIKit.framework in Frameworks */,
-				2466316BDAA84E4DB5F49472 /* Foundation.framework in Frameworks */,
 				608E8D7BBF224F33AF2610C4 /* FirebaseAnalytics.framework in Frameworks */,
 				E087D7EA61B0494AB2F17075 /* FirebaseCore.framework in Frameworks */,
 				C6863472F68E458E8BD44D27 /* FirebaseInstanceID.framework in Frameworks */,
@@ -209,6 +206,9 @@
 				A7CA1C0B21EC4546ABD41AD0 /* UserNotifications.framework in Frameworks */,
 				3387DEE0CF7E45AEBA4BCFD8 /* PushKit.framework in Frameworks */,
 				CCA53AEABCE689A9E632A7FC /* libPods-Hydroponic.a in Frameworks */,
+				49FE0AB5D04F449B8B5B161C /* libEsptouch_v0.3.5.3.a in Frameworks */,
+				571BA45D71E14B1BA24D2ED0 /* UIKit.framework in Frameworks */,
+				7AAA5A07BAC0476284F775EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,9 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				BCF49ADACE5F47F7996F3480 /* SystemConfiguration.framework */,
-				E04A1AB3968240B3B995E759 /* libEsptouch_v0.3.5.3.a */,
-				A26AD8B7316E46F2BC5945C2 /* UIKit.framework */,
-				EB9298384315433DA64DF84B /* Foundation.framework */,
 				AA542F32C48445C88E2E9C40 /* FirebaseAnalytics.framework */,
 				F7B62B3C18DE48C0920D8F7B /* FirebaseCore.framework */,
 				F84A1CD252364E04A2FC1B94 /* FirebaseInstanceID.framework */,
@@ -303,6 +300,9 @@
 				24AA95757ED743E899904053 /* UserNotifications.framework */,
 				445F0EACC5874C8C8DDF7B1D /* PushKit.framework */,
 				6F6DF30172C298D523036141 /* libPods-Hydroponic.a */,
+				A2F25625494045229F290260 /* libEsptouch_v0.3.5.3.a */,
+				D503B3F4B0B64D69AC393F1D /* UIKit.framework */,
+				A38FA9A0DA874818A600B716 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,9 +341,6 @@
 				6AA53F00DB2C4677889293EB /* APPMethodMagic.m */,
 				B94CC369A7F6472987AEE0F5 /* APPBackgroundMode.h */,
 				62F2DF69F1E54E588FBB8BB5 /* APPMethodMagic.h */,
-				F1ADEB2C83CB454F99001927 /* esptouch.m */,
-				A21BEA6290124B97BD547DE6 /* esptouch */,
-				CF9FFCF31E8141748770196D /* esptouch.h */,
 				70D943DBCE424FFA827F7B83 /* FCMPlugin.m */,
 				A2D8B633F347418C97732F23 /* AppDelegate+FCMPlugin.m */,
 				1CB6F61C55FC450B8B0BE956 /* FCMPlugin.h */,
@@ -382,6 +379,9 @@
 				FE9411C0121D4C5697E1AB90 /* PushPlugin.m */,
 				B5EB07FB8EC3460F97D92425 /* AppDelegate+notification.h */,
 				6FFD2807025A4CAAA7AE7981 /* PushPlugin.h */,
+				2DA3B5DA94BC41268E6020A0 /* esptouch.m */,
+				1D0A7E6403904E41B306F80A /* esptouch */,
+				C737AF1E34E8424AB5560F55 /* esptouch.h */,
 			);
 			name = Plugins;
 			path = Hydroponic/Plugins;
@@ -561,7 +561,6 @@
 				3B0EB060065C45FE95583862 /* CDVDevice.m in Sources */,
 				E17D9932FC0D4D00B9D02D20 /* APPBackgroundMode.m in Sources */,
 				245A83FA77CD4E8BB99BFDA4 /* APPMethodMagic.m in Sources */,
-				4215A550F8174C68BCF537F9 /* esptouch.m in Sources */,
 				DA489F38663E4D76B27BC572 /* esptouch in Sources */,
 				EA8A0C47D9D34996808F706B /* FCMPlugin.m in Sources */,
 				3378C896908C4E278AF4D69E /* AppDelegate+FCMPlugin.m in Sources */,
@@ -582,6 +581,8 @@
 				B4CFDF8AEC024B588510A51B /* IonicKeyboard.m in Sources */,
 				0EFD81196935447C87354B7F /* AppDelegate+notification.m in Sources */,
 				AF1D389D58EF4A548ED784BC /* PushPlugin.m in Sources */,
+				A1415B9864BA42E181D1A373 /* esptouch.m in Sources */,
+				D5CA3C8FD1E841E8B359BEE4 /* esptouch in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

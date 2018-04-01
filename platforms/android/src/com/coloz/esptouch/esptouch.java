@@ -47,10 +47,6 @@ public class esptouch extends CordovaPlugin {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                     synchronized (mLock) {
-                        // boolean isSsidHidden = false;
-                        // if (isSsidHiddenStr.equals("YES")) {
-                        //     isSsidHidden = true;
-                        // }
                         mEsptouchTask = new EsptouchTask(apSsid, apBssid, apPassword, timeout,
                                 cordova.getActivity());
                         mEsptouchTask.setEsptouchListener(myListener);

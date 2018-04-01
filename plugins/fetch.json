@@ -111,14 +111,6 @@
     "is_top_level": false,
     "variables": {}
   },
-  "cordova-plugin-esptouch": {
-    "source": {
-      "type": "local",
-      "path": "/home/thach/Documents/IoT-Agriculture/HydroponicMobileApp/node_modules/cordova-plugin-esptouch"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-network-information": {
     "source": {
       "type": "registry",
@@ -136,5 +128,13 @@
     "variables": {
       "SENDER_ID": "786918861869"
     }
+  },
+  "cordova-plugin-esptouch": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/bathach95/cordova-plugin-esptouch.git"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
