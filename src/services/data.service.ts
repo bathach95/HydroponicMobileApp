@@ -23,7 +23,7 @@ export class DataService {
         return status;
     }
 
-    public getNewestDataByCropId(cropId: any): Observable<any> {
+    public getLatestDataByCropId(cropId: any): Observable<any> {
         let params: any = new HttpParams().set('cropId', cropId);
         return this.http.get(Constant.HOST + '/data/newest', { params: params });
     }

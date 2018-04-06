@@ -116,4 +116,7 @@
     </plugin>
     <engine name="ios" spec="~4.5.4" />
     <plugin name="cordova-plugin-esptouch" spec="https://github.com/bathach95/cordova-plugin-esptouch.git" />
+    <allow-navigation href="http://192.168.10.117:8100" />
+    <allow-navigation href="http://192.168.1.111:8100" />
+    <allow-navigation href="http://192.168.10.93:8100" />
 </widget>

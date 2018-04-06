@@ -25,7 +25,7 @@
         </ion-refresher-content>
     </ion-refresher>
     <ion-list>
-        <div *ngFor="let device of deviceList" (click)="detail(device.mac, device.name)" style="margin-left: 10px">
+        <div *ngFor="let device of deviceList" (click)="goToLatestCropPage(device)" style="margin-left: 10px">
             <div id="devider1" class="devider"></div>
             <ion-grid>
 

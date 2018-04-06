@@ -5,7 +5,7 @@
         </ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content (swipe)="swipe($event)" padding>
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
         </ion-refresher-content>
@@ -21,26 +21,17 @@
                         <span>Type</span>
                     </ion-col>
                     <ion-col>
-                        <span>ID</span>
+                        <span>Auto</span>
                     </ion-col>
                     <ion-col>
-                        <span>Auto mode</span>
-                    </ion-col>
-                    <ion-col>
-                        <span>On/Off</span>
-                    </ion-col>
-                    <ion-col>
-                        <span>Action</span>
+                        <span>Active</span>
                     </ion-col>
                 </ion-row>
             </div>
-            <div *ngIf="data" class="table-content">
-                <ion-row *ngFor="let actuator of data" class="actuator-row">
+            <div *ngIf="actuatorList" class="table-content">
+                <ion-row *ngFor="let actuator of actuatorList" class="actuator-row" (click)="goToSchedulePage(actuator)">
                     <ion-col>
-                        {{actuator.type}}
-                    </ion-col>
-                    <ion-col>
-                        {{actuator.idonboard.toString()[1]}}
+                        {{actuator.type}} {{actuator.idonboard.toString()[1]}}
                     </ion-col>
                     <ion-col>
                         <button *ngIf="actuator.mode === 'auto'" (click)="changeMode(actuator)" class="custome btn btn-success">On</button>
@@ -49,9 +40,6 @@
                     <ion-col>
                         <button [disabled]="actuator.mode === 'auto'" *ngIf="actuator.status === 'on'" (click)="changeStatus(actuator)" class="custome btn btn-success">On</button>
                         <button [disabled]="actuator.mode === 'auto'" *ngIf="actuator.status !== 'on'" (click)="changeStatus(actuator)" class="custome btn btn-danger">Off</button>
-                    </ion-col>
-                    <ion-col>
-                        <ion-icon (click)="deleteActuator(actuator)" name="trash" color="danger"></ion-icon>
                     </ion-col>
                 </ion-row>
             </div>

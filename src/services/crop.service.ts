@@ -6,12 +6,12 @@ import { Constant } from '../utils/constant';
 export class CropService {
     constructor(private http: HttpClient) {}
 
-    public getAllCrop(mac: string) {
+    public getAllCrop(mac: string): Observable<any> {
         let params = new HttpParams().set('mac', mac);
         return this.http.get(Constant.HOST + '/crop/all', {params: params});
     }
 
-    public getNewestCropByDeviceMac(mac: string): Observable<any>{
+    public getLatestRunningCropByDeviceMac(mac: string): Observable<any> {
         let params = new HttpParams().set('mac', mac);
         return this.http.get(Constant.HOST + '/crop/newest', {params: params});
     }

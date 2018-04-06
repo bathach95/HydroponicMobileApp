@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Add new schedule
+            Add schedule for {{actuator.type}} {{actuator.idonboard.toString()[1]}}
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -9,23 +9,6 @@
     <div class="spacer" id="add-schedule-spacer1"></div>
     <form #addScheduleForm="ngForm" (ngSubmit)="addSchedule(addScheduleForm.value)">
 
-        <ion-item>
-            <ion-label>Actuator type</ion-label>
-            <ion-select require name="type" #name="ngModel" ngModel>
-                <ion-option *ngFor="let type of actuatorType" [value]="type.type">
-                    {{type.type}}
-                </ion-option>
-            </ion-select>
-        </ion-item>
-
-        <ion-item>
-            <ion-label>Actuator ID</ion-label>
-            <ion-select require name="actuatorId" #name="ngModel" ngModel>
-                <ion-option *ngFor="let actuator of availableActuator | actuatorTypeFilter: {type: addScheduleForm.value.type}" [value]="actuator.id">
-                    {{actuator.idonboard.toString()[1]}}
-                </ion-option>
-            </ion-select>
-        </ion-item>
         <ion-item>
             <ion-label>Schedule: </ion-label>
             <ion-checkbox name="schedule" #name="ngModel" [ngModel]="schedule"></ion-checkbox>

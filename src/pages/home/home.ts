@@ -5,6 +5,7 @@ import { DeviceService } from '../../services/device.service';
 import { AuthService } from '../../services/auth.service';
 import { ToastService } from '../../services/toast.service';
 import { DevicePage } from '../device/device';
+import { CropPage } from '../crop/crop';
 import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 import { FCM } from '@ionic-native/fcm';
 
@@ -100,10 +101,10 @@ export class HomePage implements OnInit {
         })
     }
 
-    public detail(deviceMac: any, deviceName: any) {
-        this.navCtrl.push(DevicePage, {
-            deviceMac: deviceMac,
-            deviceName: deviceName,
+    public goToLatestCropPage(device: any) {
+        this.navCtrl.push(CropPage, {
+            deviceMac: device.mac,
+            deviceName: device.name,
             homePage: this
         });
     }

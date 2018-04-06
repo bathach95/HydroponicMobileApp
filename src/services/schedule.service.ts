@@ -15,6 +15,11 @@ export class ScheduleService {
         });
     }
 
+    public getScheduleByCropIdAndActuatorId(cropId: number, actuatorId: number): Observable<any> {
+        let url = Constant.HOST + '/schedule/crop/' + cropId + '/actuator/' + actuatorId;
+        return this.http.get(url);
+    }
+
     public addSchedule(newSchedule: any): Observable<any> {
         return this.http.post(Constant.HOST + '/schedule/add', newSchedule);
     }

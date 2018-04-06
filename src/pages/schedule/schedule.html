@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar>
         <ion-title>
-            Schedule
+            Schedule of {{actuator.type}} {{actuator.idonboard.toString()[1]}}
         </ion-title>
     </ion-navbar>
 </ion-header>
@@ -22,16 +22,16 @@
             <div class="table-header">
                 <ion-row>
                     <ion-col>
-                        <span>Type</span>
-                    </ion-col>
-                    <ion-col>
-                        <span>ID</span>
-                    </ion-col>
-                    <ion-col>
                         <span>Start</span>
                     </ion-col>
                     <ion-col>
                         <span>Stop</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Interval</span>
+                    </ion-col>
+                    <ion-col>
+                        <span>Delay</span>
                     </ion-col>
                     <ion-col>
                         <span>Action</span>
@@ -41,16 +41,16 @@
             <div *ngIf="scheduleList" class="table-content">
                 <ion-row *ngFor="let schedule of scheduleList" class="schedule-row">
                     <ion-col>
-                        {{schedule.Actuator.type}}
-                    </ion-col>
-                    <ion-col>
-                        {{schedule.Actuator.idonboard.toString()[1]}}
-                    </ion-col>
-                    <ion-col>
                         {{schedule.starttime}}
                     </ion-col>
                     <ion-col>
                         {{schedule.endtime}}
+                    </ion-col>
+                    <ion-col>
+                        {{schedule.intervaltime}} s
+                    </ion-col>
+                    <ion-col>
+                        {{schedule.delaytime}} s
                     </ion-col>
                     <ion-col>
                         <ion-icon (click)="deleteSchedule(schedule.id)" name="trash" color="danger"></ion-icon>

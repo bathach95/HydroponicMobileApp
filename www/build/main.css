@@ -25715,6 +25715,11 @@ ion-grid {
   padding-bottom: 5px;
 }
 
+#add-actuator-spacer1 {
+  width: 300px;
+  height: 50px;
+}
+
 #add-actuator-spacer2 {
   width: 300px;
   height: 30px;
@@ -25767,6 +25772,11 @@ ion-grid {
 .threshold {
   font-size: 0.8em;
   color: #007acc !important;
+}
+
+.fab[add] {
+  width: 100px;
+  height: 100px;
 }
 
 #home-heading3 {

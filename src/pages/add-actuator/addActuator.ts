@@ -36,7 +36,7 @@ export class AddActuatorPage implements OnInit {
                 status: 'off',
                 type: actuator.type,
                 idonboard: actuator.idonboard,
-                priority: actuator.priority
+                priority: this.actuatorPriority[0] // set defalt is Primary
             }
         }
         this.actuatorService.addActuator(newActuator).subscribe((res: any) => {
@@ -45,7 +45,7 @@ export class AddActuatorPage implements OnInit {
                     this.actuatorListPage.doRefresh(null);
                 })
             }
-            this.toastService.showToast(res.messasge);
+            this.toastService.showToast(res.message);
         }, (err: any) => {
             console.log(err);
         })

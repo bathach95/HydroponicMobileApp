@@ -13,6 +13,7 @@ export class SchedulePage implements OnInit {
 
     private crop: any;
     private mac: string;
+    private actuator: any;
     public scheduleList: any;
     public synchronized: boolean;
 
@@ -23,12 +24,12 @@ export class SchedulePage implements OnInit {
     public ngOnInit() {
         this.crop = this.navParams.get('crop');
         this.mac = this.navParams.get('deviceMac');
-
+        this.actuator = this.navParams.get('actuator');
         this.refresh(null);
     }
 
     public refresh(refresher) {
-        this.scheduleService.getScheduleByCropId(this.crop.id).subscribe((res: any) => {
+        this.scheduleService.getScheduleByCropIdAndActuatorId(this.crop.id, this.actuator.id).subscribe((res: any) => {
             if (res.success) {
                 this.scheduleList = res.data;
             }
@@ -68,6 +69,7 @@ export class SchedulePage implements OnInit {
 
     public goToAddSchedulePage() {
         this.navCtrl.push(AddSchedulePage, {
+            actuator: this.actuator,
             cropId: this.crop.id,
             deviceMac: this.mac,
             schedulePage: this

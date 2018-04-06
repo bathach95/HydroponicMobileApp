@@ -4,28 +4,29 @@ import { ActuatorService } from '../../services/actuator.service';
 import { ToastService } from '../../services/toast.service';
 import { AddActuatorPage } from '../add-actuator/addActuator';
 import { ActuatorPage } from '../actuator/actuator';
-
+import { SchedulePage } from '../schedule/schedule';
 @Component({
     selector: 'page-actuator-list',
     templateUrl: 'actuator-list.html'
 })
 export class ActuatorListPage implements OnInit {
     private mac: string;
-    public data: any;
+    private crop: any;
+    public actuatorList: any;
 
     constructor(private navParams: NavParams, private actuatorService: ActuatorService,
         private toastService: ToastService, private navCtrl: NavController) { }
 
     public ngOnInit() {
         this.mac = this.navParams.get('deviceMac');
-
+        this.crop = this.navParams.get('crop');
         this.doRefresh(null);
     }
 
     public doRefresh(refresher) {
         this.actuatorService.getAllActuator(this.mac).subscribe((res: any) => {
             if (res.success) {
-                this.data = res.data;
+                this.actuatorList = res.data;
             } else {
                 this.toastService.showToast("Cannot load all actuators");
             }
@@ -90,6 +91,29 @@ export class ActuatorListPage implements OnInit {
         }
     }
 
+    // TODO: test swipe 
+    public swipe(event: any) {
+        /* Name              Value
+        DIRECTION_NONE         1
+        DIRECTION_LEFT         2
+        DIRECTION_RIGHT        4
+        DIRECTION_UP           8
+        DIRECTION_DOWN         16
+        DIRECTION_HORIZONTAL   6
+        DIRECTION_VERTICAL     24
+        DIRECTION_ALL          30 */
+        switch (event.direction) {
+            case 2:
+                this.toastService.showToast("you have just swipe from right to left");
+                break;
+            case 4:
+                this.toastService.showToast("you have just swipe from left to right");
+                break;
+            default:
+                break;
+        }
+    }
+
     public goToAddActuatorPage() {
         this.navCtrl.push(AddActuatorPage, {
             deviceMac: this.mac,
@@ -100,6 +124,14 @@ export class ActuatorListPage implements OnInit {
     public goToActuatorPage(actuator: any) {
         this.navCtrl.push(ActuatorPage, {
             actuator: actuator
+        })
+    }
+
+    public goToSchedulePage(actuator: any) {
+        this.navCtrl.push(SchedulePage, {
+            actuator: actuator,
+            crop: this.crop,
+            deviceMac: this.mac
         })
     }
 }
