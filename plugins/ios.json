@@ -19,6 +19,9 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-esptouch": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -41,12 +44,6 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "ionic-plugin-keyboard": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "phonegap-plugin-push": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-esptouch": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },

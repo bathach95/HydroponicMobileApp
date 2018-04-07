@@ -38,7 +38,7 @@
     "@types/lodash": "^4.14.104",
     "com.pylonproducts.wifiwizard": "https://github.com/hoerresb/WifiWizard",
     "cordova-android": "^6.2.3",
-    "cordova-ios": "4.5.4",
+    "cordova-ios": "4.2.0",
     "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-background-mode": "^0.7.2",

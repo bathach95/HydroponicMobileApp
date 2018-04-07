@@ -96,7 +96,14 @@
     <allow-navigation href="http://192.168.0.16:8100" />
     <allow-navigation href="http://192.168.1.107:8100" />
     <allow-navigation href="http://192.168.1.136:8100" />
+    <allow-navigation href="http://192.168.10.224:8100" />
+    <allow-navigation href="http://192.168.10.112:8100" />
+    <allow-navigation href="http://192.168.10.117:8100" />
+    <allow-navigation href="http://192.168.1.111:8100" />
+    <allow-navigation href="http://192.168.10.93:8100" />
+    <allow-navigation href="http://192.168.1.124:8100" />
     <engine name="android" spec="^6.2.3" />
+    <engine name="ios" spec="4.2.0" />
     <plugin name="cordova-plugin-device" spec="^1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="^4.0.3" />
     <plugin name="cordova-plugin-statusbar" spec="^2.2.2" />
@@ -108,15 +115,9 @@
     <plugin name="cordova-plugin-qrscanner" spec="^2.5.0" />
     <plugin name="com.pylonproducts.wifiwizard" spec="https://github.com/hoerresb/WifiWizard" />
     <plugin name="cordova-plugin-android-permissions" spec="^1.0.0" />
-    <allow-navigation href="http://192.168.10.224:8100" />
     <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-    <allow-navigation href="http://192.168.10.112:8100" />
     <plugin name="phonegap-plugin-push" spec="^2.2.2">
         <variable name="SENDER_ID" value="786918861869" />
     </plugin>
-    <engine name="ios" spec="~4.5.4" />
-    <plugin name="cordova-plugin-esptouch" spec="https://github.com/bathach95/cordova-plugin-esptouch.git" />
-    <allow-navigation href="http://192.168.10.117:8100" />
-    <allow-navigation href="http://192.168.1.111:8100" />
-    <allow-navigation href="http://192.168.10.93:8100" />
+    <plugin name="cordova-plugin-esptouch" spec="git+https://github.com/bathach95/cordova-plugin-esptouch.git" />
 </widget>

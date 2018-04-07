@@ -13,11 +13,15 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"BackgroundMode\"><param name=\"ios-package\" value=\"APPBackgroundMode\" /></feature>",
+              "xml": "<feature name=\"esptouch\"><param name=\"ios-package\" value=\"esptouch\" /></feature>",
               "count": 1
             },
             {
@@ -55,14 +59,6 @@
             {
               "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"PushNotification\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"esptouch\"><param name=\"ios-package\" value=\"esptouch\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -72,10 +68,6 @@
           "UIBackgroundModes": [
             {
               "xml": "<array><string>audio</string></array>",
-              "count": 1
-            },
-            {
-              "xml": "<array><string>remote-notification</string></array>",
               "count": 1
             }
           ],
@@ -106,26 +98,6 @@
             }
           ]
         }
-      },
-      "*-Debug.plist": {
-        "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>development</string>",
-              "count": 1
-            }
-          ]
-        }
-      },
-      "*-Release.plist": {
-        "parents": {
-          "aps-environment": [
-            {
-              "xml": "<string>production</string>",
-              "count": 1
-            }
-          ]
-        }
       }
     }
   },
@@ -136,25 +108,19 @@
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-app-event": {
+    "cordova-plugin-background-mode": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-background-mode": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-compat": {
+    "cordova-plugin-esptouch": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-fcm": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-swift-support": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-qrscanner": {
@@ -175,10 +141,13 @@
     "ionic-plugin-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "phonegap-plugin-push": {
+    "cordova-plugin-app-event": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
-    "cordova-plugin-esptouch": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-swift-support": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   },
@@ -201,6 +170,15 @@
       ]
     },
     {
+      "id": "cordova-plugin-background-mode.BackgroundMode",
+      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+      "pluginId": "cordova-plugin-background-mode",
+      "clobbers": [
+        "cordova.plugins.backgroundMode",
+        "plugin.backgroundMode"
+      ]
+    },
+    {
       "id": "cordova-plugin-device.device",
       "file": "plugins/cordova-plugin-device/www/device.js",
       "pluginId": "cordova-plugin-device",
@@ -209,12 +187,11 @@
       ]
     },
     {
-      "id": "cordova-plugin-background-mode.BackgroundMode",
-      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
-      "pluginId": "cordova-plugin-background-mode",
+      "id": "cordova-plugin-esptouch.esptouch",
+      "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
+      "pluginId": "cordova-plugin-esptouch",
       "clobbers": [
-        "cordova.plugins.backgroundMode",
-        "plugin.backgroundMode"
+        "esptouch"
       ]
     },
     {
@@ -301,41 +278,24 @@
         "cordova.plugins.Keyboard"
       ],
       "runs": true
-    },
-    {
-      "id": "phonegap-plugin-push.PushNotification",
-      "file": "plugins/phonegap-plugin-push/www/push.js",
-      "pluginId": "phonegap-plugin-push",
-      "clobbers": [
-        "PushNotification"
-      ]
-    },
-    {
-      "id": "cordova-plugin-esptouch.esptouch",
-      "file": "plugins/cordova-plugin-esptouch/www/esptouch.js",
-      "pluginId": "cordova-plugin-esptouch",
-      "clobbers": [
-        "esptouch"
-      ]
     }
   ],
   "plugin_metadata": {
     "com.pylonproducts.wifiwizard": "0.2.11",
     "cordova-plugin-android-permissions": "1.0.0",
-    "cordova-plugin-app-event": "1.2.1",
-    "cordova-plugin-device": "1.1.4",
     "cordova-plugin-background-mode": "0.7.2",
-    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-device": "1.1.4",
+    "cordova-plugin-esptouch": "1.0.3",
     "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-network-information": "2.0.1",
-    "cordova-plugin-swift-support": "3.1.1",
     "cordova-plugin-qrscanner": "2.5.0",
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.2.2",
     "cordova-plugin-whitelist": "1.3.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
     "ionic-plugin-keyboard": "2.2.1",
-    "phonegap-plugin-push": "2.2.2",
-    "cordova-plugin-esptouch": "1.0.3"
+    "cordova-plugin-app-event": "1.2.1",
+    "cordova-plugin-compat": "1.2.0",
+    "cordova-plugin-swift-support": "3.1.1"
   }
 }
