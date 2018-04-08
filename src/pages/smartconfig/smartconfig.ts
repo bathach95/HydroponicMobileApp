@@ -60,9 +60,7 @@ export class SmartConfigPage implements OnInit {
     public smartConfig(config: any) {
         this.toastService.showLoading();
         let network = _.find(this.networks, ['ssid', config.ssid.trim()]);
-
         esptouch.start(network.ssid, network.bssid, config.password, Constant.DEFAULT_TIMEOUT_SMARTCONFIG, config.count, (res: any) => {
-            console.log(res);
             this.showToastAndStopSmartConfig(res);
             this.navCtrl.pop();
         }, (err: any) => {

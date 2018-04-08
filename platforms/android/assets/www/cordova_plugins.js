@@ -70,14 +70,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-fcm.FCMPlugin",
-        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
-        "pluginId": "cordova-plugin-fcm",
-        "clobbers": [
-            "FCMPlugin"
-        ]
-    },
-    {
         "id": "cordova-plugin-qrscanner.QRScanner",
         "file": "plugins/cordova-plugin-qrscanner/www/www.min.js",
         "pluginId": "cordova-plugin-qrscanner",
@@ -125,6 +117,14 @@ module.exports = [
         "clobbers": [
             "esptouch"
         ]
+    },
+    {
+        "id": "cordova-plugin-fcm.FCMPlugin",
+        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
+        "pluginId": "cordova-plugin-fcm",
+        "clobbers": [
+            "FCMPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -138,13 +138,13 @@ module.exports.metadata =
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-app-event": "1.2.1",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
-    "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-qrscanner": "2.5.0",
     "com.pylonproducts.wifiwizard": "0.2.11",
     "cordova-plugin-android-permissions": "1.0.0",
     "cordova-plugin-network-information": "2.0.1",
-    "cordova-plugin-esptouch": "1.0.3"
+    "cordova-plugin-esptouch": "1.0.3",
+    "cordova-plugin-fcm": "2.1.2"
 };
 // BOTTOM OF METADATA
 });

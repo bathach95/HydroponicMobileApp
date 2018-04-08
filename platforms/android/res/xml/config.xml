@@ -25,10 +25,6 @@
     <feature name="LocalNotification">
         <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
     </feature>
-    <feature name="FCMPlugin">
-        <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="QRScanner">
         <param name="android-package" value="com.bitpay.cordova.qrscanner.QRScanner" />
     </feature>
@@ -46,10 +42,14 @@
         <param name="android-package" value="com.coloz.esptouch.esptouch" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="FCMPlugin">
+        <param name="android-package" value="com.gae.scaffolder.plugin.FCMPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Hydroponic</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.10.93:8100" />
     <access origin="*" />
     <allow-navigation href="http://ionic.local/*" />
     <allow-intent href="http://*/*" />
@@ -81,6 +81,7 @@
     <allow-navigation href="http://192.168.10.117:8100" />
     <allow-navigation href="http://192.168.1.111:8100" />
     <allow-navigation href="http://192.168.10.93:8100" />
+    <allow-navigation href="http://192.168.1.124:8100" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />

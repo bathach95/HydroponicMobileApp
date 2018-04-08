@@ -5,6 +5,7 @@ import { DataService } from '../../services/data.service';
 import { ThresholdService } from '../../services/threshold.service';
 import { ToastService } from '../../services/toast.service';
 import { ActuatorListPage } from '../actuator-list/actuatorList';
+import { SmartConfigPage } from '../smartconfig/smartconfig';
 import { forkJoin } from 'rxjs/observable/forkJoin';
 import 'rxjs/add/operator/mergeMap';
 
@@ -75,6 +76,10 @@ export class CropPage implements OnInit {
             deviceMac: this.mac,
             crop: this.crop
         });
+    }
+
+    public goToSmartConfigPage() {
+        this.navCtrl.push(SmartConfigPage);
     }
 
 }

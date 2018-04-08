@@ -42,14 +42,6 @@ module.exports = [
         ]
     },
     {
-        "id": "cordova-plugin-fcm.FCMPlugin",
-        "file": "plugins/cordova-plugin-fcm/www/FCMPlugin.js",
-        "pluginId": "cordova-plugin-fcm",
-        "clobbers": [
-            "FCMPlugin"
-        ]
-    },
-    {
         "id": "cordova-plugin-network-information.network",
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "pluginId": "cordova-plugin-network-information",
@@ -135,7 +127,6 @@ module.exports.metadata =
     "cordova-plugin-background-mode": "0.7.2",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-esptouch": "1.0.3",
-    "cordova-plugin-fcm": "2.1.2",
     "cordova-plugin-network-information": "2.0.1",
     "cordova-plugin-qrscanner": "2.5.0",
     "cordova-plugin-splashscreen": "4.0.3",
